@@ -1,0 +1,19 @@
+.brands {
+  background: #fff;
+  padding: 50px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+.brands .brand-logo {
+  margin: 0 5px;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands .brand-logo img {
+  width: 75%;
+}

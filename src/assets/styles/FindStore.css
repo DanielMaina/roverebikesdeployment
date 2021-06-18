@@ -1,0 +1,116 @@
+.stores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.store-list {
+  flex: 1;
+  max-height: 967px;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 85px;
+  text-align: left;
+}
+.store-list .input-store-query {
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 53px;
+
+  background: none;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+
+  margin-left: 80px;
+  margin-bottom: 40px;
+}
+.store-list .input-store-query:after {
+  content: "";
+  width: 49px;
+  height: 45px;
+  background-image: url("../icons/search.svg");
+}
+.store-list .store-results {
+  display: flex;
+  flex-direction: column;
+}
+.store-list .store-results .store-row {
+  padding: 30px 0;
+  text-align: left;
+
+  padding-left: 80px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 300ms all ease-in-out;
+}
+
+.store-list .store-results .store-row:hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.store-list .store-results .store-row.selected {
+  background-color: #c4c4c4;
+}
+
+.store-list .store-results .store-row h4 {
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+}
+.store-list .store-results .store-row p {
+  padding: 0;
+  margin: 0;
+  font-family: Play;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.store-map {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.store-map > * {
+  width: 100%;
+}
+
+.store-map .map-message {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  padding: 25px 40px;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Play;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.store-map .map-message span {
+  margin-left: 20px;
+}
