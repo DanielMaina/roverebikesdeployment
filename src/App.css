@@ -26,7 +26,7 @@
   justify-content: space-between;
   color: white;
 
-  padding: 0 50px;
+  padding: 0 90px;
 
   background-color: transparent;
   z-index: 2;
@@ -52,7 +52,7 @@
 .App-header .rover-ebike-logo {
   position: absolute;
   top: 23px;
-  left: 29px;
+  left: 90px;
   width: 253px;
   height: 80px;
   background-size: contain;
@@ -95,7 +95,7 @@
   height: 30px;
   position: fixed;
   top: 50px;
-  right: 150px;
+  right: 170px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,7 +129,7 @@
 
   position: fixed;
   top: 50px;
-  right: 50px;
+  right: 90px;
 
   display: flex;
   flex-direction: column;

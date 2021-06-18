@@ -1,13 +1,45 @@
+.product-page {
+  padding-top: 110px;
+  background-color: var(--color-black);
+}
+
+.product-page .top-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.product-page .top-message p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.product-page .top-message p span {
+  color: var(--color-red);
+}
+
 .product-page .main-product {
   display: flex;
   flex-direction: row;
+  height: 800px;
+  position: relative;
 }
 
 .product-page .main-product .main-product-spotlight {
-  flex: 2;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
 
-  background-position: center;
+  width: 100%;
+  max-width: 1276px;
+  height: 759px;
+  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -17,12 +49,10 @@
 }
 
 .product-page .main-product .main-product-information {
-  padding-top: 170px;
-}
+  position: absolute;
+  right: 98px;
+  top: 97px;
 
-.product-page .main-product .main-product-information {
-  flex: 1;
-  padding: 50px 50px 50px 50px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,20 +62,20 @@
 .product-page .product-heading {
   font-family: Play;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 18px;
   line-height: 21px;
-  color: #8a1900;
+
+  color: var(--color-white);
+
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 20px;
 }
 
 .product-page .product-heading span {
-  color: #fff;
+  color: var(--color-red);
 }
 
 .product-page .product-name {
-  padding: 20px 0;
   font-family: Play;
   font-style: normal;
   font-weight: bold;
@@ -53,6 +83,12 @@
   line-height: 93px;
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  margin-bottom: 68px;
+}
+.product-page .product-name img {
+  width: 370px;
+  height: 125px;
 }
 .product-page .product-name span {
   font-size: 56px;
@@ -70,7 +106,7 @@
 .product-page .product-description {
   margin-top: 20px;
   margin-bottom: 20px;
-
+  width: 305px;
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
@@ -114,26 +150,4 @@
   background: #000000;
   border: 1px solid #ffffff;
   color: #fff;
-}
-.product-page .product-actions {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin-top: 70px;
-}
-.product-page .product-actions .product-action {
-  height: 80px;
-  width: 100%;
-}
-
-.product-page .product-actions .product-action.add-to-cart {
-  background-image: url("../images/button_add_to_cart.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.product-page .product-actions .product-action.check-out-now {
-  background-image: url("../images/button_check_out.png");
-  background-repeat: no-repeat;
-  background-size: contain;
 }
