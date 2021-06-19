@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import logo from "../assets/images/logo.png";
-import socialLogoInstagram from "../assets/icons/social/instagram.svg";
-import socialLogoFacebook from "../assets/icons/social/facebook.svg";
-import socialLogoLinkedin from "../assets/icons/social/linkedin.svg";
-import socialLogoTwitter from "../assets/icons/social/twitter.svg";
+import {
+  ShoppingCartOutlined,
+  Instagram,
+  Facebook,
+  LinkedIn,
+  Twitter,
+} from "@material-ui/icons";
 
 class Layout extends React.Component {
   constructor() {
@@ -19,7 +22,9 @@ class Layout extends React.Component {
   componentDidMount() {
     window.addEventListener("scroll", () => {
       let headerClass = "normal";
-      let targetOffset = $("#main div div").height() + 400;
+      let windowHeight = window.height;
+      let targetOffset =
+        $("#main div div").height() + (windowHeight >= 400 ? 400 : 0);
       if (window.scrollY > targetOffset) {
         headerClass = "fixed";
       }
@@ -52,7 +57,7 @@ class Layout extends React.Component {
 
           <div className="header-sub">
             <div className="cart-logo">
-              <a href="#"></a>
+              <ShoppingCartOutlined />
             </div>
 
             <div
@@ -69,12 +74,12 @@ class Layout extends React.Component {
             <nav className={this.state.menuStatus ? "navbar active" : "navbar"}>
               <ul className="nav-list">
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/" className="nav-link">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/about-us" className="nav-link">
                     About Us
                   </a>
                 </li>
@@ -84,17 +89,17 @@ class Layout extends React.Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/contact" className="nav-link">
                     Contact
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/support" className="nav-link">
                     Support
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a href="#" className="nav-link">
+                  <a href="/warranty" className="nav-link">
                     Warranty
                   </a>
                 </li>
@@ -115,27 +120,35 @@ class Layout extends React.Component {
           <div className="footer-links">
             <ul>
               <li>
-                <a href="/">Products</a>
+                <a href="/product">Products</a>
               </li>
               <li>
-                <a href="/">Privacy & Legal</a>
+                <a href="/privacy">Privacy & Legal</a>
               </li>
               <li>
-                <a href="/">Contact</a>
+                <a href="/contact">Contact</a>
               </li>
               <li>
-                <a href="/">Support</a>
+                <a href="/support">Support</a>
               </li>
               <li>
-                <a href="/">Warranty</a>
+                <a href="/warranty">Warranty</a>
               </li>
             </ul>
           </div>
           <div className="footer-social">
-            <img src={socialLogoInstagram} alt="Instagram" />
-            <img src={socialLogoFacebook} alt="Facebook" />
-            <img src={socialLogoLinkedin} alt="LinkedIn" />
-            <img src={socialLogoTwitter} alt="Twitter" />
+            <a href="https://www.instagram.com/" target="_blank">
+              <Instagram />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+              <Facebook />
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <LinkedIn />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank">
+              <Twitter />
+            </a>
           </div>
         </footer>
       </div>

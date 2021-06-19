@@ -110,19 +110,6 @@
   /* transform: scale(0.5); */
 }
 
-.App-header .header-sub .main-menu {
-  /* width: 50px;
-  height: 60px; */
-}
-.App-header .header-sub .main-menu a {
-  /* width: 100%;
-  height: 100%;
-  display: block;
-  background: url("./assets/icons/hamburger_menu.svg") no-repeat center;
-  background-size: 50px 60px;
-  transform: scale(0.5); */
-}
-
 .hamburger-menu {
   width: 35px;
   height: 30px;
@@ -195,7 +182,6 @@
   color: #eee;
   font-weight: 300;
   letter-spacing: 1px;
-  text-transform: uppercase;
   position: relative;
   padding: 3px 0;
 }
@@ -205,7 +191,6 @@
   content: "";
   width: 100%;
   height: 2px;
-  background-color: chocolate;
   position: absolute;
   left: 0;
   transform: scaleX(0);
@@ -225,6 +210,10 @@
 .nav-link:hover::before,
 .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+#main {
+  min-height: calc(100vh - 210px);
 }
 
 .App-footer {
@@ -278,8 +267,23 @@
   }
 }
 
-.cookie-popup {
+.rover-xy-menu {
   position: absolute;
+  top: 58px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 441px;
+  z-index: 9;
+}
+
+.cookie-popup {
+  position: fixed;
 
   display: flex;
   flex-direction: column;
@@ -287,11 +291,11 @@
   align-items: flex-start;
 
   left: 100px;
-  bottom: 8%;
+  bottom: -300px;
   width: 500px;
   height: 250px;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 30px;
   padding: 40px;
 
@@ -300,7 +304,10 @@
 }
 
 .cookie-popup.active {
+  bottom: 2.5%;
+  display: flex;
   opacity: 1;
+  z-index: 999;
 }
 
 .cookie-popup p {
@@ -309,9 +316,12 @@
   font-weight: normal;
   font-size: 26px;
   line-height: 30px;
-
   text-align: left;
   color: #ffffff;
+}
+
+.cookie-popup a {
+  text-decoration: underline;
 }
 
 .cookie-popup .button {

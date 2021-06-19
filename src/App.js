@@ -4,30 +4,43 @@ import { useCookies } from "react-cookie";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import "./App.css";
-import HomePage from "./pages/home/home";
-import ProductPage from "./pages/product/product";
 import Layout from "components/Layout";
+import HomePage from "./pages/home";
+import ProductPage from "./pages/product/index";
+import ContactPage from "./pages/contact/index";
+import CheckoutPage from "./pages/checkout/index";
 
 function App() {
   document.title = "Rover E-Bike";
 
   const [cookies, setCookie] = useCookies(["policy"]);
+  const [hasCookieApprove, setHasCookieApprove] = useState(-1);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log(cookies.policy);
+  });
 
   useEffect(() => {
     return () => {
       setTimeout(() => {
-        console.log(cookies.policy);
+        if (cookies.policy === 1) {
+          setHasCookieApprove(1);
+        } else {
+          setHasCookieApprove(0);
+        }
       }, 1000);
     };
   }, []);
 
   function cookieAgree() {
     setCookie("policy", 1, { path: "/" });
+    setHasCookieApprove(1);
     return false;
   }
 
   return (
-    <BrowserRouter basename="/app">
+    <BrowserRouter basename="/">
       <div className="App">
         <div className="loader"></div>
         <div>
@@ -39,12 +52,21 @@ function App() {
               <Route path="/product">
                 <ProductPage />
               </Route>
+              <Route path="/contact">
+                <ContactPage />
+              </Route>
+              <Route path="/checkout">
+                <CheckoutPage />
+              </Route>
             </Switch>
           </Layout>
         </div>
         <div
           className={
-            "cookie-popup" + " " + (!cookies.policy ? "active" : "hidden")
+            "cookie-popup" +
+            (hasCookieApprove > -1
+              ? " " + (!hasCookieApprove ? "active" : "hidden")
+              : "")
           }
         >
           <p>
@@ -52,7 +74,7 @@ function App() {
             cookies to provide you with a great experience and to help our
           </p>
           <p>
-            <a href="/">Privacy/cookies policy</a>
+            <a href="/cookie-policy">Privacy/cookies policy</a>
           </p>
           <button className="button" onClick={cookieAgree}>
             I Agree

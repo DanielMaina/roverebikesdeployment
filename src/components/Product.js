@@ -49,7 +49,7 @@ class Product extends React.Component {
               <div className="icon">
                 <span></span>
               </div>
-              <a href="/">Check out now</a>
+              <a href="/checkout">Check out now</a>
             </div>
           </div>
         </div>
