@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";

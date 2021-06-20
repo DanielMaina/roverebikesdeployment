@@ -2,7 +2,6 @@ const state = {
   items: {},
   cart: [],
   itemCount: 0,
-  cartValue: '0'
 }
 
 const reducer = {
@@ -10,6 +9,7 @@ const reducer = {
     const key = `${action.title}${action.model ? `-${action.model}` : ""}${
       action.color ? `-${action.color}` : ""
     }`
+    console.log(key)
     const items = {
       ...state.items,
       [key]: {
@@ -37,14 +37,12 @@ const reducer = {
     }
     const cart = Object.values(items)
     const itemCount = cart.reduce((result, item) => result + item.quantity, 0)
-    const cartValue = cart.reduce((result, item) => `${parseFloat(result) + (parseFloat(item.price) * item.quantity)}`, '0')
-    console.log(cartValue)
+
     return {
       ...state,
       items: items,
       cart: cart,
       itemCount: itemCount,
-      cartValue:cartValue
     }
   },
   removeItem: (global, state, action) => {
@@ -61,14 +59,12 @@ const reducer = {
     }
     const cart = Object.values(items)
     const itemCount = cart.reduce((result, item) => result + item.quantity, 0)
-    const cartValue = cart.reduce((result, item) => `${parseFloat(result)} + ${parseFloat(item.price) * item.quantity}`, '0')
-    
+
     return {
       ...state,
       items: items,
       cart: cart,
       itemCount: itemCount,
-      cartValue: cartValue
     }
   },
 }

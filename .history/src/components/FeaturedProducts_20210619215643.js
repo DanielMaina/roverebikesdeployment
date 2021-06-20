@@ -34,9 +34,9 @@ const FeaturedProductItem = React.memo((props) => {
 const FeaturedProducts = React.memo((props) => {
   const dispatch = useContext(DispatchContext)
 
-  const addToCartHandler = ({ title, price, model, color }) => {
+  const addToCartHandler = ({ title, price }) => {
+    dispatch.sync.checkout.addToCart({ title, price })
 
-    dispatch.sync.checkout.addToCart({ title, price, model, color })
   }
 
   return (

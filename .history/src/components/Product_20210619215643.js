@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { DispatchContext } from "../lib/providers/state"
 import { Link } from 'react-router-dom'
 
@@ -29,32 +29,26 @@ const ProductItem = React.memo((props) => {
       </h3>
       <h4 className="product-price">{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(price))}`}</h4>
       <div className="product-description">
-        {selectedModel === 'X'
-          ? (<p>
-            Take on long distance and uphill adventures like a pro. With our
-            innovative Torque Sensor System, you can make any challenging
-            environment seems effortless.
-          </p>)
-          : (<p>
-            Curabitur maximus felis justo, eu elementum turpis venenatis id. Suspendisse potenti. Suspendisse placerat cursus semper. Nunc sollicitudin turpis vitae ex vulputate mattis. Duis eget pellentesque sapien.
-          </p>)
-        }
-
+        <p>
+          Take on long distance and uphill adventures like a pro. With our
+          innovative Torque Sensor System, you can make any challenging
+          environment seems effortless.
+            </p>
       </div>
       <div className="product-rotates">
-        <div className={`product-rotate ${selectedModel === 'X' ? 'rx' : 'ry'}`} onClick={() => selectModelHandler('X')}>
+        <div className={`product-rotate ${selectedModel === 'X' ? 'rx' : 'ry'}`} >
           <span>X</span>
         </div>
-        <div className={`product-rotate ${selectedModel === 'Y' ? 'rx' : 'ry'}`} onClick={() => selectModelHandler('Y')}>
+        <div className={`product-rotate ${selectedModel === 'Y' ? 'rx' : 'ry'}`}>
           <span>Y</span>
         </div>
       </div>
       <div className="product-actions">
-        <div className="product-action add-to-cart" onClick={() => onAddToCart({ title, price, model: selectedModel, color: 'BLACK' })}>
+        <div className="product-action add-to-cart">
           <div className="icon">
             <span></span>
           </div>
-          <a >Add to cart</a>
+          <a onClick={() => onAddToCart({ title, price, model: selectedModel, color: 'BLACK' })}>Add to cart</a>
         </div>
         <div className="product-action check-out-now">
           <Link to="/checkout" className="icon">
@@ -70,9 +64,8 @@ const ProductItem = React.memo((props) => {
 const Product = React.memo((props) => {
   const dispatch = useContext(DispatchContext)
 
-  const addToCartHandler = ({ title, price, model, color }) => {
-
-    dispatch.sync.checkout.addToCart({ title, price, model, color })
+  const addToCartHandler = ({ title, price }) => {
+    dispatch.sync.checkout.addToCart({ title, price })
   }
 
   return (
@@ -85,7 +78,7 @@ const Product = React.memo((props) => {
       ></div>
       <ProductItem
         title="ROVER"
-        price="2895"
+        price="CAD 2,895"
         image={roverLogo}
         onAddToCart={addToCartHandler}
       />

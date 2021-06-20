@@ -1,14 +1,17 @@
-import React, { useContext, useState } from "react";
-import "../assets/styles/HomeProduct.css";
-import spotlightImage from "../assets/images/home_product.svg";
+import React, { useContext } from "react";
 import { DispatchContext } from "../lib/providers/state"
 import { Link } from 'react-router-dom'
+
+import "../assets/styles/Product.css";
+
+import spotlightImage from "../assets/images/product/product1.svg";
 import roverLogo from "../assets/images/product/rover_logo.svg";
 
 const ProductItem = React.memo((props) => {
   const {
     title,
     price,
+    image,
     onAddToCart
   } = props
   const [selectedModel, setModel] = useState('X')
@@ -16,25 +19,21 @@ const ProductItem = React.memo((props) => {
     setModel(model)
   }
   return (
-    <div className="home-product-information">
+
+    <div className="main-product-information">
       <h5 className="product-heading">
         <span>|</span> It's your <span>world</span>, ride it!
           </h5>
       <h3 className="product-name">
-        <img src={roverLogo} />
+        <img src={image} />
       </h3>
       <h4 className="product-price">{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(price))}`}</h4>
       <div className="product-description">
-        {selectedModel === 'X'
-          ? (<p>
-            Take on long distance and uphill adventures like a pro. With our
-            innovative Torque Sensor System, you can make any challenging
-            environment seems effortless.
-          </p>)
-          : (<p>
-            Curabitur maximus felis justo, eu elementum turpis venenatis id. Suspendisse potenti. Suspendisse placerat cursus semper. Nunc sollicitudin turpis vitae ex vulputate mattis. Duis eget pellentesque sapien.
-          </p>)
-        }
+        <p>
+          Take on long distance and uphill adventures like a pro. With our
+          innovative Torque Sensor System, you can make any challenging
+          environment seems effortless.
+            </p>
       </div>
       <div className="product-rotates">
         <div className={`product-rotate ${selectedModel === 'X' ? 'rx' : 'ry'}`} onClick={() => selectModelHandler('X')}>
@@ -44,12 +43,12 @@ const ProductItem = React.memo((props) => {
           <span>Y</span>
         </div>
       </div>
-      <div className="product-actions" >
-        <div className="product-action add-to-cart" onClick={() => onAddToCart({ title, price, model: selectedModel, color: 'BLACK' })}>
+      <div className="product-actions">
+        <div className="product-action add-to-cart">
           <div className="icon">
             <span></span>
           </div>
-          <a>Add to cart</a>
+          <a onClick={() => onAddToCart({ title, price, model: selectedModel, color: 'BLACK' })}>Add to cart</a>
         </div>
         <div className="product-action check-out-now">
           <Link to="/checkout" className="icon">
@@ -62,7 +61,7 @@ const ProductItem = React.memo((props) => {
   )
 })
 
-const HomeProduct = React.memo((props) => {
+const Product = React.memo((props) => {
   const dispatch = useContext(DispatchContext)
 
   const addToCartHandler = ({ title, price, model, color }) => {
@@ -71,21 +70,22 @@ const HomeProduct = React.memo((props) => {
   }
 
   return (
-    <div className="home-product">
+    <div className="main-product">
       <div
-        className="home-product-spotlight"
+        className="main-product-spotlight"
         style={{
           backgroundImage: "url(" + spotlightImage + ")",
         }}
       ></div>
       <ProductItem
         title="ROVER"
-        price="2895"
+        price="CAD 2,895"
+        image={roverLogo}
         onAddToCart={addToCartHandler}
       />
     </div>
-  );
+  )
 })
 
 
-export default HomeProduct;
+export default Product;

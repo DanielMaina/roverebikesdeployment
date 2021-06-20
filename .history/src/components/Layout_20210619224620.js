@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from "react";
 import ReactDOM from "react-dom";
+import { StoreContext } from "../lib/providers/state"
 import { Badge } from '@material-ui/core/';
 import { DeleteOutline, Search } from "@material-ui/icons";
 import useOnClickOutside from '../lib/hooks/useOnClickOutside.jsx'
@@ -11,8 +12,7 @@ import {
   LinkedIn,
   Twitter,
 } from "@material-ui/icons";
-import { DispatchContext, StoreContext } from "../lib/providers/state"
-import { Link } from 'react-router-dom'
+import { DispatchContext } from "../lib/providers/state"
 
 const Cart = React.memo((props) => {
   const [isOpen, toggleCart] = React.useState(false)
@@ -76,17 +76,16 @@ const Cart = React.memo((props) => {
           </div>
           <div className="checkout-amount">
             <span>Total</span>
-            <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format((parseFloat(cartValue) + 100 + 100))}`}</span>
+            <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(cartValue + 100 + 100))}`}</span>
           </div>
         </div>
-
+        <div className="product-action check-out-now">
+          <Link to="/checkout" className="icon">
+            <span></span>
+          </Link>
+          <Link to="/checkout">Check out now</Link>
+        </div>
       </div>
-      <button className="product-action check-out-now" onClick={() => toggleCart(false)}>
-        <Link to="/checkout" className="icon">
-          <span></span>
-        </Link>
-        <Link to="/checkout">Check out now</Link>
-      </button>
     </div>
   </>
   )

@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from "react";
 import ReactDOM from "react-dom";
+import { StoreContext } from "../lib/providers/state"
 import { Badge } from '@material-ui/core/';
 import { DeleteOutline, Search } from "@material-ui/icons";
 import useOnClickOutside from '../lib/hooks/useOnClickOutside.jsx'
@@ -11,19 +12,18 @@ import {
   LinkedIn,
   Twitter,
 } from "@material-ui/icons";
-import { DispatchContext, StoreContext } from "../lib/providers/state"
-import { Link } from 'react-router-dom'
+import { DispatchContext } from "../lib/providers/state"
 
 const Cart = React.memo((props) => {
   const [isOpen, toggleCart] = React.useState(false)
   const store = useContext(StoreContext)
   const ref = useRef();
-  const { cart, itemCount, cartValue } = store.state.checkout
+  const { cart, itemCount } = store.state.checkout
   useOnClickOutside(ref, () => toggleCart(false));
   const dispatch = useContext(DispatchContext)
 
-  const removeItemHandler = (key, quantity) => {
-    dispatch.sync.checkout.removeItem({ key: key, quantityToRemove: quantity })
+  const removeItemHandler = (quantity) => {
+    dispatch.sync.checkout.addToCart({ quantityToRemove: quantity })
   }
   return (<>
     <div className="cart-logo" onClick={() => toggleCart(true)}>
@@ -42,13 +42,13 @@ const Cart = React.memo((props) => {
         <div className="checkout-items">
 
           {cart.map((item) => {
-            const { key, title, model, color, price, quantity } = item
+            const { title, model, color, price, quantity } = item
             return (<div className="checkout-item">
               <div className="product">
                 <span>{`${quantity}x ${title}`}</span>
                 <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(price))}`}</span>
               </div>
-              <div className="action" onClick={() => removeItemHandler(key, quantity)}>
+              <div className="action" onClick={() => removeItemHandler(quantity)}>
                 <DeleteOutline />
               </div>
             </div>
@@ -63,30 +63,23 @@ const Cart = React.memo((props) => {
           <div className="checkout-payment-info">
             <div className="item">
               <span>Subtotal</span>
-              <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(cartValue))}`}</span>
+              <span>CAD 2,895</span>
             </div>
             <div className="item">
               <span>Shipping</span>
-              <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat('100'))}`}</span>
+              <span>CAD 100</span>
             </div>
             <div className="item">
               <span>Tax</span>
-              <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat('100'))}`}</span>
+              <span>CAD 300</span>
             </div>
           </div>
           <div className="checkout-amount">
             <span>Total</span>
-            <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format((parseFloat(cartValue) + 100 + 100))}`}</span>
+            <span>CAD 3,295</span>
           </div>
         </div>
-
       </div>
-      <button className="product-action check-out-now" onClick={() => toggleCart(false)}>
-        <Link to="/checkout" className="icon">
-          <span></span>
-        </Link>
-        <Link to="/checkout">Check out now</Link>
-      </button>
     </div>
   </>
   )

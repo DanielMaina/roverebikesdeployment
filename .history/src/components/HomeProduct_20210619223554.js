@@ -25,16 +25,11 @@ const ProductItem = React.memo((props) => {
       </h3>
       <h4 className="product-price">{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(price))}`}</h4>
       <div className="product-description">
-        {selectedModel === 'X'
-          ? (<p>
-            Take on long distance and uphill adventures like a pro. With our
-            innovative Torque Sensor System, you can make any challenging
-            environment seems effortless.
-          </p>)
-          : (<p>
-            Curabitur maximus felis justo, eu elementum turpis venenatis id. Suspendisse potenti. Suspendisse placerat cursus semper. Nunc sollicitudin turpis vitae ex vulputate mattis. Duis eget pellentesque sapien.
-          </p>)
-        }
+        <p>
+          Take on long distance and uphill adventures like a pro. With our
+          innovative Torque Sensor System, you can make any challenging
+          environment seems effortless.
+            </p>
       </div>
       <div className="product-rotates">
         <div className={`product-rotate ${selectedModel === 'X' ? 'rx' : 'ry'}`} onClick={() => selectModelHandler('X')}>

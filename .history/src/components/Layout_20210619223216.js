@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from "react";
 import ReactDOM from "react-dom";
+import { StoreContext } from "../lib/providers/state"
 import { Badge } from '@material-ui/core/';
 import { DeleteOutline, Search } from "@material-ui/icons";
 import useOnClickOutside from '../lib/hooks/useOnClickOutside.jsx'
@@ -11,14 +12,13 @@ import {
   LinkedIn,
   Twitter,
 } from "@material-ui/icons";
-import { DispatchContext, StoreContext } from "../lib/providers/state"
-import { Link } from 'react-router-dom'
+import { DispatchContext } from "../lib/providers/state"
 
 const Cart = React.memo((props) => {
   const [isOpen, toggleCart] = React.useState(false)
   const store = useContext(StoreContext)
   const ref = useRef();
-  const { cart, itemCount, cartValue } = store.state.checkout
+  const { cart, itemCount } = store.state.checkout
   useOnClickOutside(ref, () => toggleCart(false));
   const dispatch = useContext(DispatchContext)
 
@@ -63,7 +63,7 @@ const Cart = React.memo((props) => {
           <div className="checkout-payment-info">
             <div className="item">
               <span>Subtotal</span>
-              <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(cartValue))}`}</span>
+              <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat(price))}`}</span>
             </div>
             <div className="item">
               <span>Shipping</span>
@@ -76,17 +76,10 @@ const Cart = React.memo((props) => {
           </div>
           <div className="checkout-amount">
             <span>Total</span>
-            <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format((parseFloat(cartValue) + 100 + 100))}`}</span>
+            <span>{`${new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'CAD' }).format(parseFloat('10000'))}`}</span>
           </div>
         </div>
-
       </div>
-      <button className="product-action check-out-now" onClick={() => toggleCart(false)}>
-        <Link to="/checkout" className="icon">
-          <span></span>
-        </Link>
-        <Link to="/checkout">Check out now</Link>
-      </button>
     </div>
   </>
   )

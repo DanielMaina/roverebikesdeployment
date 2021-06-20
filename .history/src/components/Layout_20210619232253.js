@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from "react";
 import ReactDOM from "react-dom";
+import { StoreContext } from "../lib/providers/state"
 import { Badge } from '@material-ui/core/';
 import { DeleteOutline, Search } from "@material-ui/icons";
 import useOnClickOutside from '../lib/hooks/useOnClickOutside.jsx'
@@ -11,7 +12,7 @@ import {
   LinkedIn,
   Twitter,
 } from "@material-ui/icons";
-import { DispatchContext, StoreContext } from "../lib/providers/state"
+import { DispatchContext } from "../lib/providers/state"
 import { Link } from 'react-router-dom'
 
 const Cart = React.memo((props) => {

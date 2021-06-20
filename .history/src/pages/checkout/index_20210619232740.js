@@ -1,9 +1,9 @@
-import React, { useContext, useRef } from "react";
+import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
 import headerImage from "../../assets/images/checkout-page-header.png";
-import { DispatchContext, StoreContext } from "../../lib/providers/state"
+import { DispatchContext, StoreContext } from "../lib/providers/state"
 
 import { DeleteOutline, Search } from "@material-ui/icons";
 

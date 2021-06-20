@@ -37,8 +37,8 @@ const reducer = {
     }
     const cart = Object.values(items)
     const itemCount = cart.reduce((result, item) => result + item.quantity, 0)
-    const cartValue = cart.reduce((result, item) => `${parseFloat(result) + (parseFloat(item.price) * item.quantity)}`, '0')
-    console.log(cartValue)
+    const cartValue = cart.reduce((result, item) => `${parseFloat(result)} + ${parseFloat(item.price) * item.quantity}`, '0')
+
     return {
       ...state,
       items: items,
@@ -62,7 +62,6 @@ const reducer = {
     const cart = Object.values(items)
     const itemCount = cart.reduce((result, item) => result + item.quantity, 0)
     const cartValue = cart.reduce((result, item) => `${parseFloat(result)} + ${parseFloat(item.price) * item.quantity}`, '0')
-    
     return {
       ...state,
       items: items,
