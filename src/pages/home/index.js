@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
-import promoVideo from "../../assets/movies/rover-e-Bike-short.mov";
+import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 import componentImage from "../../assets/images/home_product_component.svg";
 import footerSlide1 from "../../assets/images/home_footer_slider/slide_1.svg";
 import footerSlide2 from "../../assets/images/home_footer_slider/slide_2.svg";

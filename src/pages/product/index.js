@@ -11,7 +11,7 @@ import sectionImage2 from "../../assets/images/product/section-2.svg";
 import sectionImage3 from "../../assets/images/product/section-3.svg";
 import sectionImage4 from "../../assets/images/product/section-4.svg";
 import sectionImage5 from "../../assets/images/product/section-5.svg";
-import promoVideo from "../../assets/movies/rover-e-Bike-short.mov";
+import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 
 class ProductPage extends React.Component {
   constructor() {
