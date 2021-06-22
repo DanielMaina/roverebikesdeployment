@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/styles/FindStore.css";
-import mapAsset from "../assets/images/google_map_api.svg";
 import iconTruck from "../assets/icons/truck.svg";
 
 import GoogleMapReact from "google-map-react";
@@ -43,15 +42,30 @@ class FindStore extends React.Component {
     super();
     this.state = {
       stores: this.stores,
-      selectedStore: 1,
+      selectedStore: 0,
       map: {
         center: {
           lat: 45.52,
           lng: -73.54,
         },
-        zoom: 11,
+        zoom: 10,
       },
     };
+  }
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position.coords);
+        this.goToCoordsOnMap(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      },
+      function (error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+      }
+    );
   }
 
   findStore(e) {
@@ -70,6 +84,20 @@ class FindStore extends React.Component {
   showStoreOnMap(storeIndex) {
     this.setState((prevState, props) => {
       return { selectedStore: storeIndex };
+    });
+  }
+
+  goToCoordsOnMap(lat, long) {
+    this.setState((prevState, props) => {
+      return {
+        map: {
+          center: {
+            lat: lat,
+            lng: long,
+          },
+          zoom: 15,
+        },
+      };
     });
   }
 
@@ -127,10 +155,11 @@ class FindStore extends React.Component {
                 ? this.stores.find(
                     (store) => store.id === this.state.selectedStore
                   ).center
-                : {}
+                : this.state.map.center
             }
-            defaultCenter={this.state.map.center}
-            defaultZoom={this.state.map.zoom}
+            zoom={this.state.map.zoom}
+            /* defaultCenter={} */
+            defaultZoom={5}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map, maps }) =>
               this.handleApiLoaded(map, maps)

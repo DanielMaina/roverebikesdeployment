@@ -14,24 +14,48 @@ class Brands extends React.Component {
     return (
       <div className="brands">
         <Marquee speed={80} pauseOnHover={true}>
-          <div className="brand-logo">
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo1} alt="Brand Logo 1" />
-          </div>
-          <div className="brand-logo">
+          </a>
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo2} alt="Brand Logo 2" />
-          </div>
-          <div className="brand-logo">
+          </a>
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo3} alt="Brand Logo 3" />
-          </div>
-          <div className="brand-logo">
+          </a>
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo4} alt="Brand Logo 4" />
-          </div>
-          <div className="brand-logo">
+          </a>
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo5} alt="Brand Logo 5" />
-          </div>
-          <div className="brand-logo">
+          </a>
+          <a
+            href="https://www.vancity.com/"
+            className="brand-logo"
+            target="_blank"
+          >
             <img src={brandLogo6} alt="Brand Logo 6" />
-          </div>
+          </a>
         </Marquee>
       </div>
     );

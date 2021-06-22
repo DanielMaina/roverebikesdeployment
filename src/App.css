@@ -110,6 +110,16 @@
   /* transform: scale(0.5); */
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.col {
+  flex: 1;
+}
+
 .hamburger-menu {
   width: 35px;
   height: 30px;
@@ -217,10 +227,10 @@
 }
 
 .App-footer {
-  background-color: #000;
-  padding-top: 70px;
+  background-color: var(--color-grey);
+  padding-top: 35px;
   padding-left: 68px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   padding-right: 68px;
   min-height: 50px;
   display: flex;

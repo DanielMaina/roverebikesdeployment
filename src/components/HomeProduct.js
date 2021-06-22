@@ -16,13 +16,17 @@ class HomeProduct extends React.Component {
         ></div>
         <div className="home-product-information">
           <h5 className="product-heading">
-            <span>|</span> It's your <span>world</span>, ride it!
+            <span>|</span> It's your <span>world</span>,
           </h5>
           <h3 className="product-name">
-            <a href="/product">ROVER</a>
+            <a href="/product">Ride it!</a>
           </h3>
-          <h4 className="product-price">CAD 2,895</h4>
-          <div className="product-description">
+          <h4 className="product-price">CAD 1,899</h4>
+          <h5 className="product-old-price">CAD 2,299</h5>
+          <a href="/product" className="explore-button">
+            Explore our e-bikes
+          </a>
+          {/* <div className="product-description">
             <p>
               Take on long distance and uphill adventures like a pro. With our
               innovative Torque Sensor System, you can make any challenging
@@ -50,7 +54,7 @@ class HomeProduct extends React.Component {
               </div>
               <a href="/checkout">Check out now</a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );

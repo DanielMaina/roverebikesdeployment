@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Layout from "components/Layout";
 import HomePage from "./pages/home";
+import AboutUsPage from "./pages/about-us/index";
 import ProductPage from "./pages/product/index";
 import ContactPage from "./pages/contact/index";
 import CheckoutPage from "./pages/checkout/index";
@@ -18,25 +19,26 @@ function App() {
 
   useEffect(() => {
     // Update the document title using the browser API
-    console.log(cookies.policy);
-  });
+    console.log(cookies);
 
-  useEffect(() => {
-    return () => {
-      setTimeout(() => {
-        if (cookies.policy === 1) {
-          setHasCookieApprove(1);
-        } else {
-          setHasCookieApprove(0);
-        }
-      }, 1000);
-    };
+    setTimeout(() => {
+      if (cookies.policy === "1") {
+        setHasCookieApprove(1);
+      } else {
+        setHasCookieApprove(0);
+      }
+    }, 1000);
   }, []);
+
+  /* useEffect(() => {
+    return () => {
+      
+    };
+  }, []); */
 
   function cookieAgree() {
     setCookie("policy", 1, { path: "/" });
     setHasCookieApprove(1);
-    return false;
   }
 
   return (
@@ -48,6 +50,9 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <HomePage />
+              </Route>
+              <Route path="/about-us">
+                <AboutUsPage />
               </Route>
               <Route path="/product">
                 <ProductPage />

@@ -1,23 +1,44 @@
 .home {
   z-index: 1;
 }
-.home .main-content {
+.main-content {
   width: 100%;
   height: 100vh;
   background-color: #ddd;
   overflow: hidden;
 }
 
-.home .main-content video {
+.main-content video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.home .main-content .main-content-item {
+.main-content .main-content-item {
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
+}
+
+.home .offer-text {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+}
+.home .offer-text p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: var(--color-black);
+}
+
+.home .offer-text p span {
+  color: var(--color-red-2);
 }
 
 .home .product-list > *:first-child {
