@@ -15,14 +15,14 @@ class Brands extends React.Component {
       <div className="brands">
         <Marquee speed={80} pauseOnHover={true}>
           <a
-            href="https://www.vancity.com/"
+            href="http://www.mivice.com/"
             className="brand-logo"
             target="_blank"
           >
             <img src={brandLogo1} alt="Brand Logo 1" />
           </a>
           <a
-            href="https://www.vancity.com/"
+            href="https://www.bdc.ca/en"
             className="brand-logo"
             target="_blank"
           >
@@ -36,21 +36,21 @@ class Brands extends React.Component {
             <img src={brandLogo3} alt="Brand Logo 3" />
           </a>
           <a
-            href="https://www.vancity.com/"
+            href="https://www.shimano.com/en/"
             className="brand-logo"
             target="_blank"
           >
             <img src={brandLogo4} alt="Brand Logo 4" />
           </a>
           <a
-            href="https://www.vancity.com/"
+            href="https://www.greenway-battery.com/"
             className="brand-logo"
             target="_blank"
           >
             <img src={brandLogo5} alt="Brand Logo 5" />
           </a>
           <a
-            href="https://www.vancity.com/"
+            href="http://www.yongqi.bike/"
             className="brand-logo"
             target="_blank"
           >
