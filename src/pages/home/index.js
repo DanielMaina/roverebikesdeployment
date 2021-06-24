@@ -6,7 +6,6 @@ import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 import componentImage from "../../assets/images/home_product_component.svg";
 import FindStore from "components/FindStore";
 import HomeProduct from "components/HomeProduct";
-import Brands from "components/Brands";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -32,23 +31,15 @@ class HomePage extends React.Component {
         </div>
         <HomeProduct />
 
-        <div
-          className="product-component"
-          style={{
-            backgroundImage: "url(" + componentImage + ")",
-          }}
-        >
-          <div className="product-component-description">
-            <h4>Make it smart</h4>
-            <p>
-              Accessorize your ROVER e-bike with a full-colour{" "}
-              <span>LED screen display</span>.
-            </p>
-          </div>
-        </div>
+        <div className="center-seperator">
+          <h5>Free shipping and 7 days free return Canada wide.</h5>
+          <p>
+            Different rates will be applied for US. Head to UPS website for more
+            an estimated delivery fee.
+          </p>
+        </div>       
 
         <FindStore />
-        <Brands />
       </div>
     );
   }

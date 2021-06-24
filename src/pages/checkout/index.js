@@ -138,31 +138,6 @@ const CheckoutPage = () => {
           </div>
         </div>
       </div>
-
-      <div className="center-content">
-        <div>
-          <h4>
-            Hello,
-            <br />
-            how can we help?{" "}
-          </h4>
-        </div>
-        <div className="search-form">
-          <p>
-            FAQs, quick fixes, and official info about Rover E-bike. Just a
-            search away.
-          </p>
-
-          <form action="">
-            <div className="form-group">
-              <input type={"text"}></input>
-              <div className="icon">
-                <Search style={{ color: "#000" }} />
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
   );
 };

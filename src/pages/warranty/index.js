@@ -38,6 +38,31 @@ const WarrantyPage = () => {
           an estimated delivery fee.
         </p>
       </div>
+      <div
+        className="main-content"
+        style={{ backgroundImage: "url(" + topImage + ")" }}
+      >
+        <div className="center-wrapper">
+          <div className="center-content">
+            <h4>Terms and conditions of use </h4>
+            <p>
+            By using or browsing this website (the “Site”), you acknowledge 
+            that you have read, understood and agree to be bound to these Terms 
+            and Conditions and all applicable laws and regulations. If you do not 
+            agree to be bound by these Terms and Conditions, then you must not 
+            use this Site. We may change these Terms and Conditions at any time 
+            and without any notice to you so we suggest that you periodically visit 
+            this page to review these Terms and Conditions. By using this Site after 
+            we post any changes, you agree to accept those changes, whether or not 
+            you actually reviewed them.
+            </p>
+
+            <a href="#" className="button">
+              Download detailed version
+            </a>
+          </div>
+        </div>
+      </div>      
     </div>
   );
 };
