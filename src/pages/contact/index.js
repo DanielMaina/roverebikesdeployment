@@ -113,11 +113,7 @@ class ContactPage extends React.Component {
 
         <FindStore />    
         <Brands />
-
-        <div
-          className="contact-footer-content"
-          style={{ backgroundImage: "url(" + footerImage + ")" }}
-        ></div>
+        
       </div>
     );
   }
