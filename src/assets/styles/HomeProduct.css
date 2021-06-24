@@ -65,9 +65,9 @@
 .home-product .product-price {
   font-family: Arial;
   font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 41px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
 
   color: #ee0000;
 }
@@ -96,12 +96,13 @@
   background: #828282;
   border-radius: 30px;
   margin-top: 40px;
-
+  color: #ffffff;
   transition: all 250ms ease-in-out;
 }
 
 .home-product .explore-button:hover {
   background-color: var(--color-white);
+  color: #000;
 }
 .home-product .product-description {
   width: 337px;
@@ -196,7 +197,7 @@
   transition: transform 500ms ease;
 }
 
-.product-actions .product-action a {
+.product-actions .product-action > * {
   font-family: Play;
   font-style: normal;
   font-weight: normal;

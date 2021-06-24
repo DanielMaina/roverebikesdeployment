@@ -25,9 +25,7 @@
 }
 
 .product-page .main-product {
-  display: flex;
-  flex-direction: row;
-  height: 800px;
+  height: 810px;
   position: relative;
 }
 
@@ -37,11 +35,49 @@
   top: 0;
 
   width: 100%;
-  max-width: 1276px;
-  height: 759px;
-  background-position: left;
-  background-size: cover;
+  max-width: 1070px;
+  height: 800px;
+  background-position: right;
+  background-size: contain;
   background-repeat: no-repeat;
+}
+
+.product-page .slide-container {
+  width: 1000px;
+}
+.product-page .slide-container img {
+}
+.product-page .slide-container .each-slide div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product-page .spotlight-pager {
+  width: 20px;
+  height: 20px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+.product-page .spotlight-pager.active {
+  background-color: var(--color-red-2);
+}
+.react-slideshow-container + ul.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+}
+
+.each-slide div {
+  height: 810px;
+}
+.product-page .spotlight-pager > *:hover {
+  background-color: #fff;
+}
+
+.product-page .spotlight-pager > .selected {
+  background-color: var(--color-red-2);
 }
 
 .product-page .main-product .main-product-spotlight img {
@@ -50,7 +86,7 @@
 
 .product-page .main-product .main-product-information {
   position: absolute;
-  right: 98px;
+  right: 10%;
   top: 97px;
 
   display: flex;
@@ -93,13 +129,27 @@
 .product-page .product-name span {
   font-size: 56px;
 }
+
+.product-page .product-old-price {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: var(--color-white);
+  text-decoration: line-through;
+  padding: 0px 10px;
+  text-decoration-color: var(--color-red-2);
+  text-underline-offset: 2px;
+}
+
 .product-page .product-price {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
-  color: #8a1900;
+  color: var(--color-red-2);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -139,15 +189,15 @@
   width: 47px;
   height: 28px;
 
-  background: #ffffff;
-  border: 1px solid #8a1900;
-  color: #8a1900;
+  background: var(--color-black);
+  border: 3px solid var(--color-white);
+  color: var(--color-white);
 }
 .product-page .product-rotate.ry {
   width: 47px;
   height: 28px;
 
-  background: #000000;
-  border: 1px solid #ffffff;
-  color: #fff;
+  background: var(--color-white);
+  border: 3px solid var(--color-red-2);
+  color: var(--color-red-2);
 }

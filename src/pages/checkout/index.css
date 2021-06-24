@@ -195,6 +195,16 @@
   .checkout-item
   .action {
   margin: 0 10px;
+  cursor: pointer;
+}
+
+.checkout-page
+  .checkout-wrapper
+  .checkout-details
+  .checkout-items
+  .checkout-item
+  .action:hover {
+  color: var(--color-red);
 }
 
 .checkout-payment-info {

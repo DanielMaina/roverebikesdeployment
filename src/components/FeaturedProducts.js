@@ -1,57 +1,53 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "../assets/styles/FeaturedProducts.css";
 
-import featuredProductImage1 from "../assets/images/product/featured-product-1.svg";
-import featuredProductImage2 from "../assets/images/product/featured-product-2.svg";
-import featuredProductImage3 from "../assets/images/product/featured-product-3.svg";
+import { CartContext } from "../contexts/CartContext";
+import { ProductsContext } from "../contexts/ProductsContext";
 
-class FeaturedProducts extends React.Component {
-  render() {
-    return (
-      <div className="featured-products">
-        <h4>FEATURED PRODUCTS</h4>
+const FeaturedProducts = () => {
+  const { addProduct, cartItems, increase } = useContext(CartContext);
+  const { products } = useContext(ProductsContext);
 
-        <div className="items">
-          <div className="item">
-            <h4>ROVER HELMET</h4>
-            <h5 className="price">CAD 49.99</h5>
+  const featuredProducts = products.filter((item) => item.isFeatured === true);
+
+  const isInCart = (id) => {
+    return !!cartItems.find((item) => item.id === id);
+  };
+
+  return (
+    <div className="featured-products">
+      <h4>FEATURED PRODUCTS</h4>
+
+      <div className="items">
+        {featuredProducts.map((featuredProduct) => (
+          <div className="item" key={featuredProduct.id}>
+            <h4>{featuredProduct.name}</h4>
+            <h5 className="price">CAD {featuredProduct.price}</h5>
             <div className="image">
-              <img src={featuredProductImage1} />
+              <img src={featuredProduct.image} />
             </div>
-            <a href="/" className="add-to-cart">
-              Add to cart
-            </a>
+            {isInCart(featuredProduct.id) ? (
+              <span
+                className="add-to-cart"
+                onClick={() => increase(featuredProduct)}
+              >
+                Add More
+              </span>
+            ) : (
+              <span
+                className="add-to-cart"
+                onClick={() => addProduct(featuredProduct)}
+              >
+                Add to cart
+              </span>
+            )}
             <button className="plus"></button>
           </div>
-
-          <div className="item">
-            <h4>LED SCREEN DISPLAY</h4>
-            <h5 className="price">CAD 100.00</h5>
-            <div className="image">
-              <img src={featuredProductImage2} />
-            </div>
-            <a href="/" className="add-to-cart">
-              Add to cart
-            </a>
-            <button className="plus"></button>
-          </div>
-
-          <div className="item">
-            <h4>ROVER BASKET</h4>
-            <h5 className="price">CAD 35.89</h5>
-            <div className="image">
-              <img src={featuredProductImage3} />
-            </div>
-            <a href="/" className="add-to-cart">
-              Add to cart
-            </a>
-            <button className="plus"></button>
-          </div>
-        </div>
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default FeaturedProducts;
