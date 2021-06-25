@@ -98,7 +98,7 @@
   height: 52.53px;
 
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
 
   padding-left: 20px;
   padding-right: 20px;
@@ -110,7 +110,7 @@
   height: 120px;
 
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
 
   padding-left: 20px;
   padding-right: 20px;
@@ -123,7 +123,7 @@
 .contact-page .main-content .contact-area .contact-form .form-group button {
   color: var(--color-white);
   background: #828282;
-  border-radius: 30px;
+  border-radius: 5px;
 
   padding: 10px 20px;
   border: 0;

@@ -27,41 +27,8 @@ const Layout = (props) => {
       }
 
       setHeaderClass(headerClass);
-      /* this.setState((prevState, props) => {
-        return { headerClass: headerClass };
-      }); */
     });
   }, []);
-  /* constructor() {
-    super();
-    this.state = {
-      menuStatus: false,
-      headerClass: "normal",
-    };
-    this.itemCount = React.useContext(CartContext);
-  } */
-
-  /* componentDidMount() {
-    window.addEventListener("scroll", () => {
-      let headerClass = "normal";
-      let windowHeight = window.height;
-      let targetOffset =
-        $("#main div div").height() + (windowHeight >= 400 ? 400 : 0);
-      if (window.scrollY > targetOffset) {
-        headerClass = "fixed";
-      }
-
-      this.setState((prevState, props) => {
-        return { headerClass: headerClass };
-      });
-    });
-  } */
-
-  /* toggleMenu() {
-    this.setState((prevState, props) => {
-      return { menuStatus: !prevState.menuStatus };
-    });
-  } */
 
   const toggleMenu = () => {
     setMenuStatus(!menuStatus);

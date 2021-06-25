@@ -22,7 +22,7 @@ const FeaturedArticles = (props) => {
             <h5 className="title">{item.title}</h5>
 
             <p className="content">{ReactHtmlParser(item.content)}</p>
-            <a href="/product" className="button">
+            <a href="/blog" className="button">
               Learn More
             </a>
           </div>

@@ -14,6 +14,7 @@ import ProductPage from "./pages/product/index";
 import ContactPage from "./pages/contact/index";
 import CheckoutPage from "./pages/checkout/index";
 import WarrantyPage from "./pages/warranty/index";
+import BlogPage from "./pages/blog/index";
 
 function App() {
   document.title = "Rover E-Bike";
@@ -69,6 +70,9 @@ function App() {
                   </Route>
                   <Route path="/warranty">
                     <WarrantyPage />
+                  </Route>
+                  <Route path="/blog">
+                    <BlogPage />
                   </Route>
                 </Switch>
               </Layout>

@@ -51,6 +51,7 @@
   height: 280px;
   max-width: 245px;
   padding: 30px;
+  cursor: pointer;
 }
 .featured-products .items .item .image img {
   width: 100%;
@@ -88,4 +89,29 @@
   background-image: url("../../assets/icons/plus-small.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 200px;
+}
+
+.ReactModal__Content {
+  padding: 0 !important;
+}
+
+.modal .column {
+  flex: 1;
+
+  height: 200px;
+}
+.modal .left {
+  background: #fff;
+}
+.modal .right {
+  background: #000;
 }

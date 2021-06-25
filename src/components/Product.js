@@ -25,10 +25,12 @@ const Product = () => {
 
   const productFrames = [
     {
+      bodyLength: "170 - 175 cm",
       frameSize: "49 - 53 cm",
     },
     {
-      frameSize: "50 - 54 cm",
+      bodyLength: "180 - 185 cm",
+      frameSize: "51 - 54 cm",
     },
   ];
   const zoomOutProperties = {
@@ -79,7 +81,7 @@ const Product = () => {
             environment seems effortless
           </p>
           <p>
-            Body length: 170 - 175 cm
+            Body length: {productFrames[productIndex].bodyLength}
             <br />
             Frame size: {productFrames[productIndex].frameSize}
           </p>

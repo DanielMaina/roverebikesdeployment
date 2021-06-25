@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
-
 import Product from "../../components/Product";
 import FeaturedProducts from "../../components/FeaturedProducts";
 
@@ -262,7 +261,6 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="spec-item">
               <h3 className="section-header">TORQUE SENSOR SYSTEM</h3>
               <div className="spec-grid">
@@ -289,7 +287,6 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="spec-item">
               <h3 className="section-header">MOTOR</h3>
               <div className="spec-grid">
@@ -319,7 +316,6 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="spec-item">
               <h3 className="section-header">SHIFTER</h3>
               <div className="spec-grid">
@@ -343,7 +339,6 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="spec-item">
               <h3 className="section-header">DERAILLEUR</h3>
               <div className="spec-grid">
@@ -366,7 +361,6 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="spec-item">
               <h3 className="section-header">SUSPENSION FORK</h3>
               <div className="spec-grid">

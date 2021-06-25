@@ -1,0 +1,65 @@
+.blog-page {
+}
+.blog-page .main-content {
+  background-color: transparent;
+}
+.blog-page .main-content .main-content-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+
+.blog-page .blog-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-page .blog-area {
+}
+
+.blog-page .blog-area .blog-content {
+  width: 850px;
+
+  background: #24ae94;
+
+  border: 30px solid #fcf595;
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+
+.blog-page .blog-area .blog-content p {
+  margin: 20px 0px;
+}
+
+.blog-page .blog-area .blog-content .blog-wrapper {
+  width: 350px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 23px;
+  text-align: left;
+  color: #ffffff;
+
+  padding: 40px 70px;
+}
+
+.blog-page .live-to-ride {
+  position: absolute;
+  right: 220px;
+  bottom: 295px;
+}
+.blog-page .live-to-ride img {
+  width: 400px;
+}
