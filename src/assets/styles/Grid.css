@@ -1,0 +1,59 @@
+.component-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-gap: 20px;
+  grid-auto-rows: minmax(min-content, max-content);
+  grid-template-rows: auto;
+  align-items: center;
+  align-content: space-evenly;
+  justify-content: center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #444;
+
+  width: 100%;
+  min-height: 500px;
+
+  padding: 100px 0px;
+}
+
+.component-grid .component-grid-item {
+  background: rgba(36, 36, 36, 0.8);
+  border-radius: 20px;
+
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 55px;
+}
+
+.component-grid .component-grid-item .icon {
+  margin-bottom: 40px;
+}
+.component-grid .component-grid-item .icon img {
+}
+.component-grid .component-grid-item .title {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+}
+.component-grid .component-grid-item .content {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #ffffff;
+}

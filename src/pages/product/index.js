@@ -67,39 +67,38 @@ class ProductPage extends React.Component {
         <Product />
 
         <div className="section-wrapper">
-          <div className="product-section-desc odd">
+          <div
+            className="product-section-desc odd"
+            onMouseEnter={this.playVideo1}
+          >
             <div>
               <h4>One of a kind torque sensor system.</h4>
               <p>Guarantees the smoothest rides under any road condition.</p>
             </div>
           </div>
 
-          <div className="product-section-image">
-            <video
-              ref={this.getVideo1}
-              src={sectionMovie1}
-              muted
-              onClick={this.playVideo1}
-            ></video>
+          <div className="product-section-image" onMouseEnter={this.playVideo1}>
+            <video ref={this.getVideo1} src={sectionMovie1} muted></video>
           </div>
 
-          <div className="product-section-image">
-            <video
-              ref={this.getVideo2}
-              src={sectionMovie2}
-              muted
-              onClick={this.playVideo2}
-            ></video>
+          <div className="product-section-image" onMouseEnter={this.playVideo2}>
+            <video ref={this.getVideo2} src={sectionMovie2} muted></video>
           </div>
 
-          <div className="product-section-desc even">
+          <div
+            className="product-section-desc even"
+            onMouseEnter={this.playVideo2}
+          >
             <div>
               <h4>Shock Lock</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
 
-          <div className="product-section-white odd">
+          <div
+            className="product-section-white odd"
+            onMouseEnter={this.playVideo3}
+          >
             <div className="product-section-desc">
               <div>
                 <h4>Double tension rear derailleur.</h4>
@@ -111,25 +110,18 @@ class ProductPage extends React.Component {
             </div>
           </div>
 
-          <div className="product-section-image">
-            <video
-              ref={this.getVideo3}
-              src={sectionMovie3}
-              muted
-              onClick={this.playVideo3}
-            ></video>
+          <div className="product-section-image" onMouseEnter={this.playVideo3}>
+            <video ref={this.getVideo3} src={sectionMovie3} muted></video>
           </div>
 
-          <div className="product-section-image">
-            <video
-              ref={this.getVideo4}
-              src={sectionMovie4}
-              muted
-              onClick={this.playVideo4}
-            ></video>
+          <div className="product-section-image" onMouseEnter={this.playVideo4}>
+            <video ref={this.getVideo4} src={sectionMovie4} muted></video>
           </div>
 
-          <div className="product-section-desc even">
+          <div
+            className="product-section-desc even"
+            onMouseEnter={this.playVideo4}
+          >
             <div>
               <h4>Powerful, light and quiet. </h4>
               <p>

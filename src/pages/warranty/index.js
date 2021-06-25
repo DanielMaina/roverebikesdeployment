@@ -4,6 +4,8 @@ import "./index.css";
 import setTitle from "../../tools.js";
 
 import topImage from "../../assets/images/warranty-bg-top.png";
+import bottomImage from "../../assets/images/warranty-bg-bottom.png";
+
 const WarrantyPage = () => {
   return (
     <div className="warranty-page">
@@ -25,7 +27,12 @@ const WarrantyPage = () => {
               However, consumable parts do not have warranties.
             </p>
 
-            <a href="#" className="button">
+            <a
+              href="/content/warranty-details.pdf"
+              className="button"
+              target="_blank"
+              download="ROVER - Warranty"
+            >
               Download detailed version
             </a>
           </div>
@@ -40,29 +47,35 @@ const WarrantyPage = () => {
       </div>
       <div
         className="main-content"
-        style={{ backgroundImage: "url(" + topImage + ")" }}
+        style={{ backgroundImage: "url(" + bottomImage + ")" }}
       >
         <div className="center-wrapper">
           <div className="center-content">
             <h4>Terms and conditions of use </h4>
             <p>
-            By using or browsing this website (the “Site”), you acknowledge 
-            that you have read, understood and agree to be bound to these Terms 
-            and Conditions and all applicable laws and regulations. If you do not 
-            agree to be bound by these Terms and Conditions, then you must not 
-            use this Site. We may change these Terms and Conditions at any time 
-            and without any notice to you so we suggest that you periodically visit 
-            this page to review these Terms and Conditions. By using this Site after 
-            we post any changes, you agree to accept those changes, whether or not 
-            you actually reviewed them.
+              By using or browsing this website (the “Site”), you acknowledge
+              that you have read, understood and agree to be bound to these
+              Terms and Conditions and all applicable laws and regulations. If
+              you do not agree to be bound by these Terms and Conditions, then
+              you must not use this Site. We may change these Terms and
+              Conditions at any time and without any notice to you so we suggest
+              that you periodically visit this page to review these Terms and
+              Conditions. By using this Site after we post any changes, you
+              agree to accept those changes, whether or not you actually
+              reviewed them.
             </p>
 
-            <a href="#" className="button">
+            <a
+              href="/content/terms-and-conditions-of-use.pdf"
+              className="button"
+              target="_blank"
+              download="ROVER - Terms & Conditions of Use"
+            >
               Download detailed version
             </a>
           </div>
         </div>
-      </div>      
+      </div>
     </div>
   );
 };

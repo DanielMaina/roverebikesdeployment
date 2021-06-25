@@ -1,18 +1,13 @@
 import React from "react";
+import { PhoneOutlined, EmailOutlined, RoomOutlined } from "@material-ui/icons";
 
 import "./index.css";
 import setTitle from "../../tools.js";
 import headerImage from "../../assets/images/contact-page-header.png";
-import footerImage from "../../assets/images/contact-page-footer.png";
-import {
-  PhoneOutlined,
-  EmailOutlined,
-  RoomOutlined,
-  Search,
-} from "@material-ui/icons";
 
 import Brands from "components/Brands";
 import FindStore from "components/FindStore";
+import Search from "components/Search";
 
 class ContactPage extends React.Component {
   constructor() {
@@ -93,27 +88,10 @@ class ContactPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="center-content">
-          <div>
-            <h4>
-              Official info, events, and company updates. Just a search away.
-            </h4>
-          </div>
-          <div className="search-form">
-            <form action="">
-              <div className="form-group">
-                <input type={"text"}></input>
-                <div className="icon">
-                  <Search style={{ color: "#000" }} />
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
 
-        <FindStore />    
+        <FindStore />
+        <Search />
         <Brands />
-        
       </div>
     );
   }

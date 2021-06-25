@@ -22,7 +22,33 @@
   background-size: cover;
   background-position: center;
 }
+.home .main-content {
+  position: relative;
+}
+.home .learn-more-button {
+  position: absolute;
+  width: 300px;
+  height: 81px;
+  right: 110px;
+  bottom: 73px;
+  background: #242424;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 32px;
+
+  color: #ffffff;
+  transition: 250ms all ease-in-out;
+}
+.home .learn-more-button:hover {
+  background-color: var(--color-red);
+}
 .home .offer-text {
   height: 100px;
   display: flex;
@@ -48,7 +74,6 @@
   margin-bottom: 10px;
 }
 
-
 .home .product-component .product-component-image {
 }
 
@@ -60,7 +85,7 @@
 }
 
 .home .center-seperator {
-  width: 100vh;
+  width: 100%;
   height: 190px;
   text-align: center;
   background-color: #ffffff;

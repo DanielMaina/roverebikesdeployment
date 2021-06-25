@@ -122,6 +122,23 @@
 .hidden {
   opacity: 0;
 }
+.button-dark {
+  background: #242424;
+  border-radius: 10px;
+  padding: 20px 40px;
+
+  font-family: Play;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
 .cart-badge {
   position: absolute;
   top: -7px;
