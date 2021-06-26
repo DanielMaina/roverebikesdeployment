@@ -2,8 +2,10 @@
   background-color: #242424;
 }
 .about-us-page .col-image {
-  height: 570px;
+  height: 650px;
+  width: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .about-us-page .col-image img {
   width: 100%;

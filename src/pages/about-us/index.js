@@ -21,7 +21,7 @@ class AboutUsPage extends React.Component {
     return (
       <div className="about-us-page">
         <div className="main-content">
-          <video src={promoVideo} muted loop autoPlay></video>
+          <video src={promoVideo} autoPlay></video>
         </div>
 
         <div className="row">

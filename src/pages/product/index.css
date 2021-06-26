@@ -116,6 +116,24 @@
   padding-bottom: 18px;
 }
 
+.bike-spec .section-header.collapse-start {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bike-spec .section-header.collapse-start .collapse-start-button {
+  cursor: pointer;
+}
+
+.bike-spec .spec-items {
+  transition: 250ms all ease-in-out;
+}
+.bike-spec .spec-items.collapsed {
+  display: none;
+  transition: 250ms all ease-in-out;
+}
+
 .bike-spec .spec-section {
   color: #ffffff;
 }

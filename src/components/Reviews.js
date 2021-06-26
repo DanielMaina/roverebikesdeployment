@@ -16,8 +16,8 @@ const Reviews = (props) => {
     >
       <h5>Reviews</h5>
       <div className="review-items">
-        {props.items.map((item) => (
-          <div className="review-item">
+        {props.items.map((item, index) => (
+          <div key={"review-item-" + index} className="review-item">
             <h5 className="name">{item.name}</h5>
             <div className="image">
               {item.image ? <img src={item.image} /> : ""}

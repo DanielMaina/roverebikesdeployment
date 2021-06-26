@@ -38,12 +38,17 @@ const WarrantyPage = () => {
           </div>
         </div>
       </div>
-      <div className="center-seperator">
-        <h5>Free shipping and 7 days free return Canada wide.</h5>
-        <p>
-          Different rates will be applied for US. Head to UPS website for more
-          an estimated delivery fee.
-        </p>
+      <div className="shipping-line">
+        <div>
+          <img src="/img/icons/shipping-truck-white.svg" />
+          <div className="shipping-line-content">
+            <h5>Free shipping and 7 days free return Canada wide.</h5>
+            <p>
+              Different rates will be applied for US. Head to UPS website for
+              more an estimated delivery fee.
+            </p>
+          </div>
+        </div>
       </div>
       <div
         className="main-content"

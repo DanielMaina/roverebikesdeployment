@@ -7,6 +7,7 @@ import "../assets/styles/HomeProduct.css";
 
 import spotlightImage1 from "../assets/images/product/home-page-product-1.png";
 import spotlightImage2 from "../assets/images/product/home-page-product-2.png";
+
 const HomeProduct = (props) => {
   const [productIndex, setProductIndex] = useState(0);
   const slideImages = [spotlightImage1, spotlightImage2];

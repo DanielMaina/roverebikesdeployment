@@ -20,8 +20,7 @@ const Layout = (props) => {
     window.addEventListener("scroll", () => {
       let headerClass = "normal";
       let windowHeight = window.height;
-      let targetOffset =
-        $("#main div div").height() + (windowHeight >= 400 ? 400 : 0);
+      let targetOffset = 50;
       if (window.scrollY > targetOffset) {
         headerClass = "fixed";
       }
@@ -111,18 +110,23 @@ const Layout = (props) => {
         </div>
         <div className="footer-links">
           <ul>
+          <li>
+              <a href="/about-us">About Us</a>
+            </li>
             <li>
               <a href="/product">Products</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
             </li>
             <li>
               <a href="/privacy">Privacy & Legal</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
-            </li>
-
-            <li>
               <a href="/warranty">Warranty</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
             </li>
           </ul>
         </div>

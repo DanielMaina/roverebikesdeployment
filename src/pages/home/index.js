@@ -20,7 +20,8 @@ class HomePage extends React.Component {
 
     this.state = {};
     this.promoVideo = React.createRef();
-    this.sectionVideo = React.createRef();
+    this.sectionVideo1 = React.createRef();
+    this.sectionVideo2 = React.createRef();
   }
 
   componentDidMount() {
@@ -38,67 +39,75 @@ class HomePage extends React.Component {
             loop
             autoPlay
           ></video>
-          <a href="/product" className="learn-more-button">
-            Learn More
-          </a>
+          <div className="header-title">
+            <h4>CHANGE THE WAY YOU RIDE</h4>
+            <a href="/product" className="learn-more-button">
+              Learn More
+            </a>
+          </div>
         </div>
 
         <div className="offer-text">
-          <p>
-            EXCLUSIVE OFFER FOR A LIMITED TIME ONLY - FIRST 50 ROVER E-BIKES ARE
-            NOW ON SALE FOR 1,899 CAD!
-          </p>
+          <p>LIMITED TIME OFFER -- FIRST 50 BIKES FOR ONLY CA$1,899 !</p>
         </div>
         <HomeProduct />
 
         <div
           className="section-wrapper"
           onMouseEnter={() => {
-            this.sectionVideo.current.play();
+            this.sectionVideo1.current.play();
           }}
         >
           <div className="product-section-desc odd">
             <div>
-              <h4>One of a kind torque sensor system</h4>
-              <p>Guarantees the smoothest rides under any road condition.</p>
+              <h4>Rover Torque Sensor</h4>
+              <p>
+                Our fast responsive duel-sided torque sensor provides seemless
+                power support and gives you the smoothest riding experience
+              </p>
             </div>
           </div>
 
           <div className="product-section-image">
-            <video ref={this.sectionVideo} src={sectionMovie1} muted></video>
+            <video ref={this.sectionVideo1} src={sectionMovie1} muted></video>
           </div>
         </div>
 
         <div className="section-wrapper">
+          <div className="product-section-image">
+            <img src={sectionImage1} />
+          </div>
+
           <div className="product-section-desc even">
             <div>
               <h4>SHIMANO 7-Speed Freewheel</h4>
-              <p>Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t Freewheel.</p>
+              <p>
+                Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t
+                Freewheel.
+              </p>
             </div>
-          </div>
-
-          <div className="product-section-image">
-            <img src={sectionImage1} />
           </div>
         </div>
 
         <div
           className="section-wrapper"
           onMouseEnter={() => {
-            this.sectionVideo.current.play();
+            this.sectionVideo2.current.play();
           }}
         >
           <div className="product-section-desc odd">
             <div>
               <h4>High Capacity Battery</h4>
-              <p>Detachable &amp; long lasting battery(36V, 350W) provides convienient 
-                 charging experience (fully charged within 5hrs) and allows riding up 
-                 to 160km.</p>
+              <p>
+                Detachable &amp; long lasting battery(36V, 350W) provides
+                convienient charging experience (fully charged within 5hrs) and
+                allows riding up to 160km.
+              </p>
             </div>
           </div>
 
           <div className="product-section-image">
-            <video ref={this.sectionVideo} src={sectionMovie2} muted></video>
+            <video ref={this.sectionVideo2} src={sectionMovie2} muted></video>
           </div>
         </div>
 
@@ -111,18 +120,6 @@ class HomePage extends React.Component {
             {
               icon: "/img/icons/canadian-maple-leaf.svg",
               title: "Canadian Own",
-              content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            },
-            {
-              icon: "/img/icons/thumbs-up.svg",
-              title: "Best Value",
-              content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            },
-            {
-              icon: "/img/icons/bike.svg",
-              title: "Torque Sensor",
               content:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
@@ -159,12 +156,17 @@ class HomePage extends React.Component {
           ]}
         />
 
-        <div className="center-seperator">
-          <h5>Free shipping and 7 days free return Canada wide.</h5>
-          <p>
-            Different rates will be applied for US. Head to UPS website for more
-            an estimated delivery fee.
-          </p>
+        <div className="shipping-line">
+          <div>
+            <img src="/img/icons/shipping-truck.svg" />
+            <div className="shipping-line-content">
+              <h5>Free shipping and 7 days free return Canada wide.</h5>
+              <p>
+                Different rates will be applied for US. Head to UPS website for
+                more an estimated delivery fee.
+              </p>
+            </div>
+          </div>
         </div>
 
         <Reviews

@@ -30,7 +30,7 @@
 
   background-color: transparent;
   z-index: 2;
-  transition: all 400ms ease-in-out;
+  transition: all 200ms ease-in;
 }
 
 .App-header.fixed {

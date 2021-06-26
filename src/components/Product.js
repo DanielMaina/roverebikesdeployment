@@ -87,10 +87,10 @@ const Product = () => {
           </p>
         </div>
         <div className="product-rotates">
-          <div className="product-rotate rx">
+          <div className="product-rotate rx" onClick={() => setProductIndex(0)}>
             <span>X</span>
           </div>
-          <div className="product-rotate ry">
+          <div className="product-rotate ry" onClick={() => setProductIndex(1)}>
             <span>Y</span>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
 import Product from "../../components/Product";
 import FeaturedProducts from "../../components/FeaturedProducts";
-
+import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionMovie2 from "../../assets/movies/3d_2_shocklock.mp4";
 import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
@@ -18,7 +18,9 @@ class ProductPage extends React.Component {
 
     setTitle("Rover E-Bike | Product", true);
 
-    this.state = {};
+    this.state = {
+      displayAllSections: false,
+    };
     this.videoRef = React.createRef();
   }
 
@@ -52,6 +54,12 @@ class ProductPage extends React.Component {
 
   playVideo4 = (elm) => {
     this.video4.play();
+  };
+
+  displayAllSectionsHandler = () => {
+    this.setState({
+      displayAllSections: true,
+    });
   };
 
   render() {
@@ -175,10 +183,16 @@ class ProductPage extends React.Component {
               </div>
             </div>
             <div className="spec-item">
-              <h3 className="section-header">
+              <h3 className="section-header collapse-start">
                 METRIX
                 <br />
                 DISPLAY
+                <span
+                  className="collapse-start-button"
+                  onClick={() => this.displayAllSectionsHandler()}
+                >
+                  <AddCircleOutlineIcon />
+                </span>
               </h3>
               <div className="spec-grid">
                 <div className="spec-grid-item">
@@ -199,190 +213,200 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="spec-item">
-              <h3 className="section-header">
-                BRAKES | DISC BRAKES | CHAINS | SADDLES
-              </h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Brakes</h4>
-                  <p>Front and rear hydraulic disc brakes</p>
-                </div>
+            <div
+              className={
+                this.state.displayAllSections
+                  ? "spec-items"
+                  : "spec-items collapsed"
+              }
+            >
+              <div className="spec-item">
+                <h3 className="section-header">
+                  BRAKES | DISC BRAKES | CHAINS | SADDLES
+                </h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Brakes</h4>
+                    <p>Front and rear hydraulic disc brakes</p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Chains</h4>
-                  <p>Automatic chain-tensioning system</p>
-                </div>
+                  <div className="spec-grid-item">
+                    <h4>Chains</h4>
+                    <p>Automatic chain-tensioning system</p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Disc Brakes</h4>
-                  <p>
-                    Offers superior brake performance without the annoying howls
-                    or vibration
-                  </p>
-                </div>
-                <div className="spec-grid-item">
-                  <h4>Saddles</h4>
-                  <p>Easy adjustable height</p>
+                  <div className="spec-grid-item">
+                    <h4>Disc Brakes</h4>
+                    <p>
+                      Offers superior brake performance without the annoying
+                      howls or vibration
+                    </p>
+                  </div>
+                  <div className="spec-grid-item">
+                    <h4>Saddles</h4>
+                    <p>Easy adjustable height</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">BATTERY</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>BATTERY</h4>
-                  <p>
-                    Greenway 36V 14AH-40pcs cell
-                    <br />
-                    Battery shell: Greenway
-                    <br />
-                    Samsung LG battery
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">BATTERY</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>BATTERY</h4>
+                    <p>
+                      Greenway 36V 14AH-40pcs cell
+                      <br />
+                      Battery shell: Greenway
+                      <br />
+                      Samsung LG battery
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Battery life</h4>
-                  <p>
-                    Fully charged within 5 hours
-                    <br />
-                    Range: 120 - 160 km
-                  </p>
-                </div>
-                <div className="spec-grid-item">
-                  <h4>Protection</h4>
-                  <p>
-                    Overvoltage protection
-                    <br />
-                    Short circuit protection
-                    <br />
-                    Temperature protection
-                  </p>
+                  <div className="spec-grid-item">
+                    <h4>Battery life</h4>
+                    <p>
+                      Fully charged within 5 hours
+                      <br />
+                      Range: 120 - 160 km
+                    </p>
+                  </div>
+                  <div className="spec-grid-item">
+                    <h4>Protection</h4>
+                    <p>
+                      Overvoltage protection
+                      <br />
+                      Short circuit protection
+                      <br />
+                      Temperature protection
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">TORQUE SENSOR SYSTEM</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Magnetic sensing system</h4>
-                  <p>
-                    Introducing the principle of magnetostriction into our
-                    e-bikes, our technology therefore, does not require gauges
-                    or telemetry. The magneto strictive sensors provide you with
-                    very accurate real-time data - even in extreme environments.
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">TORQUE SENSOR SYSTEM</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Magnetic sensing system</h4>
+                    <p>
+                      Introducing the principle of magnetostriction into our
+                      e-bikes, our technology therefore, does not require gauges
+                      or telemetry. The magneto strictive sensors provide you
+                      with very accurate real-time data - even in extreme
+                      environments.
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Uphill and long distance friendly</h4>
-                  <p>
-                    Enjoy climbing uphill or long distance rides without a
-                    worry.
-                  </p>
-                  <p>
-                    Our torque sensor system helps preserve battery consumption.
-                    We want to make healthy living a lifestyle for you!
-                  </p>
+                  <div className="spec-grid-item">
+                    <h4>Uphill and long distance friendly</h4>
+                    <p>
+                      Enjoy climbing uphill or long distance rides without a
+                      worry.
+                    </p>
+                    <p>
+                      Our torque sensor system helps preserve battery
+                      consumption. We want to make healthy living a lifestyle
+                      for you!
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">MOTOR</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Mivice M080</h4>
-                  <p>
-                    36V 350W
-                    <br />
-                    Max torque: &gt;40Nm
-                    <br />
-                    Weight: 2.5Kg
-                    <br />
-                    Waterproof grade: IP65
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">MOTOR</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Mivice M080</h4>
+                    <p>
+                      36V 350W
+                      <br />
+                      Max torque: &gt;40Nm
+                      <br />
+                      Weight: 2.5Kg
+                      <br />
+                      Waterproof grade: IP65
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Powerful, light and quiet</h4>
-                  <p>
-                    The motor can achieve a maximum power of 600W with the
-                    highest efficiency up to 80%.
-                  </p>
-                  <p>
-                    With our unique gear set technology, we are able to obtain
-                    the no-load noise of less than 55dB.
-                  </p>
+                  <div className="spec-grid-item">
+                    <h4>Powerful, light and quiet</h4>
+                    <p>
+                      The motor can achieve a maximum power of 600W with the
+                      highest efficiency up to 80%.
+                    </p>
+                    <p>
+                      With our unique gear set technology, we are able to obtain
+                      the no-load noise of less than 55dB.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">SHIFTER</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Shimano Tourney SL-RS35</h4>
-                  <p>
-                    Dimensions‎: 9.4 x 9.12 x 6.1 cm
-                    <br />
-                    Weight‎: 91 g<br /> Material: high-quality plastic
-                    <br /> and durable metal{" "}
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">SHIFTER</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Shimano Tourney SL-RS35</h4>
+                    <p>
+                      Dimensions‎: 9.4 x 9.12 x 6.1 cm
+                      <br />
+                      Weight‎: 91 g<br /> Material: high-quality plastic
+                      <br /> and durable metal{" "}
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Easy twist and adjustments</h4>
-                  <p>
-                    The REVOSHIFT shifter allows riders to maintain a secure and
-                    stable grip on the handlebar.
-                  </p>
-                  <p>Easy, steady, secure and smooth shifting.</p>
+                  <div className="spec-grid-item">
+                    <h4>Easy twist and adjustments</h4>
+                    <p>
+                      The REVOSHIFT shifter allows riders to maintain a secure
+                      and stable grip on the handlebar.
+                    </p>
+                    <p>Easy, steady, secure and smooth shifting.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">DERAILLEUR</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Shimano RD-TY300-SGS</h4>
-                  <p>
-                    Dimensions: 12.29 x 11.91 x 10.11cm
-                    <br />
-                    Weight: ‎259 g<br />
-                    Material: high-quality aluminum alloy
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">DERAILLEUR</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Shimano RD-TY300-SGS</h4>
+                    <p>
+                      Dimensions: 12.29 x 11.91 x 10.11cm
+                      <br />
+                      Weight: ‎259 g<br />
+                      Material: high-quality aluminum alloy
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Double tension rear derailleur</h4>
-                  <p>
-                    Made to last with high-quality aluminium alloy to provide
-                    stability during sudden speed change.
-                  </p>
+                  <div className="spec-grid-item">
+                    <h4>Double tension rear derailleur</h4>
+                    <p>
+                      Made to last with high-quality aluminium alloy to provide
+                      stability during sudden speed change.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="spec-item">
-              <h3 className="section-header">SUSPENSION FORK</h3>
-              <div className="spec-grid">
-                <div className="spec-grid-item">
-                  <h4>Trama CTZ</h4>
-                  <p>
-                    Wheel: 700C
-                    <br />
-                    Stanchion: 28.6
-                    <br />
-                    Pitch: 107
-                    <br />
-                    Travel: 40mm
-                  </p>
-                </div>
+              <div className="spec-item">
+                <h3 className="section-header">SUSPENSION FORK</h3>
+                <div className="spec-grid">
+                  <div className="spec-grid-item">
+                    <h4>Trama CTZ</h4>
+                    <p>
+                      Wheel: 700C
+                      <br />
+                      Stanchion: 28.6
+                      <br />
+                      Pitch: 107
+                      <br />
+                      Travel: 40mm
+                    </p>
+                  </div>
 
-                <div className="spec-grid-item">
-                  <h4>Impact proof</h4>
-                  <p>
-                    The front fork offers support and absorbs impact caused by
-                    uneven terrain.
-                  </p>
+                  <div className="spec-grid-item">
+                    <h4>Impact proof</h4>
+                    <p>
+                      The front fork offers support and absorbs impact caused by
+                      uneven terrain.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

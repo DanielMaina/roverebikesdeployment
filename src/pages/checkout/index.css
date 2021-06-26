@@ -91,7 +91,7 @@
   height: 52.53px;
 
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
 
   text-indent: 20px;
   font-size: 16px;
@@ -102,7 +102,7 @@
   height: 120px;
 
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
 
   text-indent: 20px;
   padding-top: 20px;
@@ -145,7 +145,6 @@
 .checkout-page .checkout-wrapper .checkout-details .checkout-items {
   display: flex;
   flex-direction: column;
-  background: #000;
   padding-bottom: 20px;
 }
 .checkout-page
@@ -316,7 +315,7 @@
   height: 56px;
 
   background: #ffffff;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-top: 20px;
   padding: 0 20px;
   padding-right: 40px;
