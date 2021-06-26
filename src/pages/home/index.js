@@ -7,22 +7,24 @@ import HomeProduct from "components/HomeProduct";
 import Grid from "components/Grid";
 import Reviews from "components/Reviews";
 
+import landingImage from "../../assets/images/home-page-landing.png";
+
 import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionImage1 from "../../assets/images/homepage-image.png";
-import sectionMovie2 from "../../assets/movies/3d_5_battery.mp4";
+import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
 
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
-    setTitle("Rover E-Bike | Home", true);
-
     this.state = {};
     this.promoVideo = React.createRef();
     this.sectionVideo1 = React.createRef();
     this.sectionVideo2 = React.createRef();
   }
+
+  componentDidUpdate() {}
 
   componentDidMount() {
     this.promoVideo.current.play();
@@ -35,9 +37,12 @@ class HomePage extends React.Component {
           <video
             ref={this.promoVideo}
             src={promoVideoSource}
+            poster={landingImage}
             muted
             loop
-            autoPlay
+            autoPlay={true}
+            preload={"none"}
+            onLoad
           ></video>
           <div className="header-title">
             <h4>CHANGE THE WAY YOU RIDE</h4>
@@ -48,10 +53,10 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-            <p>
-              EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-              ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
-            </p>
+          <p>
+            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
+            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
+          </p>
         </div>
         <HomeProduct />
 
@@ -63,7 +68,7 @@ class HomePage extends React.Component {
         >
           <div className="product-section-desc odd">
             <div>
-              <h4>Rover Torque Sensor</h4>
+              <h4>Mivice dual-sided torque sensor</h4>
               <p>
                 Our fast responsive duel-sided torque sensor provides seemless
                 power support and gives you the smoothest riding experience
@@ -92,25 +97,20 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-        <div
-          className="section-wrapper"
-          onMouseEnter={() => {
-            this.sectionVideo2.current.play();
-          }}
-        >
+        <div className="section-wrapper">
           <div className="product-section-desc odd">
             <div>
               <h4>High Capacity Battery</h4>
               <p>
-                High Capacity Battery Detachable &amp; long lasting battery(36V, 14AH) 
-                provides convenient charging experience (fully charged within 5hrs) 
-                and allows riding up to 160km.
+                High Capacity Battery Detachable &amp; long lasting battery(36V,
+                14AH) provides convenient charging experience (fully charged
+                within 5hrs) and allows riding up to 160km.
               </p>
             </div>
           </div>
 
           <div className="product-section-image">
-            <video ref={this.sectionVideo2} src={sectionMovie2} muted></video>
+            <img src={sectionBatteryImage} />
           </div>
         </div>
 

@@ -7,6 +7,10 @@ import topImage from "../../assets/images/warranty-bg-top.png";
 import bottomImage from "../../assets/images/warranty-bg-bottom.png";
 
 const WarrantyPage = () => {
+  useEffect(() => {
+    setTitle("Warranty");
+  }, []);
+
   return (
     <div className="warranty-page">
       <div

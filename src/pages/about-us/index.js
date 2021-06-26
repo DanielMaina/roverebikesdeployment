@@ -12,9 +12,10 @@ class AboutUsPage extends React.Component {
   constructor() {
     super();
 
-    setTitle("Rover E-Bike | About Us", true);
-
     this.state = {};
+  }
+  componentDidUpdate() {
+    setTitle("About Us");
   }
 
   render() {

@@ -21,7 +21,7 @@ export const dummyProducts = [
     name: "Colored IPS Screen Display",
     price: 100.0,
     isFeatured: true,
-    image: "/img/featured-product-2.svg",
+    image: "/img/featured-product-2.png",
   },
   {
     id: 5,

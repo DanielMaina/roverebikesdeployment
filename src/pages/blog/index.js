@@ -7,7 +7,7 @@ import headerImage from "../../assets/images/contact-page-header.png";
 import liveToRideImage from "../../assets/images/blog-page-live-to-ride.png";
 const BlogPage = () => {
   useEffect(() => {
-    setTitle("Rover E-Bike | Blog", true);
+    setTitle("Blog");
   }, []);
 
   return (

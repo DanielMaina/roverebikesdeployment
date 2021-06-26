@@ -27,7 +27,7 @@
 }
 .home .header-title {
   position: absolute;
-  left: 110px;
+  left: -50%;
   top: 300px;
   width: 600px;
   height: 120px;
@@ -36,7 +36,27 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  animation-name: titleAnimation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
+
+@keyframes titleAnimation {
+  0% {
+    left: -25%;
+  }
+
+  50% {
+    left: 250px;
+  }
+  100% {
+    left: 110px;
+  }
+}
+
 .home .header-title h4 {
   font-family: Play;
   font-style: normal;
@@ -48,6 +68,8 @@
 .home .learn-more-button {
   width: 230px;
   height: 50px;
+
+  opacity: 0;
 
   background: #242424;
   border-radius: 50px;
@@ -63,10 +85,28 @@
 
   color: #ffffff;
   transition: 250ms all ease-in-out;
+
+  animation-name: learnMoreButtonAnimation;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
 .home .learn-more-button:hover {
   background-color: var(--color-red);
 }
+
+@keyframes learnMoreButtonAnimation {
+  from {
+    opacity: 0;
+    background-color: var(--color-red);
+  }
+  to {
+    opacity: 1;
+    background-color: #242424;
+  }
+}
+
 .home .offer-text {
   height: 100px;
   display: flex;
@@ -85,8 +125,7 @@
 }
 
 .home .offer-text p span {
-  color: #8A1900;
-
+  color: #8a1900;
 }
 
 .home .product-list > *:first-child {

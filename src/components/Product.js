@@ -33,6 +33,7 @@ const Product = () => {
       frameSize: "51 - 54 cm",
     },
   ];
+
   const zoomOutProperties = {
     indicators: true,
     arrows: false,
@@ -41,7 +42,6 @@ const Product = () => {
     transitionDuration: 500,
     indicators: (i) => <span href="#" className="spotlight-pager"></span>,
     onChange: function (oldIndex, ind) {
-      console.log(ind);
       setProductIndex(ind);
     },
   };
@@ -87,10 +87,16 @@ const Product = () => {
           </p>
         </div>
         <div className="product-rotates">
-          <div className="product-rotate rx" onClick={() => setProductIndex(0)}>
+          <div
+            className={"product-rotate" + (productIndex === 0 ? " active" : "")}
+            onClick={() => setProductIndex(0)}
+          >
             <span>X</span>
           </div>
-          <div className="product-rotate ry" onClick={() => setProductIndex(1)}>
+          <div
+            className={"product-rotate" + (productIndex === 1 ? " active" : "")}
+            onClick={() => setProductIndex(1)}
+          >
             <span>Y</span>
           </div>
         </div>

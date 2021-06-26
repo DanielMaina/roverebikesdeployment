@@ -12,10 +12,11 @@ import Search from "components/Search";
 class ContactPage extends React.Component {
   constructor() {
     super();
-
-    setTitle("Rover E-Bike | Contact", true);
-
     this.state = {};
+  }
+
+  componentDidUpdate() {
+    setTitle("Contact");
   }
 
   render() {
@@ -38,7 +39,7 @@ class ContactPage extends React.Component {
                   <PhoneOutlined />
                 </div>
                 <div>
-                  <p>+1(000)-000-000</p>
+                  <p>+1(888)-736-7581</p>
                 </div>
               </div>
 
@@ -57,9 +58,9 @@ class ContactPage extends React.Component {
                 </div>
                 <div>
                   <p>
-                    000 XXX St
+                    600-1285 W Broadway
                     <br />
-                    Vancouver, BC V0X 1X1
+                    Vancouver, BC V6H 3X8
                     <br />
                     Canada
                   </p>
