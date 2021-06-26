@@ -18,3 +18,4 @@ class EmptyPage extends React.Component {
 }
 
 export default EmptyPage;
+

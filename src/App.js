@@ -15,6 +15,7 @@ import ContactPage from "./pages/contact/index";
 import CheckoutPage from "./pages/checkout/index";
 import WarrantyPage from "./pages/warranty/index";
 import BlogPage from "./pages/blog/index";
+import PrivacyPage from "./pages/privacy/index";
 
 function App() {
   document.title = "Rover E-Bike";
@@ -74,6 +75,9 @@ function App() {
                   <Route path="/blog">
                     <BlogPage />
                   </Route>
+                  <Route path="/privacy">
+                    <PrivacyPage />
+                  </Route>
                 </Switch>
               </Layout>
             </div>
@@ -90,7 +94,7 @@ function App() {
                 cookies to provide you with a great experience and to help our
               </p>
               <p>
-                <a href="/cookie-policy">Privacy/cookies policy</a>
+                <a href="/privacy">Privacy/cookies policy</a>
               </p>
               <button className="button" onClick={cookieAgree}>
                 I Agree
