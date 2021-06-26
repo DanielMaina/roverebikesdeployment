@@ -48,7 +48,10 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>LIMITED TIME OFFER -- FIRST 50 BIKES FOR ONLY CA$1,899 !</p>
+            <p>
+              EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
+              ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
+            </p>
         </div>
         <HomeProduct />
 
@@ -99,9 +102,9 @@ class HomePage extends React.Component {
             <div>
               <h4>High Capacity Battery</h4>
               <p>
-                Detachable &amp; long lasting battery(36V, 350W) provides
-                convienient charging experience (fully charged within 5hrs) and
-                allows riding up to 160km.
+                High Capacity Battery Detachable &amp; long lasting battery(36V, 14AH) 
+                provides convenient charging experience (fully charged within 5hrs) 
+                and allows riding up to 160km.
               </p>
             </div>
           </div>

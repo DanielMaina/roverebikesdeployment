@@ -85,7 +85,8 @@
 }
 
 .home .offer-text p span {
-  color: var(--color-red-2);
+  color: #8A1900;
+
 }
 
 .home .product-list > *:first-child {
