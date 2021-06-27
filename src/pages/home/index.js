@@ -68,7 +68,7 @@ class HomePage extends React.Component {
         >
           <div className="product-section-desc odd">
             <div>
-              <h4>Mivice dual-sided torque sensor</h4>
+              <h4>Mivice Dual-sided Torque Sensor</h4>
               <p>
                 Our fast responsive duel-sided torque sensor provides seemless
                 power support and gives you the smoothest riding experience

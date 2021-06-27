@@ -25,12 +25,12 @@ const Product = () => {
 
   const productFrames = [
     {
-      bodyLength: "170 - 175 cm",
-      frameSize: "49 - 53 cm",
+      bodyLength: "165 - 170 cm",
+      frameSize: "45 - 49 cm",
     },
     {
-      bodyLength: "180 - 185 cm",
-      frameSize: "51 - 54 cm",
+      bodyLength: "170 - 175 cm",
+      frameSize: "49 - 53 cm",
     },
   ];
 
@@ -65,7 +65,7 @@ const Product = () => {
 
       <div className="main-product-information">
         <h5 className="product-heading">
-          <span>|</span> It's your <span>world</span>, ride it!
+          | It's your world, ride it!
         </h5>
         <h3 className="product-name">
           <img src={roverLogo} />
