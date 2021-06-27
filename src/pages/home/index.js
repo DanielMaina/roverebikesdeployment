@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
-import promoVideoSource from "../../assets/movies/rover-e-Bike-short.mp4";
+import promoVideoSource from "../../assets/movies/rover-e-Bike-homepage.mp4";
 import HomeProduct from "components/HomeProduct";
 import Grid from "components/Grid";
 import Reviews from "components/Reviews";
@@ -124,37 +124,37 @@ class HomePage extends React.Component {
               icon: "/img/icons/canadian-maple-leaf.svg",
               title: "Canadian Own",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Based here, designed here, serve here",
             },
             {
               icon: "/img/icons/bike-rider.svg",
               title: "Smoothest Ride",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Have the smoothest riding experience by our duel-sided torque sensor",
             },
             {
               icon: "/img/icons/carbon_skill-level-advanced.svg",
-              title: "Upgradable",
+              title: "Detachable Battery",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Our detachable battery allows you to charge anywhere, and lasts up to 160km",
             },
             {
               icon: "/img/icons/easy-fix.svg",
-              title: "Easy Fix",
+              title: "Upgradable",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Allows to program motor speed, upgrade accessories and more",
             },
             {
               icon: "/img/icons/sun-clock.svg",
-              title: "Flexible Biking",
+              title: "Weatherproof",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Weatherproof rated IP66, ride wherever, whenever",
             },
             {
               icon: "/img/icons/shipping.svg",
-              title: "Shipping Ready",
+              title: "Ship Ready",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Free shipping & 7-day free return Canada wide",
             },
           ]}
         />

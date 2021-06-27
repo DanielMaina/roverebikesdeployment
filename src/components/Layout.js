@@ -7,7 +7,7 @@ import {
   ShoppingCartOutlined,
   Instagram,
   Facebook,
-  LinkedIn,
+  YouTube,
   Twitter,
 } from "@material-ui/icons";
 
@@ -131,16 +131,16 @@ const Layout = (props) => {
           </ul>
         </div>
         <div className="footer-social">
-          <a href="https://www.instagram.com/" target="_blank">
+          <a href="https://www.instagram.com/roverebike/" target="_blank">
             <Instagram />
           </a>
-          <a href="https://www.facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/Rover-Electronic-Bike-104849678508598/" target="_blank">
             <Facebook />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank">
-            <LinkedIn />
+          <a href="https://www.youtube.com/watch?v=6WCnAzdTosk" target="_blank">
+            <YouTube />
           </a>
-          <a href="https://www.twitter.com/" target="_blank">
+          <a href="https://twitter.com/bike_rover" target="_blank">
             <Twitter />
           </a>
         </div>
