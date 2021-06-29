@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 .home-product .spotlight-pager.active {
-  background-color: #8A1900;
+  background-color: #8a1900;
 }
 
 .home-product .home-product-information {
@@ -64,7 +64,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .home-product .product-heading span {
-  color: #ffffff;;
+  color: #ffffff;
   margin-left: 0.3em;
 }
 .home-product .product-heading span:first-child {
@@ -93,7 +93,7 @@
   font-size: 48px;
   line-height: 55px;
 
-  color: #8A1900;
+  color: #8a1900;
 }
 
 .home-product .product-old-price {
@@ -105,7 +105,7 @@
 
   color: #ffffff;
   text-decoration: line-through;
-  text-decoration-color: #8A1900;
+  text-decoration-color: #8a1900;
 }
 
 .home-product .explore-button {
@@ -240,4 +240,57 @@
 
 .product-actions .product-action.check-out-now span {
   background-image: url("../icons/checkout.svg");
+}
+
+@media (max-width: 720px) {
+  .home-product .home-product-information {
+    left: 20px;
+    top: 20px;
+    padding: 0;
+  }
+  .home-product .product-heading {
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .home-product .product-name {
+    font-size: 32px;
+    line-height: 1.5em;
+  }
+  .home-product .product-old-price {
+    font-size: 16px;
+    line-height: 1em;
+  }
+  .home-product .product-price {
+    font-size: 24px;
+  }
+  .home-product .explore-button {
+    width: 100px;
+
+    background: #828282;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 14px;
+
+    color: #f4f5f4;
+  }
+
+  .home-product .home-product-spotlight .each-slide div {
+    height: 100vw;
+    background-size: 90%;
+  }
+
+  .home-product {
+    min-height: 300px;
+  }
+
+  .home-product
+    .home-product-spotlight
+    .react-slideshow-container
+    + ul.indicators {
+    right: 10px;
+  }
 }

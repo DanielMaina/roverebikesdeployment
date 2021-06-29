@@ -198,3 +198,16 @@
 
   color: #e5e5e5;
 }
+
+@media (max-width: 720px) {
+  .section-wrapper > div {
+    min-height: 420px;
+  }
+  .product-section-desc {
+    background-color: #f4f4f4;
+  }
+  .product-section-desc > div {
+    width: 100vw;
+    padding: 0;
+  }
+}

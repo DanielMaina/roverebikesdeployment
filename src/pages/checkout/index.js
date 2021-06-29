@@ -11,23 +11,8 @@ import headerImage from "../../assets/images/checkout-page-header.png";
 import { DeleteOutline, Search } from "@material-ui/icons";
 
 const CheckoutPage = () => {
-  /* constructor() {
-    super();
-
-    setTitle("Rover E-Bike | Checkout", true);
-
-    this.state = {};
-  } */
-
-  const {
-    total,
-    cartItems,
-    itemCount,
-    clearCart,
-    checkout,
-    handleCheckout,
-    decrease,
-  } = useContext(CartContext);
+  const { total, cartItems, increase, decrease, removeProduct } =
+    useContext(CartContext);
 
   return (
     <div className="checkout-page">
@@ -90,23 +75,42 @@ const CheckoutPage = () => {
           </form>
         </div>
         <div className="checkout-details">
-          <h4>Your Cart</h4>
           <div className="checkout-items">
+            <h4>Your Cart</h4>
             {cartItems.map((ci) => (
-              <div className="checkout-item">
+              <div key={"checkout-item-" + ci.id} className="checkout-item">
                 <div className="product">
                   <span>
                     {ci.quantity}x {ci.name}
                   </span>
                   <span>CAD {formatNumber(ci.price * ci.quantity)}</span>
                 </div>
-                <div
-                  className="action"
-                  onClick={() => {
-                    decrease(ci);
-                  }}
-                >
-                  <DeleteOutline />
+                <div className="action">
+                  <div
+                    className="product-action decrease-quantity"
+                    onClick={() => {
+                      decrease(ci);
+                    }}
+                  >
+                    -
+                  </div>
+                  <div className="product-action quantity">{ci.quantity}</div>
+                  <div
+                    className="product-action increase-quantity"
+                    onClick={() => {
+                      increase(ci);
+                    }}
+                  >
+                    +
+                  </div>
+                  <span
+                    className="product-action remove"
+                    onClick={() => {
+                      removeProduct(ci);
+                    }}
+                  >
+                    <DeleteOutline />
+                  </span>
                 </div>
               </div>
             ))}
@@ -129,6 +133,12 @@ const CheckoutPage = () => {
               <span>Total</span>
               <span>CAD {formatNumber(parseFloat(total) + 400)}</span>
             </div>
+          </div>
+          <div className="checkout-information">
+            <p>
+              All SALES are pre-sale only. All new purchases will be shipped out
+              MID-AUGUST.
+            </p>
           </div>
         </div>
       </div>

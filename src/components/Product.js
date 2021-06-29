@@ -25,12 +25,12 @@ const Product = () => {
 
   const productFrames = [
     {
-      bodyLength: "165 - 170 cm",
-      frameSize: "45 - 49 cm",
+      bodyLength: "17.7''",
+      frameSize: "5'2''-5'7''",
     },
     {
-      bodyLength: "170 - 175 cm",
-      frameSize: "49 - 53 cm",
+      bodyLength: "19.7''",
+      frameSize: "5'8'' - 6'6''",
     },
   ];
 
@@ -81,9 +81,9 @@ const Product = () => {
             environment seems effortless
           </p>
           <p>
-            Body length: {productFrames[productIndex].bodyLength}
+            Steel frame {productFrames[productIndex].bodyLength}
             <br />
-            Frame size: {productFrames[productIndex].frameSize}
+            For riders {productFrames[productIndex].frameSize}
           </p>
         </div>
         <div className="product-rotates">

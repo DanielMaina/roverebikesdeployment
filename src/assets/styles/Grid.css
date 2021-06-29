@@ -1,4 +1,4 @@
-.component-grid {
+.component-grid-desktop {
   display: grid;
   grid-template-columns: 25% 25% 25%;
   grid-gap: 35px;
@@ -7,7 +7,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
   color: #444;
@@ -16,6 +16,10 @@
   min-height: 400px;
 
   padding: 100px 0px;
+}
+
+.component-grid-mobile {
+  display: none;
 }
 
 .component-grid .component-grid-item {
@@ -56,4 +60,24 @@
   line-height: 18px;
 
   color: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .component-grid-desktop {
+    display: none;
+  }
+  .component-grid-mobile {
+    display: block;
+  }
+  .component-grid-mobile > div {
+    height: 100%;
+    padding-top: calc(100% - 500px / 2);
+  }
+  .component-grid-mobile .component-grid-item {
+    width: calc(100vw - 200px);
+    margin: auto;
+  }
+  .shipping-line {
+    display: none;
+  }
 }

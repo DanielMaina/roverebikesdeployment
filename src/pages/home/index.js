@@ -13,6 +13,7 @@ import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
+import gridBackgroundImageMobile from "../../assets/images/home-page-grid-mobile-bg.png";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -53,10 +54,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>
-            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
-          </p>
+          <p>LIMITTED TIME OFFER FIRST 50 BIKES FOR ONLY CA$ 1,899 !</p>
         </div>
         <HomeProduct />
 
@@ -81,11 +79,7 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-        <div className="section-wrapper">
-          <div className="product-section-image">
-            <img src={sectionImage1} />
-          </div>
-
+        <div className="section-wrapper even">
           <div className="product-section-desc even">
             <div>
               <h4>SHIMANO 7-Speed Freewheel</h4>
@@ -94,6 +88,10 @@ class HomePage extends React.Component {
                 Freewheel.
               </p>
             </div>
+          </div>
+
+          <div className="product-section-image">
+            <img src={sectionImage1} />
           </div>
         </div>
 
@@ -119,42 +117,46 @@ class HomePage extends React.Component {
             backgroundImage: "url(" + gridBackgroundImage + ")",
             height: "890px",
           }}
+          mobileStyle={{
+            backgroundImage: "url(" + gridBackgroundImageMobile + ")",
+            height: "500px",
+          }}
           items={[
             {
               icon: "/img/icons/canadian-maple-leaf.svg",
               title: "Canadian Own",
               content:
-                "Based here, designed here, serve here",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
             {
               icon: "/img/icons/bike-rider.svg",
               title: "Smoothest Ride",
               content:
-                "Have the smoothest riding experience by our duel-sided torque sensor",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
             {
               icon: "/img/icons/carbon_skill-level-advanced.svg",
-              title: "Detachable Battery",
+              title: "Upgradable",
               content:
-                "Our detachable battery allows you to charge anywhere, and lasts up to 160km",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
             {
               icon: "/img/icons/easy-fix.svg",
-              title: "Upgradable",
+              title: "Easy Fix",
               content:
-                "Allows to program motor speed, upgrade accessories and more",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
             {
               icon: "/img/icons/sun-clock.svg",
-              title: "Weatherproof",
+              title: "Flexible Biking",
               content:
-                "Weatherproof rated IP66, ride wherever, whenever",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
             {
               icon: "/img/icons/shipping.svg",
-              title: "Ship Ready",
+              title: "Shipping Ready",
               content:
-                "Free shipping & 7-day free return Canada wide",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
           ]}
         />

@@ -43,29 +43,51 @@ export const CartReducer = (state, action) => {
         ],
       };
     case "INCREASE":
-      state.cartItems[
-        state.cartItems.findIndex((item) => item.id === action.payload.id)
-      ].quantity++;
-      return {
-        ...state,
-        ...sumItems(state.cartItems),
-        cartItems: [...state.cartItems],
-      };
+      let existingCartItemIndex = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (existingCartItemIndex > -1) {
+        const cartItems = [
+          ...state.cartItems.slice(0, existingCartItemIndex),
+          {
+            ...state.cartItems[existingCartItemIndex],
+            quantity: state.cartItems[existingCartItemIndex].quantity + 1,
+          },
+          ...state.cartItems.slice(existingCartItemIndex + 1),
+        ];
+        return {
+          ...state,
+          ...sumItems(state.cartItems),
+          cartItems: [...cartItems],
+        };
+      }
+      return state;
+
     case "DECREASE":
       let q =
         state.cartItems[
           state.cartItems.findIndex((item) => item.id === action.payload.id)
         ].quantity;
       if (q > 1) {
-        state.cartItems[
-          state.cartItems.findIndex((item) => item.id === action.payload.id)
-        ].quantity--;
-
-        return {
-          ...state,
-          ...sumItems(state.cartItems),
-          cartItems: [...state.cartItems],
-        };
+        let existingCartItemIndex = state.cartItems.findIndex(
+          (item) => item.id === action.payload.id
+        );
+        if (existingCartItemIndex > -1) {
+          const cartItems = [
+            ...state.cartItems.slice(0, existingCartItemIndex),
+            {
+              ...state.cartItems[existingCartItemIndex],
+              quantity: state.cartItems[existingCartItemIndex].quantity - 1,
+            },
+            ...state.cartItems.slice(existingCartItemIndex + 1),
+          ];
+          return {
+            ...state,
+            ...sumItems(state.cartItems),
+            cartItems: [...cartItems],
+          };
+        }
+        return state;
       } else {
         return {
           ...state,

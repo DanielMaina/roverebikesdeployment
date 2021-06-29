@@ -130,8 +130,12 @@ class ProductPage extends React.Component {
             onMouseEnter={this.playVideo2}
           >
             <div>
-              <h4>Shock Lock</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4>Shock aborbing system</h4>
+              <p>
+                Our front suspension fork allows you to adjust shock 
+                absorbing levels according to terrains, provides comfort 
+                in any conditions.
+                </p>
             </div>
           </div>
 
@@ -141,10 +145,10 @@ class ProductPage extends React.Component {
           >
             <div className="product-section-desc">
               <div>
-                <h4>Double tension rear derailleur.</h4>
+                <h4>7-speed level for maximum support</h4>
                 <p>
-                  Made to last with high-quality aluminium alloy to provide
-                  stability during sudden speed change.
+                  SHIMANO TOURNEY shift lever delivers easy and reliable 
+                  shifting for all riders.
                 </p>
               </div>
             </div>
@@ -234,7 +238,7 @@ class ProductPage extends React.Component {
                 <div className="spec-grid-item">
                   <h4>Frame Size</h4>
                   <h5>
-                    ROVER <span className="tx-red">X</span>
+                    ROVER <strong>X</strong>
                   </h5>
                   <p className="sm">
                     Body length: 165 - 170 cm
@@ -242,7 +246,7 @@ class ProductPage extends React.Component {
                     Frame size: 45 - 49 cm
                   </p>
                   <h5>
-                    ROVER <span className="tx-red">Y</span>
+                    ROVER <strong>Y</strong>
                   </h5>
                   <p className="sm">
                     Body length: 170 - 175 cm <br />
@@ -275,12 +279,11 @@ class ProductPage extends React.Component {
 
                 <div className="spec-grid-item">
                   <h4>
-                    <span className="tx-red">SMART</span> Mode
+                    SMART Mode
                   </h4>
                   <p>
                     Add-on: full-colour{" "}
-                    <span className="tx-red">LED screen display</span> for an
-                    addtional CAD100
+                    full-color IPS screen display for an addtional CAD100
                   </p>
                   <p>Easy replace and install</p>
                 </div>

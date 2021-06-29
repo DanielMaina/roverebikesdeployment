@@ -101,6 +101,16 @@ class AboutUsPage extends React.Component {
                 "Date: September 1st, 2021" +
                 "Location: Stanley Park",
             },
+            {
+              title: "Lorem ipsum dolor sid amet",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
+            {
+              title: "Lorem ipsum dolor sid amet",
+              content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            },
           ]}
         />
       </div>

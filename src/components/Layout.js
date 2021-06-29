@@ -44,7 +44,6 @@ const Layout = (props) => {
             backgroundImage: "url(" + logo + ")",
           }}
         ></a>
-        <div className="rover-xy-menu"></div>
 
         <div className="header-sub">
           <a href="/checkout" className="cart-logo">
@@ -110,7 +109,7 @@ const Layout = (props) => {
         </div>
         <div className="footer-links">
           <ul>
-          <li>
+            <li>
               <a href="/about-us">About Us</a>
             </li>
             <li>
