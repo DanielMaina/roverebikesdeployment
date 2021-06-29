@@ -126,37 +126,37 @@ class HomePage extends React.Component {
               icon: "/img/icons/canadian-maple-leaf.svg",
               title: "Canadian Own",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Based here, designed here, serve here",
             },
             {
               icon: "/img/icons/bike-rider.svg",
               title: "Smoothest Ride",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Have the smoothest riding experience by our duel-sided torque sensor.",
+            },
+            {
+              icon: "/img/icons/battery-image.svg",
+              title: "Detachable Battery",
+              content:
+                "Our detachable battery allows you to charge anywhere, and lasts up to 160km.",
             },
             {
               icon: "/img/icons/carbon_skill-level-advanced.svg",
               title: "Upgradable",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            },
-            {
-              icon: "/img/icons/easy-fix.svg",
-              title: "Easy Fix",
-              content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Allows to program motor speed, upgrade accessories and more.",
             },
             {
               icon: "/img/icons/sun-clock.svg",
-              title: "Flexible Biking",
+              title: "Weatherproof",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Weatherproof rated IP66, ride wherever, whenever.",
             },
             {
               icon: "/img/icons/shipping.svg",
-              title: "Shipping Ready",
+              title: "Ship Ready",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Free shipping & 7-day free return Canada wide",
             },
           ]}
         />
@@ -177,22 +177,22 @@ class HomePage extends React.Component {
         <Reviews
           items={[
             {
-              name: "Tess J.",
+              name: "Frank F.",
               image: "/img/reviews/review-1.png",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Love the bike! Torque sensor system makes the rides very smooth, and the back motor barely makes any noise. Everything cuts out right way when you stop pedaling and the bike gives amazing assistance whenever you need it.",
             },
             {
-              name: "Devin W.",
+              name: "Zhe Z.",
               image: "/img/reviews/review-2.png",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "I really love the bike. Rover Y looks like a normal bike and can easily support me when I’m doing long-distance biking. I am going to buy a Rover X for my girlfriend as her birthday surprise.",
             },
             {
-              name: "Paul A.",
+              name: "Site M.",
               image: "/img/reviews/review-3.png",
               content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "I love the idea of biking, but I hate going uphill. However, after I bought Rover Y, I’m enjoying biking every day. Everyone has been asking me where I got the bike, and they are all surprised of how well it’s been built. All the parts are made from licensed and well-known manufacturer. I am extremely happy with my purchase.",
             },
           ]}
         />
