@@ -155,10 +155,9 @@ const Product = () => {
       >
         <div
           style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            padding: 20,
-            margin: 5,
+            position: "absolute",
+            right: 0,
+            margin: 10,
           }}
         >
           <button className="close-modal-button" onClick={closeModal}>

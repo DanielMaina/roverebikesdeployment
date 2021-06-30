@@ -21,7 +21,6 @@
   padding: 100px;
 }
 .about-us-page .col-text h4 {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
@@ -36,7 +35,6 @@
 .about-us-page .col-text p {
   width: 398px;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -47,10 +45,9 @@
 
 .about-us-page .white-content {
   background-color: var(--color-white);
-  padding: 120px 15%;
+  padding: 150px 15%;
   text-align: left;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 32px;

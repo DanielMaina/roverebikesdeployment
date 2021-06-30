@@ -17,3 +17,7 @@
 .brands .brand-logo img {
   width: 75%;
 }
+
+.brands .marquee-container {
+  z-index: 1;
+}

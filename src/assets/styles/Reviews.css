@@ -9,7 +9,6 @@
 }
 .reviews .reviews-desktop > h5 {
   display: inline-block;
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 90px;
@@ -59,6 +58,8 @@
   align-items: center;
 
   padding: 80px 50px;
+  width: calc(100% / 3);
+  height: 420px;
 }
 
 .reviews .review-items .review-item .image {
@@ -66,7 +67,6 @@
 }
 
 .reviews .review-items .review-item .name {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -76,7 +76,6 @@
   margin-bottom: 30px;
 }
 .reviews .review-items .review-item .content {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -93,6 +92,7 @@
     background: #fff;
     background-image: none !important;
   }
+
   .reviews-desktop {
     display: none;
   }
@@ -105,6 +105,11 @@
   }
   .reviews-mobile .review-items {
     display: block;
+    padding: 40px 0;
+  }
+  .reviews .review-items .review-item {
+    width: 100%;
+    height: auto;
   }
   .reviews-mobile .review-item {
     width: calc(100vw);
@@ -117,5 +122,6 @@
   .reviews-mobile .review-items .review-item .content {
     width: 80%;
     text-align: center;
+    font-size: 16px;
   }
 }

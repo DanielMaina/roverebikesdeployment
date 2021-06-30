@@ -85,7 +85,7 @@ class AboutUsPage extends React.Component {
           <a
             href="/product"
             class="button-dark"
-            style={{ float: "right", marginTop: "20px" }}
+            style={{ float: "right", marginTop: "35px" }}
           >
             Explore our bikes
           </a>
@@ -100,16 +100,6 @@ class AboutUsPage extends React.Component {
                 "Snacks and coffee will be provided at the meet up place! <br/><br/>" +
                 "Date: September 1st, 2021" +
                 "Location: Stanley Park",
-            },
-            {
-              title: "Lorem ipsum dolor sid amet",
-              content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            },
-            {
-              title: "Lorem ipsum dolor sid amet",
-              content:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             },
           ]}
         />

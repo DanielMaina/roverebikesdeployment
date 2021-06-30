@@ -42,7 +42,6 @@
 .component-grid .component-grid-item .icon img {
 }
 .component-grid .component-grid-item .title {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -53,7 +52,6 @@
   margin-bottom: 20px;
 }
 .component-grid .component-grid-item .content {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

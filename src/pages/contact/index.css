@@ -49,7 +49,6 @@
   margin: 0 5px;
 }
 .contact-page .main-content .contact-area .contact-information h4 {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -63,7 +62,6 @@
   padding-left: 29px;
 }
 .contact-page .main-content .contact-area .contact-information p {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -83,7 +81,6 @@
   margin-bottom: 27px;
 }
 .contact-page .main-content .contact-area .contact-form .form-group label {
-  font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -151,7 +148,7 @@
 }
 .contact-page .center-content > div:first-child h4 {
   width: 554px;
-  font-family: Play;
+
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -166,7 +163,6 @@
   align-items: flex-start;
   padding-left: 80px;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;

@@ -6,7 +6,6 @@
 }
 .featured-articles > h5 {
   display: inline-block;
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 56px;
@@ -63,7 +62,6 @@
 
 .featured-articles .items .item .title {
   height: 60px;
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -76,7 +74,6 @@
   margin-bottom: 30px;
 }
 .featured-articles .items .item .content {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -91,7 +88,6 @@
   border-radius: 10px;
   padding: 10px 30px;
 
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;

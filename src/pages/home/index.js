@@ -25,7 +25,10 @@ class HomePage extends React.Component {
     this.sectionVideo2 = React.createRef();
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    this.sectionVideo1.current.defaultMuted = true;
+    this.sectionVideo1.current.muted = true;
+  }
 
   componentDidMount() {
     this.promoVideo.current.play();
@@ -60,7 +63,7 @@ class HomePage extends React.Component {
 
         <div
           className="section-wrapper"
-          onMouseEnter={() => {
+          onFocus={() => {
             this.sectionVideo1.current.play();
           }}
         >
@@ -75,7 +78,13 @@ class HomePage extends React.Component {
           </div>
 
           <div className="product-section-image">
-            <video ref={this.sectionVideo1} src={sectionMovie1} muted></video>
+            <video
+              ref={this.sectionVideo1}
+              src={sectionMovie1}
+              muted
+              autoPlay
+              playsInline
+            ></video>
           </div>
         </div>
 
@@ -125,8 +134,7 @@ class HomePage extends React.Component {
             {
               icon: "/img/icons/canadian-maple-leaf.svg",
               title: "Canadian Own",
-              content:
-                "Based here, designed here, serve here",
+              content: "Based here, designed here, serve here",
             },
             {
               icon: "/img/icons/bike-rider.svg",
@@ -149,14 +157,12 @@ class HomePage extends React.Component {
             {
               icon: "/img/icons/sun-clock.svg",
               title: "Weatherproof",
-              content:
-                "Weatherproof rated IP66, ride wherever, whenever.",
+              content: "Weatherproof rated IP66, ride wherever, whenever.",
             },
             {
               icon: "/img/icons/shipping.svg",
               title: "Ship Ready",
-              content:
-                "Free shipping & 7-day free return Canada wide",
+              content: "Free shipping & 7-day free return Canada wide",
             },
           ]}
         />

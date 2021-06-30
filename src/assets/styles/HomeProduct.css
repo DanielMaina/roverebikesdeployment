@@ -20,7 +20,7 @@
   .react-slideshow-container
   + ul.indicators {
   position: absolute;
-  bottom: 100px;
+  top: 0;
   right: 100px;
   left: auto;
   height: 100%;
@@ -53,7 +53,6 @@
   text-align: left;
 }
 .home-product .product-heading {
-  font-family: Play;
   font-style: normal;
   font-weight: bold;
   font-size: 72px;
@@ -73,7 +72,6 @@
 .home-product .product-name {
   margin-bottom: 52px;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 100px;
@@ -87,7 +85,6 @@
   font-size: 56px;
 }
 .home-product .product-price {
-  font-family: Arial;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -97,7 +94,6 @@
 }
 
 .home-product .product-old-price {
-  font-family: Arial;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -111,14 +107,14 @@
 .home-product .explore-button {
   width: 262px;
   padding: 20px;
-  font-family: Play;
+
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
   background: #828282;
-  border-radius: 30px;
+  border-radius: 5px;
   margin-top: 40px;
   color: #ffffff;
   transition: all 250ms ease-in-out;
@@ -137,7 +133,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -236,7 +231,6 @@
 }
 
 .product-actions .product-action > * {
-  font-family: Play;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -279,7 +273,6 @@
     background: #828282;
     border-radius: 5px;
 
-    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

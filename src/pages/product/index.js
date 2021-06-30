@@ -16,7 +16,6 @@ import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 
-
 class ProductPage extends React.Component {
   constructor() {
     super();
@@ -80,8 +79,8 @@ class ProductPage extends React.Component {
       <div className="product-page">
         <div className="top-message">
           <p>
-            EXCLUSIVE OFFER FOR A <span>LIMITED TIME ONLY</span> - FIRST 50
-            ROVER E-BIKES ARE NOW ON SALE FOR <span>1,899 CAD!</span>
+            LIMITTED TIME OFFER
+            <br /> FIRST 50 BIKES FOR ONLY CA$ 1,899 !
           </p>
         </div>
         <Product />
@@ -108,8 +107,7 @@ class ProductPage extends React.Component {
                 ref={this.getVideo1}
                 src={sectionMovie1}
                 muted
-                preload={"auto"}
-                onLoadEnd={() => this.setState({ video1IsLoading: false })}
+                autoPlay
               ></video>
             </React.Fragment>
           </div>
@@ -119,7 +117,7 @@ class ProductPage extends React.Component {
               ref={this.getVideo2}
               src={sectionMovie2}
               muted
-              preload={"auto"}
+              autoPlay
             ></video>
           </div>
 
@@ -157,20 +155,27 @@ class ProductPage extends React.Component {
               ref={this.getVideo3}
               src={sectionMovie3}
               muted
-              preload={"auto"}
+              autoPlay
             ></video>
           </div>
 
-          <div className="product-section-image" onMouseEnter={this.playVideo4}>
+          <div
+            className="product-section-image"
+            onMouseEnter={this.playVideo4}
+            onFocus={this.playVideo4}
+          >
             <video
               ref={this.getVideo4}
               src={sectionMovie4}
               muted
-              preload={"auto"}
+              autoPlay
             ></video>
           </div>
 
-          <div className="product-section-desc" onMouseEnter={this.playVideo4}>
+          <div
+            className="product-section-desc even"
+            onMouseEnter={this.playVideo4}
+          >
             <div>
               <h4>Powerful, light and quiet. </h4>
               <p>
@@ -198,7 +203,7 @@ class ProductPage extends React.Component {
             <img src={sectionBatteryImage} />
           </div>
 
-          <div className="product-section-desc">
+          <div className="product-section-desc even">
             <div>
               <h4>High Capacity Battery</h4>
               <p>
@@ -251,17 +256,15 @@ class ProductPage extends React.Component {
             </div>
             <div className="spec-item">
               <h3 className="section-header collapse-start">
-                METRIX
-                <br />
-                DISPLAY
+                METRIX DISPLAY
                 <span
                   className="collapse-start-button"
                   onClick={() => this.displayAllSectionsHandler()}
                 >
                   {this.state.displayAllSections == false ? (
-                    <AddCircleOutlineIcon />
+                    <AddCircleOutlineIcon fontSize="large" />
                   ) : (
-                    <RemoveCircleOutlineIcon />
+                    <RemoveCircleOutlineIcon fontSize="large" />
                   )}
                 </span>
               </h3>
