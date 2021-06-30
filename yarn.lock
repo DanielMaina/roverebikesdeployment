@@ -1465,10 +1465,10 @@
     "@types/yargs" "^15.0.0"
     "chalk" "^4.0.0"
 
-"@jest/types@^27.0.2":
-  "integrity" "sha512-XpjCtJ/99HB4PmyJ2vgmN7vT+JLP7RW1FBT9RgnMFS4Dt7cvIyBee8O3/j98aUZ34ZpenPZFqmaaObWSeL65dg=="
-  "resolved" "https://registry.npmjs.org/@jest/types/-/types-27.0.2.tgz"
-  "version" "27.0.2"
+"@jest/types@^27.0.6":
+  "integrity" "sha512-aSquT1qa9Pik26JK5/3rvnYb4bGtm1VFNesHKmNTwmPIgOrixvhL2ghIvFRNEpzy3gU+rUgjIF/KodbkFAl++g=="
+  "resolved" "https://registry.npmjs.org/@jest/types/-/types-27.0.6.tgz"
+  "version" "27.0.6"
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^3.0.0"
@@ -1634,6 +1634,18 @@
   "version" "6.0.1"
   dependencies:
     "@sinonjs/commons" "^1.7.0"
+
+"@stripe/react-stripe-js@^1.0.0":
+  "integrity" "sha512-FjcVrhf72+9fUL3Lz3xi02ni9tzH1A1x6elXlr6tvBDgSD55oPJuodoP8eC7xTnBIKq0olF5uJvgtkJyDCdzjA=="
+  "resolved" "https://registry.npmjs.org/@stripe/react-stripe-js/-/react-stripe-js-1.4.1.tgz"
+  "version" "1.4.1"
+  dependencies:
+    "prop-types" "^15.7.2"
+
+"@stripe/stripe-js@^1.0.0", "@stripe/stripe-js@^1.13.0":
+  "integrity" "sha512-yJiDGutlwu25iajCy51VRJeoH3UMs+s5qVIDGfmPUuFpZ+F6AJ9g9EFrsBNvHxAGBahQFMLlBdzlCVydhGp6tg=="
+  "resolved" "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-1.15.1.tgz"
+  "version" "1.15.1"
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   "integrity" "sha512-yBMPqmd1yEJo/280PAMkychuaALyQ9Lkb5q1ck3mjJrFuEobIfhnQ4J3mbvBoISmR3SWMWV+cGB/I0lCQee79A=="
@@ -7049,7 +7061,7 @@
     "import-local" "^3.0.2"
     "jest-cli" "^26.6.0"
 
-"jquery@>=1.8.3", "jquery@3.6.0":
+"jquery@^3.6.0", "jquery@>=1.8.3":
   "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
   "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
   "version" "3.6.0"
@@ -9332,11 +9344,11 @@
     "react-is" "^17.0.1"
 
 "pretty-format@^27.0.2":
-  "integrity" "sha512-mXKbbBPnYTG7Yra9qFBtqj+IXcsvxsvOBco3QHxtxTl+hHKq6QdzMZ+q0CtL4ORHZgwGImRr2XZUX2EWzORxig=="
-  "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-27.0.2.tgz"
-  "version" "27.0.2"
+  "integrity" "sha512-8tGD7gBIENgzqA+UBzObyWqQ5B778VIFZA/S66cclyd5YkFLYs2Js7gxDKf0MXtTc9zcS7t1xhdfcElJ3YIvkQ=="
+  "resolved" "https://registry.npmjs.org/pretty-format/-/pretty-format-27.0.6.tgz"
+  "version" "27.0.6"
   dependencies:
-    "@jest/types" "^27.0.2"
+    "@jest/types" "^27.0.6"
     "ansi-regex" "^5.0.0"
     "ansi-styles" "^5.0.0"
     "react-is" "^17.0.1"
@@ -9459,6 +9471,13 @@
   "integrity" "sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc="
   "resolved" "https://registry.npmjs.org/q/-/q-1.5.1.tgz"
   "version" "1.5.1"
+
+"qs@^6.6.0":
+  "integrity" "sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg=="
+  "resolved" "https://registry.npmjs.org/qs/-/qs-6.10.1.tgz"
+  "version" "6.10.1"
+  dependencies:
+    "side-channel" "^1.0.4"
 
 "qs@6.7.0":
   "integrity" "sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ=="
@@ -9773,10 +9792,10 @@
   dependencies:
     "tslib" "^1.9.0"
 
-"react-slideshow-image@^3.4.7":
-  "integrity" "sha512-ekPcuHIxg4P5GIL61BUzUDEAEpcth14EUkYmLScg4+McYeO1/y8v6hp4mv/PpARMZjKAJdvsqjz9Xl3JhrLcDg=="
-  "resolved" "https://registry.npmjs.org/react-slideshow-image/-/react-slideshow-image-3.4.7.tgz"
-  "version" "3.4.7"
+"react-slideshow-image@^3.5.0":
+  "integrity" "sha512-h7vzt+zxUfTiRsG4sEgOhTWN802rqVyR9Y31cMzOtWU8/7mrVJU2ljFUkoU2cANippGHN/wAqVJ9cJKZWub6bg=="
+  "resolved" "https://registry.npmjs.org/react-slideshow-image/-/react-slideshow-image-3.5.0.tgz"
+  "version" "3.5.0"
   dependencies:
     "@tweenjs/tween.js" "^18.1.2"
     "resize-observer-polyfill" "^1.5.1"
@@ -11126,6 +11145,13 @@
   "integrity" "sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig=="
   "resolved" "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz"
   "version" "3.1.1"
+
+"stripe@^7.1.0":
+  "integrity" "sha512-W6R2CzMF87DeWVtxrAD8E9As62VIu2M9Ece+YKVw2P4oOBgvj5M2F2xH8R5VMmnDtmx4RJtg8PIJ4DmijpLU6g=="
+  "resolved" "https://registry.npmjs.org/stripe/-/stripe-7.63.1.tgz"
+  "version" "7.63.1"
+  dependencies:
+    "qs" "^6.6.0"
 
 "style-loader@1.3.0":
   "integrity" "sha512-V7TCORko8rs9rIqkSrlMfkqA63DfoGBBJmK1kKGCcSi+BWb4cqz0SRsnp4l6rU5iwOEd0/2ePv68SV22VXon4Q=="

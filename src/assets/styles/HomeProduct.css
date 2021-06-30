@@ -187,6 +187,16 @@
   flex-direction: row;
   margin-top: 70px;
 }
+.product-actions.modal {
+  background: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 80px;
+  align-items: center;
+  padding: 20px;
+  width: calc(100% - 40px);
+}
 .product-actions .product-action {
   display: flex;
   align-items: flex-end;

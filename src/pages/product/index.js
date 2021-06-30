@@ -16,7 +16,6 @@ import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 
-import promoImage from "../../assets/images/product/video-cover-bg.png";
 
 class ProductPage extends React.Component {
   constructor() {
@@ -95,9 +94,8 @@ class ProductPage extends React.Component {
             <div>
               <h4>Mivice dual-sided torque sensor</h4>
               <p>
-                Our fast responsive duel-sided torque sensor provides 
-                seemless power support and gives you the smoothest riding
-                experience. 
+                Our fast responsive duel-sided torque sensor provides seemless
+                power support and gives you the smoothest riding experience.
               </p>
             </div>
           </div>
@@ -132,10 +130,10 @@ class ProductPage extends React.Component {
             <div>
               <h4>Shock aborbing system</h4>
               <p>
-                Our front suspension fork allows you to adjust shock 
-                absorbing levels according to terrains, provides comfort 
-                in any conditions.
-                </p>
+                Our front suspension fork allows you to adjust shock absorbing
+                levels according to terrains, provides comfort in any
+                conditions.
+              </p>
             </div>
           </div>
 
@@ -147,7 +145,7 @@ class ProductPage extends React.Component {
               <div>
                 <h4>7-speed level for maximum support</h4>
                 <p>
-                  SHIMANO TOURNEY shift lever delivers easy and reliable 
+                  SHIMANO TOURNEY shift lever delivers easy and reliable
                   shifting for all riders.
                 </p>
               </div>
@@ -212,10 +210,6 @@ class ProductPage extends React.Component {
           </div>
         </div>
 
-        <div className="product-section-video">
-          <img src={promoImage} />
-        </div>
-
         <div className="bike-spec">
           <h3 className="header">
             COMPONENT<span>SPEC</span>
@@ -278,12 +272,10 @@ class ProductPage extends React.Component {
                 </div>
 
                 <div className="spec-grid-item">
-                  <h4>
-                    SMART Mode
-                  </h4>
+                  <h4>SMART Mode</h4>
                   <p>
-                    Add-on: full-colour{" "}
-                    full-color IPS screen display for an addtional CAD100
+                    Add-on: full-colour full-color IPS screen display for an
+                    addtional CAD100
                   </p>
                   <p>Easy replace and install</p>
                 </div>

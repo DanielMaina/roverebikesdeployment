@@ -29,6 +29,11 @@ const FeaturedProducts = () => {
     return !!cartItems.find((item) => item.id === id);
   };
 
+  const getQuantityFromCart = (id) => {
+    let item = cartItems.find((item) => item.id === id);
+    return item && item.quantity > 1 ? "(" + item.quantity + "x)" : "";
+  };
+
   function openModal(featuredProduct) {
     setModalModel(featuredProduct);
     setIsOpen(true);
@@ -58,10 +63,10 @@ const FeaturedProducts = () => {
             </div>
             {isInCart(featuredProduct.id) ? (
               <span
-                className="add-to-cart"
+                className="add-to-cart added"
                 onClick={() => increase(featuredProduct)}
               >
-                Add More
+                Add One More {getQuantityFromCart(featuredProduct.id)}
               </span>
             ) : (
               <span

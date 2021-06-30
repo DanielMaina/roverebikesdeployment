@@ -1,21 +1,39 @@
 import React, { useState, useContext } from "react";
-
-import "../assets/styles/Product.css";
-
-import { CartContext } from "../contexts/CartContext";
-import { ProductsContext } from "../contexts/ProductsContext";
+import Modal from "react-modal";
 
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+
+import "../assets/styles/Product.css";
+
+import FeaturedProducts from "../components/FeaturedProducts";
+
+import { CartContext } from "../contexts/CartContext";
+import { ProductsContext } from "../contexts/ProductsContext";
 
 import spotlightImage1 from "../assets/images/product/product-page-product-1.png";
 import spotlightImage2 from "../assets/images/product/product-page-product-2.png";
 
 import roverLogo from "../assets/images/product/rover_logo.svg";
 
+const customStyles = {
+  overlay: {
+    zIndex: 999,
+  },
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+
 const Product = () => {
   const { products } = useContext(ProductsContext);
   const { addProduct, cartItems, increase } = useContext(CartContext);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const product = products.find((p) => p.id === 1);
 
@@ -48,7 +66,18 @@ const Product = () => {
 
   const addToCart = () => {
     addProduct(product);
+    openModal();
   };
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {}
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <div className="main-product">
@@ -64,9 +93,7 @@ const Product = () => {
       </div>
 
       <div className="main-product-information">
-        <h5 className="product-heading">
-          | It's your world, ride it!
-        </h5>
+        <h5 className="product-heading">| It's your world, ride it!</h5>
         <h3 className="product-name">
           <img src={roverLogo} />
         </h3>
@@ -110,6 +137,36 @@ const Product = () => {
             </div>
             <a href="#">Add to cart</a>
           </div>
+          <div className="product-action check-out-now" onClick={openModal}>
+            <div className="icon">
+              <span></span>
+            </div>
+            <a href="#">Check out now</a>
+          </div>
+        </div>
+      </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Featured Products Modal"
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            padding: 20,
+            margin: 5,
+          }}
+        >
+          <button className="close-modal-button" onClick={closeModal}>
+            Close
+          </button>
+        </div>
+        <FeaturedProducts />
+        <div className="product-actions modal">
           <div className="product-action check-out-now">
             <div className="icon">
               <span></span>
@@ -117,7 +174,7 @@ const Product = () => {
             <a href="/checkout">Check out now</a>
           </div>
         </div>
-      </div>
+      </Modal>
     </div>
   );
 };

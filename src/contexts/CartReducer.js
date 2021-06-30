@@ -14,7 +14,9 @@ export const sumItems = (cartItems) => {
   let total = cartItems
     .reduce((total, product) => total + product.price * product.quantity, 0)
     .toFixed(2);
-  return { itemCount, total };
+
+  let totalAmount = parseFloat(total) + parseFloat(400.0);
+  return { itemCount, total, totalAmount };
 };
 
 export const CartReducer = (state, action) => {
