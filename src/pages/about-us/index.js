@@ -32,14 +32,14 @@ class AboutUsPage extends React.Component {
           ></div>
           <div className="col col-text">
             <div>
-              <h4>A unique experience</h4>
+              <h4>Why Rover?</h4>
               <p>
-                We believe in raising the standard of torque sensor system and
-                promoting them.
+                We want to help create an E-Bike that helps you make the choice for a
+                healthier lifestyle.
               </p>
+              <br/>
               <p>
-                We keep on working to strengthen e-bike standard in the market
-                with our unique collections.
+                Our goal is to bind the social and physical in one product.
               </p>
             </div>
           </div>
@@ -47,22 +47,30 @@ class AboutUsPage extends React.Component {
 
         <div className="white-content">
           <p>
-            Our fashion trend is simple as we keep it technical and sport with
-            charm. Our products are lifestyle e-bikes. Advantages are Fashion
-            trend, greener way to ride, avoid traffic, looks like a normal bike.
+            Our commitment: we believe in quality. From Shimano freewheels to torque sensor
+            system, we work with industry leading companies to bring you 
+            highest quality e-bikes.
           </p>
+          <a
+            href="/product"
+            class="button-dark"
+            style={{ float: "right", marginTop: "35px" }}
+          >
+            Explore our bikes
+          </a>
         </div>
 
         <div className="row">
           <div className="col col-text">
             <div>
-              <h4>Designed to impress</h4>
+              <h4>We Listen</h4>
               <p>
-                We take riding fashion trends very seriously. We are a team of
-                riding enthusiasts who love riding from the depth of our hearts.
+                What customers desire, we deliver. Your feedback matters to us. 
+                Our biggest goal is to satisfy customers’ needs in every aspect.
               </p>
+              <br/>
               <p>
-                It is one of the reasons for us to launch a brand for e-bike.
+                We are keen to continuously strengthen our products.
               </p>
             </div>
           </div>
@@ -72,23 +80,6 @@ class AboutUsPage extends React.Component {
               style={{ backgroundImage: "url(" + image2 + ")" }}
             ></div>
           </div>
-        </div>
-
-        <div className="white-content">
-          <p>
-            Also, they are high technical e-bikes. Using one of a kind torque
-            sensor system will help people enjoy riding. Since normal bike will
-            hurt people’s knee and leg when riding long distance or uphill. Our
-            torque sensor system will make long distance or uphill easily
-            without any pain.
-          </p>
-          <a
-            href="/product"
-            class="button-dark"
-            style={{ float: "right", marginTop: "35px" }}
-          >
-            Explore our bikes
-          </a>
         </div>
 
         <FeaturedArticles

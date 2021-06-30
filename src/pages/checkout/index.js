@@ -66,10 +66,6 @@ const CheckoutPage = () => {
                 <select>
                   <option></option>
                   <option>Canada</option>
-                  <option>England</option>
-                  <option>France</option>
-                  <option>Norway</option>
-                  <option>Turkey</option>
                   <option>U.S.A</option>
                 </select>
               </div>
@@ -188,16 +184,16 @@ const CheckoutPage = () => {
               </div>
               <div className="item">
                 <span>Shipping</span>
-                <span>CAD {formatNumber(total > 0 ? 100 : 0)}</span>
+                <span>CAD {formatNumber(total > 0 ? 0 : 0)}</span>
               </div>
               <div className="item">
                 <span>Tax</span>
-                <span>CAD {formatNumber(total > 0 ? 300 : 0)}</span>
+                <span>CAD {formatNumber(total > 0 ? (total*0.05) : 0)}</span>
               </div>
             </div>
             <div className="checkout-amount">
               <span>Total</span>
-              <span>CAD {formatNumber(parseFloat(total) + 400)}</span>
+              <span>CAD {formatNumber(parseFloat(total) + (total*0.05))}</span>
             </div>
           </div>
           <div className="checkout-information">
