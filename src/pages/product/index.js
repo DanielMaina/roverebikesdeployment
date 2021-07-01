@@ -107,6 +107,7 @@ class ProductPage extends React.Component {
                 ref={this.getVideo1}
                 src={sectionMovie1}
                 muted
+                loop
                 autoPlay
               ></video>
             </React.Fragment>
@@ -117,6 +118,7 @@ class ProductPage extends React.Component {
               ref={this.getVideo2}
               src={sectionMovie2}
               muted
+              loop
               autoPlay
             ></video>
           </div>
@@ -155,6 +157,7 @@ class ProductPage extends React.Component {
               ref={this.getVideo3}
               src={sectionMovie3}
               muted
+              loop
               autoPlay
             ></video>
           </div>
@@ -168,6 +171,7 @@ class ProductPage extends React.Component {
               ref={this.getVideo4}
               src={sectionMovie4}
               muted
+              loop
               autoPlay
             ></video>
           </div>

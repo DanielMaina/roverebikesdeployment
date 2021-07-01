@@ -63,6 +63,9 @@ class HomePage extends React.Component {
 
         <div
           className="section-wrapper"
+          onMouseEnter={() => {
+            this.sectionVideo1.current.play();
+          }}
           onFocus={() => {
             this.sectionVideo1.current.play();
           }}
@@ -82,6 +85,7 @@ class HomePage extends React.Component {
               ref={this.sectionVideo1}
               src={sectionMovie1}
               muted
+              loop
               autoPlay
               playsInline
             ></video>
