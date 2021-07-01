@@ -38,14 +38,14 @@ const HomeProduct = (props) => {
       </div>
       <div className="home-product-information">
         <h5 className="product-heading">
-          <span>|</span> It's your <span>world</span>,
+          <span>Introducing</span>
         </h5>
         <h3 className="product-name">
-          <a href="/product">Ride it!</a>
+          <a href="/product">Rover X/Y Series</a>
         </h3>
-
-        <h5 className="product-old-price">CAD 2,299</h5>
+        
         <h4 className="product-price">CAD 1,899</h4>
+        <h5 className="product-old-price">CAD 2,299</h5>
         <a href="/product" className="explore-button">
           Explore more
         </a>

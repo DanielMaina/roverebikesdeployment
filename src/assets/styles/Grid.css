@@ -78,4 +78,7 @@
   .shipping-line {
     display: none;
   }
+  .component-grid-mobile .react-slideshow-container {
+    margin-top: -20px;
+  }
 }

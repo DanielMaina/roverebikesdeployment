@@ -98,8 +98,8 @@ const Product = () => {
           <img src={roverLogo} />
         </h3>
         <h4 className="product-price">
-          <span className="product-old-price">CAD 2,895</span>
-          CAD 1,899
+          <span className="product-new-price">CAD 1,899</span>
+          <span className="product-old-price">CAD 2,895</span>          
         </h4>
         <div className="product-description">
           <p>
