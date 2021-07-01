@@ -229,7 +229,10 @@
 
   .product-page .product-heading {
   }
-
+  .product-page .product-description p {
+    text-align: center;
+    padding: 0 30px;
+  }
   .product-page .product-name {
     font-size: 1em;
     margin-bottom: 0px;

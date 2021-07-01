@@ -34,28 +34,22 @@ class AboutUsPage extends React.Component {
             <div>
               <h4>Why Rover?</h4>
               <p>
-                We want to help create an E-Bike that helps you make the choice for a
-                healthier lifestyle.
+                We want to help create an E-Bike that helps you make the choice
+                for a healthier lifestyle.
               </p>
-              <br/>
-              <p>
-                Our goal is to bind the social and physical in one product.
-              </p>
+              <br />
+              <p>Our goal is to bind the social and physical in one product.</p>
             </div>
           </div>
         </div>
 
         <div className="white-content">
           <p>
-            Our commitment: we believe in quality. From Shimano freewheels to torque sensor
-            system, we work with industry leading companies to bring you 
-            highest quality e-bikes.
+            Our commitment: we believe in quality. From Shimano freewheels to
+            torque sensor system, we work with industry leading companies to
+            bring you highest quality e-bikes.
           </p>
-          <a
-            href="/product"
-            class="button-dark"
-            style={{ float: "right", marginTop: "35px" }}
-          >
+          <a href="/product" class="button-dark" style={{ marginTop: "35px" }}>
             Explore our bikes
           </a>
         </div>
@@ -65,13 +59,11 @@ class AboutUsPage extends React.Component {
             <div>
               <h4>We Listen</h4>
               <p>
-                What customers desire, we deliver. Your feedback matters to us. 
+                What customers desire, we deliver. Your feedback matters to us.
                 Our biggest goal is to satisfy customers’ needs in every aspect.
               </p>
-              <br/>
-              <p>
-                We are keen to continuously strengthen our products.
-              </p>
+              <br />
+              <p>We are keen to continuously strengthen our products.</p>
             </div>
           </div>
           <div className="col col-image">

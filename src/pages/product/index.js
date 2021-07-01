@@ -86,61 +86,65 @@ class ProductPage extends React.Component {
         <Product />
 
         <div className="section-wrapper">
-          <div
-            className="product-section-desc odd"
-            onMouseEnter={this.playVideo1}
-          >
-            <div>
-              <h4>Mivice dual-sided torque sensor</h4>
-              <p>
-                Our fast responsive duel-sided torque sensor provides seemless
-                power support and gives you the smoothest riding experience.
-              </p>
+          <div className="section-1">
+            <div
+              className="product-section-desc"
+              onMouseEnter={this.playVideo1}
+            >
+              <div>
+                <h4>Mivice dual-sided torque sensor</h4>
+                <p>
+                  Our fast responsive duel-sided torque sensor provides seemless
+                  power support and gives you the smoothest riding experience.
+                </p>
+              </div>
+            </div>
+            <div
+              className="product-section-image"
+              onMouseEnter={this.playVideo1}
+            >
+              <React.Fragment>
+                {video1IsLoading}
+
+                <video
+                  ref={this.getVideo1}
+                  src={sectionMovie1}
+                  muted
+                  loop
+                  autoPlay
+                ></video>
+              </React.Fragment>
             </div>
           </div>
 
-          <div className="product-section-image" onMouseEnter={this.playVideo1}>
-            <React.Fragment>
-              {video1IsLoading}
-
+          <div className="section-2">
+            <div
+              className="product-section-desc"
+              onMouseEnter={this.playVideo2}
+            >
+              <div>
+                <h4>Shock aborbing system</h4>
+                <p>
+                  Our front suspension fork allows you to adjust shock absorbing
+                  levels according to terrains, provides comfort in any
+                  conditions.
+                </p>
+              </div>
+            </div>
+            <div
+              className="product-section-image"
+              onMouseEnter={this.playVideo2}
+            >
               <video
-                ref={this.getVideo1}
-                src={sectionMovie1}
+                ref={this.getVideo2}
+                src={sectionMovie2}
                 muted
                 loop
                 autoPlay
               ></video>
-            </React.Fragment>
-          </div>
-
-          <div className="product-section-image" onMouseEnter={this.playVideo2}>
-            <video
-              ref={this.getVideo2}
-              src={sectionMovie2}
-              muted
-              loop
-              autoPlay
-            ></video>
-          </div>
-
-          <div
-            className="product-section-desc even"
-            onMouseEnter={this.playVideo2}
-          >
-            <div>
-              <h4>Shock aborbing system</h4>
-              <p>
-                Our front suspension fork allows you to adjust shock absorbing
-                levels according to terrains, provides comfort in any
-                conditions.
-              </p>
             </div>
           </div>
-
-          <div
-            className="product-section-white odd"
-            onMouseEnter={this.playVideo3}
-          >
+          <div className="section-1" onMouseEnter={this.playVideo3}>
             <div className="product-section-desc">
               <div>
                 <h4>7-speed level for maximum support</h4>
@@ -150,71 +154,78 @@ class ProductPage extends React.Component {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className="product-section-image" onMouseEnter={this.playVideo3}>
-            <video
-              ref={this.getVideo3}
-              src={sectionMovie3}
-              muted
-              loop
-              autoPlay
-            ></video>
-          </div>
-
-          <div
-            className="product-section-image"
-            onMouseEnter={this.playVideo4}
-            onFocus={this.playVideo4}
-          >
-            <video
-              ref={this.getVideo4}
-              src={sectionMovie4}
-              muted
-              loop
-              autoPlay
-            ></video>
-          </div>
-
-          <div
-            className="product-section-desc even"
-            onMouseEnter={this.playVideo4}
-          >
-            <div>
-              <h4>Powerful, light and quiet. </h4>
-              <p>
-                With IP65 protection level, our motors are protected against
-                water jets at any angle.
-              </p>
+            <div
+              className="product-section-image"
+              onMouseEnter={this.playVideo3}
+            >
+              <video
+                ref={this.getVideo3}
+                src={sectionMovie3}
+                muted
+                loop
+                autoPlay
+              ></video>
             </div>
           </div>
 
-          <div className="product-section-desc">
-            <div>
-              <h4>SHIMANO 7-Speed Freewheel</h4>
-              <p>
-                Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t
-                Freewheel.
-              </p>
+          <div className="section-2">
+            <div
+              className="product-section-desc"
+              onMouseEnter={this.playVideo4}
+            >
+              <div>
+                <h4>Powerful, light and quiet. </h4>
+                <p>
+                  With IP65 protection level, our motors are protected against
+                  water jets at any angle.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="product-section-image"
+              onMouseEnter={this.playVideo4}
+              onFocus={this.playVideo4}
+            >
+              <video
+                ref={this.getVideo4}
+                src={sectionMovie4}
+                muted
+                loop
+                autoPlay
+              ></video>
             </div>
           </div>
 
-          <div className="product-section-image">
-            <img src={sectionImage1} />
+          <div className="section-1">
+            <div className="product-section-desc">
+              <div>
+                <h4>SHIMANO 7-Speed Freewheel</h4>
+                <p>
+                  Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t
+                  Freewheel.
+                </p>
+              </div>
+            </div>
+
+            <div className="product-section-image">
+              <img src={sectionImage1} />
+            </div>
           </div>
 
-          <div className="product-section-image">
-            <img src={sectionBatteryImage} />
-          </div>
-
-          <div className="product-section-desc even">
-            <div>
-              <h4>High Capacity Battery</h4>
-              <p>
-                High Capacity Battery Detachable &amp; long lasting battery(36V,
-                14AH) provides convenient charging experience (fully charged
-                within 5hrs) and allows riding up to 160km.
-              </p>
+          <div className="section-2">
+            <div className="product-section-desc">
+              <div>
+                <h4>High Capacity Battery</h4>
+                <p>
+                  High Capacity Battery Detachable &amp; long lasting
+                  battery(36V, 14AH) provides convenient charging experience
+                  (fully charged within 5hrs) and allows riding up to 160km.
+                </p>
+              </div>
+            </div>
+            <div className="product-section-image">
+              <img src={sectionBatteryImage} />
             </div>
           </div>
         </div>
@@ -259,19 +270,7 @@ class ProductPage extends React.Component {
               </div>
             </div>
             <div className="spec-item">
-              <h3 className="section-header collapse-start">
-                METRIX DISPLAY
-                <span
-                  className="collapse-start-button"
-                  onClick={() => this.displayAllSectionsHandler()}
-                >
-                  {this.state.displayAllSections == false ? (
-                    <AddCircleOutlineIcon fontSize="large" />
-                  ) : (
-                    <RemoveCircleOutlineIcon fontSize="large" />
-                  )}
-                </span>
-              </h3>
+              <h3 className="section-header collapse-start">METRIX DISPLAY</h3>
               <div className="spec-grid">
                 <div className="spec-grid-item">
                   <h4>SPORT Mode</h4>
@@ -480,6 +479,16 @@ class ProductPage extends React.Component {
                 </div>
               </div>
             </Collapse>
+          </div>
+          <div
+            className="collapse-start-button"
+            onClick={() => this.displayAllSectionsHandler()}
+          >
+            {this.state.displayAllSections == false ? (
+              <AddCircleOutlineIcon fontSize="large" />
+            ) : (
+              <RemoveCircleOutlineIcon fontSize="large" />
+            )}
           </div>
         </div>
         <FeaturedProducts />

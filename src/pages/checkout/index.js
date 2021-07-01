@@ -40,6 +40,15 @@ const CheckoutPage = () => {
     { value: "usa", label: "U.S.A" },
   ];
   const customStyles = {
+    groupHeading: (provided, state) => ({
+      ...provided,
+      fontSize: "1em",
+      color: "black",
+      textAlign: "left",
+      borderBottom: "1px solid #ddd",
+      background: "#ccc",
+      padding: "10px 10px",
+    }),
     option: (provided, state) => ({
       ...provided,
       //borderBottom: "1px dotted pink",
@@ -51,11 +60,31 @@ const CheckoutPage = () => {
 
   const cityList = (_country) => {
     if (_country === "canada") {
-      setCityData(
-        cities.canada.items.map((city) => {
-          return { value: city.name, label: city.name };
-        })
-      );
+      let cityData = [];
+
+      cities.canada.items.map((city) => {
+        let options;
+        options = city.cities.sort(function (a, b) {
+          if (a < b) {
+            return -1;
+          }
+          if (a > b) {
+            return 1;
+          }
+          return 0;
+        });
+
+        options = options.map((item) => {
+          return { label: item, value: item };
+        });
+        let cityObject = {
+          label: city.name,
+          options: options,
+        };
+        cityData.push(cityObject);
+      });
+
+      setCityData(cityData);
     } else if (_country === "usa") {
       let keys = Object.keys(cities.usa.items);
       let usaCityData = [];
@@ -207,7 +236,7 @@ const CheckoutPage = () => {
                 />
               </div>
               <div className="form-row">
-                <label>*City</label>
+                <label>*Province/State</label>
                 <Select
                   name={"city"}
                   ref={citySelectRef}

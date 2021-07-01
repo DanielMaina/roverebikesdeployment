@@ -171,7 +171,8 @@ class FindStore extends React.Component {
   }
 
   render() {
-    return (
+    return null;
+    /* return (
       <div className="stores">
         <div className="store-list">
           {this.header()}
@@ -185,7 +186,7 @@ class FindStore extends React.Component {
           </div>
         </div>
       </div>
-    );
+    ); */
   }
 }
 
