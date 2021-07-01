@@ -2,11 +2,12 @@ import React, { useRef, useEffect, useContext } from "react";
 
 import { CartContext } from "../contexts/CartContext";
 
-const Paypal = () => {
+const Paypal = (props) => {
   const paypal = useRef();
 
-  const { total, handleCheckout, totalAmount } = useContext(CartContext);
+  const { total, handleCheckout } = useContext(CartContext);
   useEffect(() => {
+    console.log(props.amount.toFixed(2));
     window.paypal
       .Buttons({
         createOrder: (data, actions, err) => {
@@ -17,7 +18,7 @@ const Paypal = () => {
                 description: "ROVER E-Bike",
                 amount: {
                   currency_code: "CAD",
-                  value: totalAmount,
+                  value: parseFloat(props.amount),
                 },
               },
             ],
@@ -25,7 +26,6 @@ const Paypal = () => {
         },
         onApprove: async (data, actions) => {
           const order = await actions.order.capture();
-          console.log(order);
         },
         onError: (err) => {
           console.log(err);

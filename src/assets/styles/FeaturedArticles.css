@@ -99,3 +99,25 @@
   color: #000000;
   margin-top: 20px;
 }
+
+@media (max-width: 720px) {
+  .featured-articles {
+    padding: 0;
+  }
+
+  .featured-articles > h5 {
+    font-size: 46px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .featured-articles .items {
+    min-height: auto;
+    width: calc(100% - 20px);
+    padding: 10px;
+  }
+  .featured-articles .items .item {
+    width: 100vw;
+    padding: 25px 25px;
+  }
+}

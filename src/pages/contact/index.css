@@ -197,3 +197,58 @@
   right: 10px;
   top: 24px;
 }
+
+@media (max-width: 720px) {
+  .contact-page .main-content {
+    height: 100%;
+  }
+
+  .contact-page .main-content .contact-area {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+
+  .contact-page .main-content .contact-area .contact-information {
+    padding: 20px 5px;
+    width: calc(100% - 50px);
+    margin: 20px;
+  }
+
+  .contact-page .main-content .contact-area .contact-information h4 {
+    padding: 20px 0 20px 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .contact-page .main-content .contact-area .contact-form {
+    width: 100vw;
+    margin-top: 200px;
+  }
+  .contact-page .main-content .contact-area .contact-form .form-group {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
+  .contact-page .main-content .contact-area .contact-form .form-group input,
+  .contact-page .main-content .contact-area .contact-form .form-group textarea {
+    width: -webkit-fill-available;
+  }
+
+  .contact-page .center-content {
+    flex-direction: column;
+  }
+
+  .contact-page .center-content > div:first-child h4 {
+    font-size: 28px;
+    padding: 0 20px;
+  }
+  .contact-page .center-content > div:last-child {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-page .center-content > div:last-child input {
+    width: 100%;
+  }
+}

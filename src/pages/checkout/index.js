@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
-
+import Select from "react-select";
 import "./index.css";
 import setTitle from "../../tools.js";
 
 import Paypal from "../../components/Paypal";
+import { cities } from "../../services/data";
 
 import { CartContext } from "../../contexts/CartContext";
 import { formatNumber } from "../../helpers/utils";
@@ -24,7 +25,138 @@ const CheckoutPage = () => {
     useContext(CartContext);
   const [paymentMethod, setPaymentMethod] = useState();
   const [processing, setProcessing] = useState(false);
+  const [country, setCountry] = useState(false);
+  const [selectedCity, setSelectedCity] = useState(false);
+  const [formValues, setFormValues] = useState({});
+  const [cityData, setCityData] = useState([]);
+  const [shippingAmount, setShippingAmount] = useState(0);
+  const [taxValue, setTaxValue] = useState({ value: 0, amount: 0 });
+  const [totalAmount, setTotalAmount] = useState(0);
   const submitButtonRef = useRef();
+  const citySelectRef = useRef();
+
+  const countryData = [
+    { value: "canada", label: "Canada" },
+    { value: "usa", label: "U.S.A" },
+  ];
+  const customStyles = {
+    option: (provided, state) => ({
+      ...provided,
+      //borderBottom: "1px dotted pink",
+      color: "black",
+      textAlign: "left",
+      //padding: 20,
+    }),
+  };
+
+  const cityList = (_country) => {
+    if (_country === "canada") {
+      setCityData(
+        cities.canada.items.map((city) => {
+          return { value: city.name, label: city.name };
+        })
+      );
+    } else if (_country === "usa") {
+      let keys = Object.keys(cities.usa.items);
+      let usaCityData = [];
+
+      keys.forEach((key) => {
+        let options;
+        options = cities.usa.items[key].sort(function (a, b) {
+          if (a < b) {
+            return -1;
+          }
+          if (a > b) {
+            return 1;
+          }
+          return 0;
+        });
+
+        options = options.map((item) => {
+          return { label: item, value: item };
+        });
+        let cityObject = {
+          label: key,
+          options: options,
+        };
+        usaCityData.push(cityObject);
+      });
+
+      setCityData(usaCityData);
+    }
+  };
+  const countryHandler = (e) => {
+    setCountry(e.value);
+    citySelectRef.current.select.clearValue();
+    cityList(e.value);
+
+    let _shippingAmount = cities[e.value].shipping;
+    setShippingAmount(_shippingAmount);
+    setTaxValue({
+      amount: 0,
+      value: 0,
+    });
+
+    if (e.value === "canada") {
+      setTotalAmount(calculateTotal(e.value));
+    } else {
+      setTotalAmount(parseFloat(total) + parseFloat(_shippingAmount));
+    }
+  };
+  const cityHandler = (e) => {
+    let selectedCity = null;
+    if (e) {
+      setSelectedCity(e.value);
+
+      if (country === "canada") {
+        selectedCity = cities.canada.items.find(
+          (city) => city.name === e.value
+        );
+
+        if (selectedCity) {
+          setTaxValue({
+            amount:
+              (parseFloat(total) * parseFloat(selectedCity.taxPercantage)) /
+              100,
+            value: selectedCity.taxPercantage,
+          });
+          setTotalAmount(calculateTotal(country, selectedCity));
+        }
+      } else {
+        setTaxValue({
+          amount: 0,
+          value: 0,
+        });
+        setTotalAmount(calculateTotal(country, selectedCity));
+      }
+    }
+  };
+  const calculateTotal = (country, selectedCity = null) => {
+    let totalAmount = parseFloat(total);
+
+    if (country === "canada") {
+      let _taxAmount = 0;
+      if (selectedCity) {
+        _taxAmount =
+          (parseFloat(totalAmount) * parseFloat(selectedCity.taxPercantage)) /
+          100;
+        totalAmount = totalAmount + _taxAmount + parseFloat(shippingAmount);
+      } else {
+        totalAmount = 0;
+      }
+    } else {
+      totalAmount = totalAmount + parseFloat(shippingAmount);
+    }
+    return totalAmount;
+  };
+
+  const setFormValue = (input) => {
+    let _formValues = formValues;
+    _formValues[input.target.name] = input.target.value;
+    setFormValues(_formValues);
+  };
+
+  const validateForm = () => {};
 
   return (
     <div className="checkout-page">
@@ -34,45 +166,64 @@ const CheckoutPage = () => {
           <form action="#" method={"POST"}>
             <div className="form-group">
               <label>*Email Address</label>
-              <input type={"text"}></input>
+              <input
+                name={"email"}
+                type={"text"}
+                onKeyUp={setFormValue}
+              ></input>
             </div>
             <div className="form-group row">
               <div className="form-row">
                 <label>*Name</label>
-                <input type={"text"}></input>
+                <input
+                  name={"name"}
+                  type={"text"}
+                  onKeyUp={setFormValue}
+                ></input>
               </div>
               <div className="form-row">
                 <label>*Last Name</label>
-                <input type={"text"}></input>
+                <input
+                  name={"last_name"}
+                  type={"text"}
+                  onKeyUp={setFormValue}
+                ></input>
               </div>
             </div>
 
             <div className="form-group">
               <label>*Street and house number</label>
-              <input type={"text"}></input>
+              <input name={"street"} type={"text"}></input>
             </div>
             <div className="form-group row">
               <div className="form-row">
-                <label>*City</label>
-                <select>
-                  <option></option>
-                  <option>Toronto</option>
-                  <option>Montréal</option>
-                  <option>Vancouver</option>
-                </select>
+                <label>*County</label>
+                <Select
+                  name={"country"}
+                  isSearchable={false}
+                  styles={customStyles}
+                  options={countryData}
+                  onChange={countryHandler}
+                />
               </div>
               <div className="form-row">
-                <label>*County</label>
-                <select>
-                  <option></option>
-                  <option>Canada</option>
-                  <option>U.S.A</option>
-                </select>
+                <label>*Province/State</label>
+                <Select
+                  name={"city"}
+                  ref={citySelectRef}
+                  styles={customStyles}
+                  options={cityData}
+                  onChange={cityHandler}
+                />
               </div>
             </div>
             <div className="form-group">
               <label>*Zip/Postal Code</label>
-              <input type={"text"}></input>
+              <input
+                name={"zip_code"}
+                type={"text"}
+                onKeyUp={setFormValue}
+              ></input>
             </div>
 
             <h4>Billing Address</h4>
@@ -131,7 +282,7 @@ const CheckoutPage = () => {
             <div className="payment-box">
               <h4>Payment</h4>
               <div className="form-group buttons">
-                <Paypal />
+                {totalAmount > 0 ? <Paypal amount={totalAmount} /> : null}
               </div>
             </div>
           </form>
@@ -184,16 +335,16 @@ const CheckoutPage = () => {
               </div>
               <div className="item">
                 <span>Shipping</span>
-                <span>CAD {formatNumber(total > 0 ? 0 : 0)}</span>
+                <span>CAD {formatNumber(shippingAmount)}</span>
               </div>
               <div className="item">
-                <span>Tax</span>
-                <span>CAD {formatNumber(total > 0 ? (total*0.05) : 0)}</span>
+                <span>Tax (%{taxValue.value}) </span>
+                <span>CAD {formatNumber(taxValue.amount)}</span>
               </div>
             </div>
             <div className="checkout-amount">
               <span>Total</span>
-              <span>CAD {formatNumber(parseFloat(total) + (total*0.05))}</span>
+              <span>CAD {formatNumber(totalAmount)}</span>
             </div>
           </div>
           <div className="checkout-information">

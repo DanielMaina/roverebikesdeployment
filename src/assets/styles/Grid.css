@@ -66,10 +66,12 @@
   }
   .component-grid-mobile {
     display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .component-grid-mobile > div {
     height: 100%;
-    padding-top: calc(100% - 500px / 2);
+    padding-top: 96px;
   }
   .component-grid-mobile .component-grid-item {
     width: calc(100vw - 200px);
@@ -79,6 +81,5 @@
     display: none;
   }
   .component-grid-mobile .react-slideshow-container {
-    margin-top: -20px;
   }
 }

@@ -59,18 +59,19 @@ export const CartReducer = (state, action) => {
         ];
         return {
           ...state,
-          ...sumItems(state.cartItems),
+          ...sumItems(cartItems),
           cartItems: [...cartItems],
         };
       }
       return state;
 
     case "DECREASE":
-      let q =
+      let quantity =
         state.cartItems[
           state.cartItems.findIndex((item) => item.id === action.payload.id)
         ].quantity;
-      if (q > 1) {
+
+      if (quantity > 1) {
         let existingCartItemIndex = state.cartItems.findIndex(
           (item) => item.id === action.payload.id
         );
@@ -79,13 +80,14 @@ export const CartReducer = (state, action) => {
             ...state.cartItems.slice(0, existingCartItemIndex),
             {
               ...state.cartItems[existingCartItemIndex],
-              quantity: state.cartItems[existingCartItemIndex].quantity - 1,
+              quantity: quantity - 1,
             },
             ...state.cartItems.slice(existingCartItemIndex + 1),
           ];
+
           return {
             ...state,
-            ...sumItems(state.cartItems),
+            ...sumItems(cartItems),
             cartItems: [...cartItems],
           };
         }

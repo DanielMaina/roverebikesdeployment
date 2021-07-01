@@ -55,3 +55,33 @@
 
   color: #000000;
 }
+
+@media (max-width: 720px) {
+  .about-us-page .row {
+    flex-direction: column;
+  }
+
+  .about-us-page .col-text div {
+    padding: 40px 0 40px 0;
+  }
+
+  .about-us-page .col-text div * {
+    padding: 10px 20px;
+  }
+
+  .about-us-page .col-text h4 {
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
+
+  .about-us-page .col-text p {
+    width: auto;
+    font-size: 18px;
+    line-height: 1.5em;
+  }
+
+  .about-us-page .col-image {
+    height: 300px;
+    background-size: cover;
+  }
+}
