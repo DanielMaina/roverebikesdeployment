@@ -1,10 +1,13 @@
-.center-wrapper {
+.warranty-page .center-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.center-wrapper .center-content {
+.warranty-page .center-wrapper .center-content {
+  display: flex;
+  flex-direction: column;
+
   width: 1144px;
   height: 364px;
   padding: 100px 75px;
@@ -18,7 +21,7 @@
   position: relative;
 }
 
-.center-wrapper .center-content h4 {
+.warranty-page .center-wrapper .center-content h4 {
   font-style: normal;
   font-weight: normal;
   font-size: 56px;
@@ -32,30 +35,36 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.center-wrapper .center-content p {
+.warranty-page .center-wrapper .center-content p {
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 28px;
 }
 
-.center-wrapper .center-content .button {
+.warranty-page .center-wrapper .center-content .button {
   width: 262px;
 
   background: #f4f5f4;
   border-radius: 20px;
 
+  margin-top: 30px;
+  margin-left: auto;
   padding: 30px 20px;
 
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 19px;
 
   text-align: center;
 
   color: #000000;
   text-align: center;
+}
+
+.warranty-page .center-wrapper .center-content .button:hover {
+  background: #fff;
 }
 
 .warranty-page .shipping-line {
@@ -68,4 +77,70 @@
 
 .warranty-page .shipping-line * {
   color: var(--color-white);
+}
+@media (max-width: 720px) {
+  .warranty-page .center-wrapper .center-content {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    padding: 30px 20px;
+    height: 100%;
+  }
+  .warranty-page .main-content {
+    height: 100%;
+    padding: 10px;
+    width: calc(100% - 20px);
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .warranty-page .center-wrapper .center-content h4 {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 15px;
+    line-height: 1em;
+    text-align: center;
+  }
+
+  .warranty-page .center-wrapper .center-content p {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  .warranty-page .center-wrapper .center-content .button {
+    margin-top: 40px;
+    padding: 15px 10px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .warranty-page .shipping-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .warranty-page .shipping-line > div {
+    display: flex;
+    padding: 20px;
+  }
+
+  .warranty-page .shipping-line .shipping-line-content {
+    font-size: 11px;
+  }
+  .warranty-page .shipping-line img {
+    width: 40px;
+  }
+  .warranty-page .shipping-line h5 {
+    font-size: 23px;
+    line-height: 1em;
+    margin-bottom: 10px;
+  }
+  .warranty-page .shipping-line p {
+    font-size: 12px;
+    line-height: 1em;
+  }
 }

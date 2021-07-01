@@ -389,7 +389,11 @@
 }
 
 @media (max-width: 720px) {
+  /* #main {
+    margin-top: 59px;
+  } */
   .App-header {
+    /* position: inherit; */
     width: 100vw;
     height: 70px;
     padding: 0;
@@ -421,8 +425,7 @@
 
   .App-footer {
     flex-direction: column;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0;
   }
   .App-footer .footer-links {
     display: flex;

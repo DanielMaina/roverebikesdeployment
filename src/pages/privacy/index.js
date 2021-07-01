@@ -12,7 +12,7 @@ const PrivacyPage = () => {
   }, []);
 
   return (
-    <div className="warranty-page">
+    <div className="privacy-page">
       <div
         className="main-content"
         style={{ backgroundImage: "url(" + topImage + ")" }}
