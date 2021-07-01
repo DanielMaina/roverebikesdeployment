@@ -112,6 +112,8 @@ class ProductPage extends React.Component {
                   muted
                   loop
                   autoPlay
+                  playsInline
+                  webkit-playsinline
                 ></video>
               </React.Fragment>
             </div>
@@ -123,7 +125,7 @@ class ProductPage extends React.Component {
               onMouseEnter={this.playVideo2}
             >
               <div>
-                <h4>Shock aborbing system</h4>
+                <h4>Shock aborbing system</h4>autoPlay={true}
                 <p>
                   Our front suspension fork allows you to adjust shock absorbing
                   levels according to terrains, provides comfort in any
@@ -141,6 +143,8 @@ class ProductPage extends React.Component {
                 muted
                 loop
                 autoPlay
+                playsInline
+                webkit-playsinline
               ></video>
             </div>
           </div>
@@ -164,6 +168,8 @@ class ProductPage extends React.Component {
                 muted
                 loop
                 autoPlay
+                playsInline
+                webkit-playsinline
               ></video>
             </div>
           </div>
@@ -193,6 +199,8 @@ class ProductPage extends React.Component {
                 muted
                 loop
                 autoPlay
+                playsInline
+                webkit-playsinline
               ></video>
             </div>
           </div>

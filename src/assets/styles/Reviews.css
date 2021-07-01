@@ -32,7 +32,7 @@
   grid-gap: 30px;
   grid-auto-rows: minmax(min-content, max-content);
   grid-template-rows: auto;
-  align-items: center;
+  align-items: flex-start;
   align-content: space-evenly;
   justify-content: center;
 
@@ -59,7 +59,7 @@
 
   padding: 80px 50px;
   width: calc(100% / 3);
-  height: 420px;
+  height: 450px;
 }
 
 .reviews .review-items .review-item .image {
@@ -78,7 +78,7 @@
 .reviews .review-items .review-item .content {
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
 
   color: #000000;

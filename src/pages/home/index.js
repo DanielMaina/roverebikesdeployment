@@ -42,11 +42,12 @@ class HomePage extends React.Component {
             ref={this.promoVideo}
             src={promoVideoSource}
             poster={landingImage}
+            autoPlay={true}
             muted
             loop
-            autoPlay={true}
-            preload={"none"}
             onLoad
+            playsInline
+            webkit-playsinline
           ></video>
           <div className="header-title">
             <h4>CHANGE THE WAY YOU RIDE</h4>

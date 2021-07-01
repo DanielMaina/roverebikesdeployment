@@ -10,6 +10,7 @@ import { CartContext } from "../contexts/CartContext";
 import { ProductsContext } from "../contexts/ProductsContext";
 
 import modalImage from "../assets/images/modal.png";
+import modalImageMobile from "../assets/images/modal-mobile.png";
 const customStyles = {
   content: {
     top: "50%",
@@ -109,7 +110,14 @@ const FeaturedProducts = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <img src={modalImage} />
+        <img
+          src={modalImage}
+          className="featured-products-modal-image-desktop"
+        />
+        <img
+          src={modalImageMobile}
+          className="featured-products-modal-image-mobile"
+        />
       </Modal>
     </div>
   );

@@ -447,12 +447,22 @@
 
   .cookie-popup {
     left: 0;
+
     width: 100vw;
     padding: 0;
+    border-radius: 0;
+  }
+  .cookie-popup.active {
+    bottom: 0;
   }
   .cookie-popup p {
     font-size: 16px;
     padding: 20px;
     line-height: 1.5em;
+  }
+
+  .cookie-popup button {
+    margin-left: 10px;
+    margin-bottom: 10px;
   }
 }

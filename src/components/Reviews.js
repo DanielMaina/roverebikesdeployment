@@ -1,6 +1,6 @@
 import { map } from "jquery";
 import React from "react";
-
+import StarIcon from "@material-ui/icons/Star";
 import "../assets/styles/Reviews.css";
 
 import { Slide } from "react-slideshow-image";
@@ -35,7 +35,13 @@ const Reviews = (props) => {
               <div className="image">
                 {item.image ? <img src={item.image} /> : ""}
               </div>
-              <img src="/img/icons/stars.png" width={100} />
+              <div>
+                <StarIcon style={{ color: "black" }} />
+                <StarIcon style={{ color: "black" }} />
+                <StarIcon style={{ color: "black" }} />
+                <StarIcon style={{ color: "black" }} />
+                <StarIcon style={{ color: "black" }} />
+              </div>
               <p className="content">{item.content}</p>
             </div>
           ))}
@@ -50,7 +56,13 @@ const Reviews = (props) => {
                 <div className="image">
                   {item.image ? <img src={item.image} /> : ""}
                 </div>
-                <img src="/img/icons/stars.png" width={100} />
+                <div>
+                  <StarIcon style={{ color: "black" }} />
+                  <StarIcon style={{ color: "black" }} />
+                  <StarIcon style={{ color: "black" }} />
+                  <StarIcon style={{ color: "black" }} />
+                  <StarIcon style={{ color: "black" }} />
+                </div>
                 <p className="content">{item.content}</p>
               </div>
             ))}
