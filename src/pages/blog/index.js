@@ -5,6 +5,7 @@ import setTitle from "../../tools.js";
 
 import headerImage from "../../assets/images/contact-page-header.png";
 import liveToRideImage from "../../assets/images/blog-page-live-to-ride.png";
+import liveToRideImageMobile from "../../assets/images/blog-page-live-to-ride-mobile.png";
 const BlogPage = () => {
   useEffect(() => {
     setTitle("Blog");
@@ -13,17 +14,14 @@ const BlogPage = () => {
   return (
     <div className="blog-page">
       <div className="main-content">
-        <div
-          className="main-content-bg"
-          style={{
-            backgroundImage: "url(" + headerImage + ")",
-          }}
-          alt="Main Content Asset"
-        />
+        <div className="main-content-bg" alt="Main Content Asset" />
       </div>
       <div className="blog-area">
         <div className="blog-content">
           <div className="blog-wrapper">
+            <div className="live-to-ride-mobile">
+              <img src={liveToRideImageMobile} />
+            </div>
             <strong>When:</strong> September 1 , 2021
             <br />
             <strong>Time:</strong> 12pm

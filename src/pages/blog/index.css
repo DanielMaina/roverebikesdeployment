@@ -12,6 +12,8 @@
   background-repeat: no-repeat;
 
   z-index: -1;
+
+  background-image: url("../../assets/images/contact-page-header.png");
 }
 
 .blog-page .blog-area {
@@ -26,7 +28,12 @@
   justify-content: center;
 }
 
-.blog-page .blog-area {
+.blog-page .live-to-ride-mobile {
+  display: none;
+}
+
+.blog-page .live-to-ride {
+  display: block;
 }
 
 .blog-page .blog-area .blog-content {
@@ -62,4 +69,38 @@
 }
 .blog-page .live-to-ride img {
   width: 400px;
+}
+@media (max-width: 720px) {
+  .blog-page .main-content .main-content-bg {
+    background-image: url("../../assets/images/blog-page-header-mobile.png");
+  }
+
+  .blog-page .main-content {
+    height: 100%;
+  }
+
+  .blog-page .blog-area {
+    top: 100px;
+    width: auto;
+    height: auto;
+  }
+  .blog-page .blog-area .blog-content {
+    width: calc(100% - 40px);
+  }
+  .blog-page .blog-area .blog-content .blog-wrapper {
+    width: calc(100% - 60px);
+    padding: 0;
+    padding-top: 20px;
+    font-size: 11px;
+    line-height: 1em;
+    padding: 30px;
+  }
+  .blog-page .live-to-ride-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .blog-page .live-to-ride {
+    display: none;
+  }
 }
