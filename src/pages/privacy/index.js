@@ -270,7 +270,7 @@ const PrivacyPage = () => {
               <h5>CONTACT US</h5>
               For more information about our privacy practices, if you have
               questions, or if you would like to make a complaint, please
-              contact us by e-mail at info@roverebike.com or by mail using the
+              contact us by e-mail at info@roverebike.ca or by mail using the
               details provided below.
             </p>
           </div>

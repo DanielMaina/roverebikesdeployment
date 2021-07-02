@@ -264,9 +264,10 @@
   .home-product .product-old-price {
     font-size: 16px;
     line-height: 1em;
+    margin-top: -10px;
   }
   .home-product .product-price {
-    font-size: 24px;
+    font-size: 24px;    
   }
   .home-product .explore-button {
     width: 100px;

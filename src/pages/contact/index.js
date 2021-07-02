@@ -101,7 +101,7 @@ const ContactPage = () => {
                 <EmailOutlined />
               </div>
               <div>
-                <p>info@roverebike.com</p>
+                <p>info@roverebike.ca</p>
               </div>
             </div>
 

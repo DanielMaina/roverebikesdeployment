@@ -30,6 +30,9 @@ class AboutUsPage extends React.Component {
         </div>
 
         <div className="row">
+          <div className="col col-image">
+            <img src={image1} />
+          </div>
           <div className="col col-text">
             <div>
               <h4>Why Rover?</h4>
@@ -40,9 +43,6 @@ class AboutUsPage extends React.Component {
               <br />
               <p>Our goal is to bind the social and physical in one product.</p>
             </div>
-          </div>
-          <div className="col col-image">
-            <img src={image1} />
           </div>
         </div>
 
