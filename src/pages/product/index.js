@@ -79,8 +79,8 @@ class ProductPage extends React.Component {
       <div className="product-page">
         <div className="top-message">
           <p>
-            LIMITTED TIME OFFER
-            <br /> FIRST 50 BIKES FOR ONLY CA$ 1,899 !
+            LIMITED TIME OFFER
+            <br /> FIRST 50 BIKES FOR ONLY CA$ 1,899.99 !
           </p>
         </div>
         <Product />
@@ -94,7 +94,7 @@ class ProductPage extends React.Component {
               <div>
                 <h4>Mivice dual-sided torque sensor</h4>
                 <p>
-                  Our fast responsive duel-sided torque sensor provides seemless
+                  Our fast responsive dual-sided torque sensor provides seamless
                   power support and gives you the smoothest riding experience.
                 </p>
               </div>
@@ -125,7 +125,7 @@ class ProductPage extends React.Component {
               onMouseEnter={this.playVideo2}
             >
               <div>
-                <h4>Shock aborbing system</h4>
+                <h4>Shock absorbing system</h4>
                 <p>
                   Our front suspension fork allows you to adjust shock absorbing
                   levels according to terrains, provides comfort in any

@@ -71,7 +71,7 @@ const FeaturedProducts = () => {
         >
           <img src={featuredProduct.image} />
         </div>
-        {isInCart(featuredProduct.id) ? (
+        {/* {isInCart(featuredProduct.id) ? (
           <span
             className="add-to-cart added"
             onClick={() => increase(featuredProduct)}
@@ -91,7 +91,7 @@ const FeaturedProducts = () => {
           onClick={() => {
             openModal(featuredProduct);
           }}
-        ></button>
+        ></button> */}
       </div>
     ));
   };
@@ -103,7 +103,7 @@ const FeaturedProducts = () => {
       <div className="items mobile">
         <Slide {...zoomOutProperties}>{listItems()}</Slide>
       </div>
-      <Modal
+      {/* <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
@@ -118,7 +118,7 @@ const FeaturedProducts = () => {
           src={modalImageMobile}
           className="featured-products-modal-image-mobile"
         />
-      </Modal>
+      </Modal> */}
     </div>
   );
 };

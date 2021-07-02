@@ -45,6 +45,7 @@ const ContactPage = () => {
         .catch((error) => {
           setFormSendingStatus(2);
         });
+        alert("thank you for the submission!")
     } else {
       setFormValidation(false);
     }

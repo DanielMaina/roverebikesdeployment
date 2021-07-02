@@ -3,6 +3,7 @@ import React from "react";
 import "./index.css";
 import setTitle from "../../tools.js";
 import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
+import promoVideoMobile from "../../assets/movies/rover-e-Bike-short-mobile.mp4";
 import image1 from "../../assets/images/about-us/image1.png";
 import image2 from "../../assets/images/about-us/image2.png";
 
@@ -22,7 +23,10 @@ class AboutUsPage extends React.Component {
     return (
       <div className="about-us-page">
         <div className="main-content">
-          <video src={promoVideo} autoPlay></video>
+          <video 
+            src={this.isMobile ? promoVideoMobile : promoVideo} 
+            autoPlay={true}            
+            ></video>
         </div>
 
         <div className="row">

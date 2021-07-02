@@ -98,8 +98,8 @@ const Product = () => {
           <img src={roverLogo} />
         </h3>
         <h4 className="product-price">
-          <span className="product-new-price">CAD 1,899</span>
-          <span className="product-old-price">CAD 2,895</span>          
+          <span className="product-new-price">CAD 1,899.99</span>
+          <span className="product-old-price">CAD 2,399.99</span>          
         </h4>
         <div className="product-description">
           <p>
@@ -128,7 +128,7 @@ const Product = () => {
           </div>
         </div>
         <div className="product-actions">
-          <div
+          {/* <div
             className="product-action add-to-cart"
             onClick={() => addToCart()}
           >
@@ -136,12 +136,12 @@ const Product = () => {
               <span></span>
             </div>
             <a href="#">Add to cart</a>
-          </div>
-          <div className="product-action check-out-now" onClick={openModal}>
+          </div> */}
+          <div className="product-action check-out-now">
             <div className="icon">
               <span></span>
             </div>
-            <a href="#">Check out now</a>
+            <a href="https://www.indiegogo.com/projects/rover-e-bike-revolutionize-the-way-you-ride#/">Purchase your E-bike right now with Indiegogo</a>
           </div>
         </div>
       </div>

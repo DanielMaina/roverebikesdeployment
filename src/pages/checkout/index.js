@@ -373,7 +373,7 @@ const CheckoutPage = () => {
             </div>
             <div className="checkout-amount">
               <span>Total</span>
-              <span>CAD {formatNumber(totalAmount)}</span>
+              <span>CAD {formatNumber(total)}</span>
             </div>
           </div>
           <div className="checkout-information">

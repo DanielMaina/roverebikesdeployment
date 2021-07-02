@@ -62,7 +62,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>LIMITTED TIME OFFER FIRST 50 BIKES FOR ONLY CA$ 1,899 !</p>
+          <p>LIMITED TIME OFFER FIRST 50 BIKES FOR ONLY CA$ 1,899 !</p>
         </div>
         <HomeProduct />
 
@@ -79,7 +79,7 @@ class HomePage extends React.Component {
             <div>
               <h4>Mivice Dual-sided Torque Sensor</h4>
               <p>
-                Our fast responsive duel-sided torque sensor provides seemless
+                Our fast responsive dual-sided torque sensor provides seamless
                 power support and gives you the smoothest riding experience
               </p>
             </div>

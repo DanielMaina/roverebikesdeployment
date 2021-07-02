@@ -79,7 +79,7 @@ const PrivacyPage = () => {
             </p>
             <p>
               You can opt out of tracking via User ID by sending an e-mail to
-              <strong>info@roverebike.com.</strong>
+              <strong>info@roverebike.ca.</strong>
             </p>
             <p>
               You may also refuse the use of cookies by selecting the
@@ -115,7 +115,7 @@ const PrivacyPage = () => {
             <p>
               This Privacy Policy describes how your personal information is
               collected, used, and shared when you visit or make a purchase from
-              https://reverbike.com/ (the “Site”). By using the Site, you agree
+              https://reverbike.ca/ (the “Site”). By using the Site, you agree
               to the collection and use of information in accordance with this
               Privacy Policy.
             </p>
