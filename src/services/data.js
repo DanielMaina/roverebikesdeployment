@@ -1,3 +1,5 @@
+export const baseURL = "https://roverebike.ca/";
+
 export const additionalPrices = {
   shipping: 100, // Default shipping price CAD
   tax: 30, // Percentage of the total amount

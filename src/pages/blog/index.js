@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import "./index.css";
 import setTitle from "../../tools.js";
 
-import headerImage from "../../assets/images/contact-page-header.png";
 import liveToRideImage from "../../assets/images/blog-page-live-to-ride.png";
 import liveToRideImageMobile from "../../assets/images/blog-page-live-to-ride-mobile.png";
 const BlogPage = () => {

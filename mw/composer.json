@@ -1,0 +1,7 @@
+{
+  "name": "rover/backend",
+  "minimum-stability": "dev",
+  "require": {
+    "phpmailer/phpmailer": "9999999-dev"
+  }
+}

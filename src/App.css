@@ -445,6 +445,10 @@
     margin-top: 30px;
   }
 
+  .navbar {
+    width: 200px;
+  }
+
   .cookie-popup {
     left: 0;
 

@@ -189,6 +189,37 @@
   color: #000000;
 }
 
+.contact-page .contact-form .success-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page .contact-form .success-message div {
+  padding: 100px 50px;
+  background: rgb(38, 94, 6);
+  color: var(--color-white);
+  font-size: 21px;
+  border-radius: 20px;
+}
+
+.contact-page .contact-form .success-message div h5 {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.contact-page .contact-form .error-message {
+  color: var(--color-red);
+}
+.contact-page .formSendingMessage {
+  margin-left: auto;
+  color: var(--color-white);
+  background: var(--color-red-2);
+  border-radius: 10px;
+
+  padding: 10px 20px;
+  font-size: 16px;
+}
 .contact-page .search-form .form-group {
   position: relative;
 }

@@ -31,12 +31,18 @@ const ContactPage = () => {
       setFormValidation(true);
       setFormSendingStatus(1);
 
-      ApiService.post("contact", formValues)
+      const apiService = ApiService;
+      apiService.init();
+      apiService
+        .post("contact.php", formValues)
         .then((res) => {
-          console.log(res);
+          if (res.data.status === 1) {
+            setFormSendingStatus(3);
+          } else {
+            setFormSendingStatus(2);
+          }
         })
         .catch((error) => {
-          console.log(error);
           setFormSendingStatus(2);
         });
     } else {
@@ -46,10 +52,24 @@ const ContactPage = () => {
 
   const formSendingMessage = () => {
     if (formSendingStatus === 1) {
-      return "sending";
+      return <div className="formSendingMessage">sending...</div>;
     } else if (formSendingStatus === 2) {
       return "error";
     }
+  };
+
+  const renderSuccessMessage = () => {
+    return (
+      <div className="success-message">
+        <div>
+          <h5>Thank you for getting in touch!</h5>
+          <p>
+            We appreciate you contacting us. One of our colleagues will get back
+            in touch with you soon!Have a great day!
+          </p>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -100,35 +120,42 @@ const ContactPage = () => {
             </div>
           </div>
           <div className="contact-form">
-            <form action="#" method={"POST"}>
-              <div className="form-group">
-                <label>*Name</label>
-                <input
-                  type={"text"}
-                  name={"name"}
-                  onKeyUp={setFormValue}
-                ></input>
-              </div>
-              <div className="form-group">
-                <label>*Email Address</label>
-                <input
-                  type={"text"}
-                  name={"email"}
-                  onKeyUp={setFormValue}
-                ></input>
-              </div>
-              <div className="form-group">
-                <label>*Message</label>
-                <textarea name={"message"} onKeyUp={setFormValue}></textarea>
-              </div>
+            {formSendingStatus === 3 ? (
+              renderSuccessMessage()
+            ) : (
+              <form action="#" method={"POST"}>
+                <div className="form-group">
+                  <label>*Name</label>
+                  <input
+                    type={"text"}
+                    name={"name"}
+                    onKeyUp={setFormValue}
+                  ></input>
+                </div>
+                <div className="form-group">
+                  <label>*Email Address</label>
+                  <input
+                    type={"text"}
+                    name={"email"}
+                    onKeyUp={setFormValue}
+                  ></input>
+                </div>
+                <div className="form-group">
+                  <label>*Message</label>
+                  <textarea name={"message"} onKeyUp={setFormValue}></textarea>
+                </div>
 
-              <div className="form-group">
-                {formSendingMessage}
-                <button type={"button"} onClick={sendFormData}>
-                  Submit
-                </button>
-              </div>
-            </form>
+                <div className="form-group">
+                  {formSendingStatus === 1 ? (
+                    formSendingMessage()
+                  ) : (
+                    <button type={"button"} onClick={sendFormData}>
+                      Submit
+                    </button>
+                  )}
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>

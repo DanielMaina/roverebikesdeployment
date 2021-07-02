@@ -3,6 +3,7 @@ import React from "react";
 import "./index.css";
 import setTitle from "../../tools.js";
 import promoVideoSource from "../../assets/movies/rover-e-Bike-homepage.mp4";
+import promoVideoSourceMobile from "../../assets/movies/rover-e-Bike-homepage-mobile.mp4";
 import HomeProduct from "components/HomeProduct";
 import Grid from "components/Grid";
 import Reviews from "components/Reviews";
@@ -19,6 +20,9 @@ class HomePage extends React.Component {
   constructor(props) {
     super(props);
 
+    this.isMobile = window.innerWidth <= 500;
+
+    console.log(this.isMobile);
     this.state = {};
     this.promoVideo = React.createRef();
     this.sectionVideo1 = React.createRef();
@@ -40,7 +44,7 @@ class HomePage extends React.Component {
         <div className="main-content">
           <video
             ref={this.promoVideo}
-            src={promoVideoSource}
+            src={this.isMobile ? promoVideoSourceMobile : promoVideoSource}
             poster={landingImage}
             autoPlay={true}
             muted

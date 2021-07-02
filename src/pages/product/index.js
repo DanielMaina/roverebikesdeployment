@@ -125,7 +125,7 @@ class ProductPage extends React.Component {
               onMouseEnter={this.playVideo2}
             >
               <div>
-                <h4>Shock aborbing system</h4>autoPlay={true}
+                <h4>Shock aborbing system</h4>
                 <p>
                   Our front suspension fork allows you to adjust shock absorbing
                   levels according to terrains, provides comfort in any

@@ -1,6 +1,10 @@
 .about-us-page {
   background-color: #242424;
 }
+
+.about-us-page .row {
+  flex-direction: row-reverse;
+}
 .about-us-page .col-image {
   height: 650px;
   width: 100%;
@@ -9,6 +13,7 @@
 }
 .about-us-page .col-image img {
   width: 100%;
+  height: 100%;
 }
 .about-us-page .col-text {
   display: flex;
@@ -63,8 +68,11 @@
   margin-left: auto;
 }
 @media (max-width: 720px) {
+  .about-us-page .main-content {
+  }
+
   .about-us-page .row {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .about-us-page .col-text div {
