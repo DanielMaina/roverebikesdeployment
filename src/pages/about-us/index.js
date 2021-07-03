@@ -4,6 +4,7 @@ import "./index.css";
 import setTitle from "../../tools.js";
 import promoVideo from "../../assets/movies/rover-e-Bike-short.mp4";
 import promoVideoMobile from "../../assets/movies/rover-e-Bike-short-mobile.mp4";
+import posterMobile from "../../assets/images/about-us/mobile-poster.png";
 import image1 from "../../assets/images/about-us/image1.png";
 import image2 from "../../assets/images/about-us/image2.png";
 
@@ -23,7 +24,8 @@ class AboutUsPage extends React.Component {
     return (
       <div className="about-us-page">
         <div className="main-content">
-          <video 
+          <video
+            poster={this.isMobile ? posterMobile : false}
             src={this.isMobile ? promoVideoMobile : promoVideo} 
             autoPlay={true}
             muted={this.isMobile ? "muted" : false}
