@@ -12,7 +12,7 @@ import FeaturedArticles from "../../components/FeaturedArticles";
 class AboutUsPage extends React.Component {
   constructor() {
     super();
-
+    this.isMobile = window.innerWidth <= 500;
     this.state = {};
   }
   componentDidUpdate() {
