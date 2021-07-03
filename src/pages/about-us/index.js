@@ -26,6 +26,7 @@ class AboutUsPage extends React.Component {
           <video 
             src={this.isMobile ? promoVideoMobile : promoVideo} 
             autoPlay={true}
+            muted
             onLoad
             playsInline
             webkit-playsinline            
