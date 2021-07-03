@@ -25,7 +25,10 @@ class AboutUsPage extends React.Component {
         <div className="main-content">
           <video 
             src={this.isMobile ? promoVideoMobile : promoVideo} 
-            autoPlay={true}            
+            autoPlay={true}
+            onLoad
+            playsInline
+            webkit-playsinline            
             ></video>
         </div>
 
