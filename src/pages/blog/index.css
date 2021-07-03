@@ -80,9 +80,10 @@
   }
 
   .blog-page .blog-area {
-    top: 100px;
+    top: 0px;
     width: auto;
-    height: auto;
+    min-height: 870px;
+    position: relative;
   }
   .blog-page .blog-area .blog-content {
     width: calc(100% - 40px);
