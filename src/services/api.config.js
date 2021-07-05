@@ -3,7 +3,7 @@ import { TokenService } from "./storage.service";
 
 const ApiService = {
   init() {
-    axios.defaults.baseURL = "https://roverebike.ca/mw/";
+    axios.defaults.baseURL = "http://mw.roverebike.ca/";
     axios.defaults.headers.post["Content-Type"] =
       "application/json;charset=utf-8";
     axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
