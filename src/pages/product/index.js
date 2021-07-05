@@ -9,10 +9,6 @@ import Collapse from "../../components/Collapse";
 import FeaturedProducts from "../../components/FeaturedProducts";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@material-ui/icons/RemoveCircleOutline";
-import sectionMovie1 from "../../assets/movies/3d_1_torque.mp4";
-import sectionMovie2 from "../../assets/movies/3d_2_shocklock.mp4";
-import sectionMovie3 from "../../assets/movies/3d_3_shifter.mp4";
-import sectionMovie4 from "../../assets/movies/3d_4_motor.mp4";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import sectionImage1 from "../../assets/images/homepage-image.png";
 
@@ -108,7 +104,7 @@ class ProductPage extends React.Component {
 
                 <video
                   ref={this.getVideo1}
-                  src={sectionMovie1}
+                  src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_1_torque.mp4"}
                   muted
                   loop
                   autoPlay
@@ -139,7 +135,7 @@ class ProductPage extends React.Component {
             >
               <video
                 ref={this.getVideo2}
-                src={sectionMovie2}
+                src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_2_shocklock.mp4"}
                 muted
                 loop
                 autoPlay
@@ -164,7 +160,7 @@ class ProductPage extends React.Component {
             >
               <video
                 ref={this.getVideo3}
-                src={sectionMovie3}
+                src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_3_shifter.mp4"}
                 muted
                 loop
                 autoPlay
@@ -195,7 +191,7 @@ class ProductPage extends React.Component {
             >
               <video
                 ref={this.getVideo4}
-                src={sectionMovie4}
+                src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_4_motor.mp4"}
                 muted
                 loop
                 autoPlay
