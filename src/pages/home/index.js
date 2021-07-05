@@ -44,7 +44,7 @@ class HomePage extends React.Component {
         <div className="main-content">
           <video
             ref={this.promoVideo}
-            src={this.isMobile ? promoVideoSourceMobile : promoVideoSource}
+            src={this.isMobile ? promoVideoSourceMobile : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage.mp4"}
             poster={landingImage}
             autoPlay={true}
             muted
