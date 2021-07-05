@@ -2,8 +2,7 @@ import React from "react";
 
 import "./index.css";
 import setTitle from "../../tools.js";
-import promoVideoSource from "../../assets/movies/rover-e-Bike-homepage.mp4";
-import promoVideoSourceMobile from "../../assets/movies/rover-e-Bike-homepage-mobile.mp4";
+
 import HomeProduct from "components/HomeProduct";
 import Grid from "components/Grid";
 import Reviews from "components/Reviews";
@@ -44,7 +43,7 @@ class HomePage extends React.Component {
         <div className="main-content">
           <video
             ref={this.promoVideo}
-            src={this.isMobile ? promoVideoSourceMobile : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage.mp4"}
+            src={this.isMobile ? "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage-mobile.mp4" : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage.mp4"}
             poster={landingImage}
             autoPlay={true}
             muted
