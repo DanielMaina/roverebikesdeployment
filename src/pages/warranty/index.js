@@ -33,9 +33,8 @@ const WarrantyPage = () => {
 
             <a
               href="/content/warranty-details.pdf"
-              className="button"
-              target="_blank"
-              download="ROVER - Warranty"
+              className="button" 
+              download
             >
               Download detailed version
             </a>
