@@ -76,8 +76,7 @@ const WarrantyPage = () => {
             <a
               href="/content/terms-and-conditions-of-use.pdf"
               className="button"
-              target="_blank"
-              download="ROVER - Terms & Conditions of Use"
+              download
             >
               Download detailed version
             </a>
