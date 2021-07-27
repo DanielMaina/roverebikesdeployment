@@ -86,7 +86,7 @@ class HomePage extends React.Component {
           <div className="product-section-image">
             <video
               ref={this.sectionVideo1}
-              src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_1_torque.mp4"}
+              src={"https://www.roverebike.ca/movies/3d_1_torque.mp4"}
               muted
               loop
               autoPlay
