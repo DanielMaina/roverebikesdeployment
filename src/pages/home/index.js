@@ -9,6 +9,8 @@ import Reviews from "components/Reviews";
 
 import landingImage from "../../assets/images/home-page-landing.png";
 
+import torqueVideo from "../../assets/movies/3d_1_torque.mp4";
+
 import sectionImage1 from "../../assets/images/homepage-image.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
@@ -42,7 +44,11 @@ class HomePage extends React.Component {
         <div className="main-content">
           <video
             ref={this.promoVideo}
-            src={this.isMobile ? "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage-mobile.mp4" : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage.mp4"}
+            src={
+              this.isMobile
+                ? "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage-mobile.mp4"
+                : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-homepage.mp4"
+            }
             poster={landingImage}
             autoPlay={true}
             muted
@@ -86,7 +92,7 @@ class HomePage extends React.Component {
           <div className="product-section-image">
             <video
               ref={this.sectionVideo1}
-              src={"https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/3d_1_torque.mp4"}
+              src={torqueVideo}
               muted
               loop
               autoPlay
