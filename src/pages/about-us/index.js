@@ -24,13 +24,17 @@ class AboutUsPage extends React.Component {
         <div className="main-content">
           <video
             poster={this.isMobile ? posterMobile : false}
-            src={this.isMobile ? "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-short-mobile.mp4" : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-short.mp4"} 
+            src={
+              this.isMobile
+                ? "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-short-mobile.mp4"
+                : "https://amplify-amplify6164c245e3204-staging-204824-deployment.s3.us-east-2.amazonaws.com/movies/rover-e-Bike-short.mp4"
+            }
             autoPlay={true}
             muted={this.isMobile ? "muted" : false}
             onLoad
             playsInline
-            webkit-playsinline            
-            ></video>
+            webkit-playsinline
+          ></video>
         </div>
 
         <div className="row">
@@ -88,7 +92,7 @@ class AboutUsPage extends React.Component {
               content:
                 "Bring your bike and your smile. Join us on our 1st ever social 100 KM bike event. Together we will ride the world. <br/><br/>" +
                 "Snacks and coffee will be provided at the meet up place! <br/><br/>" +
-                "Date: September 1st, 2021" +
+                "Date: September 11st, 2021" +
                 "Location: Stanley Park",
             },
           ]}

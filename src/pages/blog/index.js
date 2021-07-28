@@ -4,7 +4,7 @@ import "./index.css";
 import setTitle from "../../tools.js";
 
 import liveToRideImage from "../../assets/images/blog-page-live-to-ride.png";
-import liveToRideImageMobile from "../../assets/images/blog-page-live-to-ride-mobile.png";
+import liveToRideImageMobile from "../../assets/images/blog-page-live-to-ride.png";
 const BlogPage = () => {
   useEffect(() => {
     setTitle("Blog");
@@ -21,7 +21,7 @@ const BlogPage = () => {
             <div className="live-to-ride-mobile">
               <img src={liveToRideImageMobile} />
             </div>
-            <strong>When:</strong> September 1 , 2021
+            <strong>When:</strong> September 11 , 2021
             <br />
             <strong>Time:</strong> 12pm
             <br />

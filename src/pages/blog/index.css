@@ -32,8 +32,18 @@
   display: none;
 }
 
+.blog-page .live-to-ride-mobile img {
+  width: 100%;
+}
+
 .blog-page .live-to-ride {
   display: block;
+}
+
+.blog-page .live-to-ride img {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 7px solid #fbf595;
 }
 
 .blog-page .blog-area .blog-content {
