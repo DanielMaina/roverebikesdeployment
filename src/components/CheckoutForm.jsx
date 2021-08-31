@@ -21,8 +21,7 @@ export default function CheckoutForm(props) {
       .fetch("https://mw.roverebike.ca/payment.php", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",       
-          'X-Requested-With': 'XMLHttpRequest'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({total: props.total, data: props.data})
       })
