@@ -2,6 +2,7 @@
   "name": "rover/backend",
   "minimum-stability": "dev",
   "require": {
-    "phpmailer/phpmailer": "9999999-dev"
+    "phpmailer/phpmailer": "9999999-dev",
+    "stripe/stripe-php": "^6.31"
   }
 }
