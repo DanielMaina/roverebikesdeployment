@@ -127,7 +127,7 @@ const Product = () => {
           </div>
         </div>
         <div className="product-actions">
-          {/* <div
+          <div
             className="product-action add-to-cart"
             onClick={() => addToCart()}
           >
@@ -135,15 +135,8 @@ const Product = () => {
               <span></span>
             </div>
             <a href="#">Add to cart</a>
-          </div> */}
-          <div className="product-action check-out-now">
-            <div className="icon">
-              <span></span>
-            </div>
-            <a href="https://www.indiegogo.com/projects/rover-e-bike-revolutionize-the-way-you-ride#/">Purchase your E-bike right now with Indiegogo</a>
           </div>
-        </div>
-      </div>
+
 
       <Modal
         isOpen={modalIsOpen}
