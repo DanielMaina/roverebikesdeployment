@@ -46,7 +46,7 @@ const Layout = (props) => {
         ></a>
 
         <div className="header-sub">
-          <a href="https://www.indiegogo.com/projects/rover-e-bike-revolutionize-the-way-you-ride#/" className="cart-logo">
+          <a href="/checkout" className="cart-logo">
             <ShoppingCartOutlined />
             <div
               id="cart-badge"
