@@ -66,7 +66,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>LIMITED TIME OFFER FIRST 50 BIKES FOR ONLY CA$ 1,899 !</p>
+          <p></p>
         </div>
         <HomeProduct />
 
