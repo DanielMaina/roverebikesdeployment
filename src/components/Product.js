@@ -138,35 +138,35 @@ const Product = () => {
           </div>
         </div>
 
-
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Featured Products Modal"
-      >
-        <div
-          style={{
-            position: "absolute",
-            right: 0,
-            margin: 10,
-          }}
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Featured Products Modal"
         >
-          <button className="close-modal-button" onClick={closeModal}>
-            Close
-          </button>
-        </div>
-        <FeaturedProducts />
-        <div className="product-actions modal">
-          <div className="product-action check-out-now">
-            <div className="icon">
-              <span></span>
-            </div>
-            <a href="/checkout">Check out now</a>
+          <div
+            style={{
+              position: "absolute",
+              right: 0,
+              margin: 10,
+            }}
+          >
+            <button className="close-modal-button" onClick={closeModal}>
+              Close
+            </button>
           </div>
-        </div>
-      </Modal>
+          <FeaturedProducts />
+          <div className="product-actions modal">
+            <div className="product-action check-out-now">
+              <div className="icon">
+                <span></span>
+              </div>
+              <a href="/checkout">Check out now</a>
+            </div>
+          </div>
+        </Modal>
+      </div>
     </div>
   );
 };
