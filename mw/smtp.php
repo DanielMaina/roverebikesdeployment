@@ -18,7 +18,7 @@ require './vendor/autoload.php';
     
     // Replace recipient@example.com with a "To" address. If your account
     // is still in the sandbox, this address must be verified.
-    $recipient = 'roverebike@gmail.com';
+    $recipient = 'erdemdurdu@gmail.com';
     
     // Replace smtp_username with your Amazon SES SMTP user name.
     $usernameSmtp = 'AKIAXE5VPGPA5UWSIPBP';

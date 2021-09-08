@@ -25,8 +25,10 @@ import "../../assets/styles/Checkout.css";
 // recreating the Stripe object on every render.
 // loadStripe is initialized with a fake API key.
 // Sign in to see examples pre-filled with your key.
-const promise = loadStripe("pk_test_51J1eaAAEoDFgQQjkzqg2SF43C7MAwBWfnFaIdv44O9TqXlIVJSpjx86Qrv5NBErwD7XUXTinhTDNuJeYFpHvP0yh00tCsZSBQC");
-
+//const promise = loadStripe("pk_test_51J1eaAAEoDFgQQjkzqg2SF43C7MAwBWfnFaIdv44O9TqXlIVJSpjx86Qrv5NBErwD7XUXTinhTDNuJeYFpHvP0yh00tCsZSBQC");
+const promise = loadStripe(
+  "pk_live_51J1eaAAEoDFgQQjkbdzVcpIJJnUwKxl0JUM6wKk5LBWS1TiyfhlurrvAG9dhvA6UZSSKyZsqvyr0ZdzusWrMx28r00efDBh9QK"
+);
 
 const CheckoutPage = () => {
   useEffect(() => {
@@ -41,7 +43,9 @@ const CheckoutPage = () => {
   const [selectedCity, setSelectedCity] = useState(false);
   const [formValues, setFormValues] = useState({});
   const [validation, setValidation] = useState(false);
-  const [validationMessage, setValidationMessage] = useState("Please fill out all required(*) fields to complete order.");
+  const [validationMessage, setValidationMessage] = useState(
+    "Please fill out all required(*) fields to complete order."
+  );
   const [cityData, setCityData] = useState([]);
   const [shippingAmount, setShippingAmount] = useState(0);
   const [taxValue, setTaxValue] = useState({ value: 0, amount: 0 });
@@ -130,8 +134,7 @@ const CheckoutPage = () => {
   };
   const countryHandler = (e) => {
     setCountry(e.value);
-    
-    
+
     let _formValues = formValues;
     _formValues["country"] = e.value;
     setFormValues(_formValues);
@@ -208,51 +211,47 @@ const CheckoutPage = () => {
     let _formValues = formValues;
     _formValues[input.target.name] = input.target.value;
     setFormValues(_formValues);
-    
+
     validateForm();
   };
 
- const checkFormItem = (name) =>{
-   let keys = Object.keys(formValues);
+  const checkFormItem = (name) => {
+    let keys = Object.keys(formValues);
     console.log(keys);
-    if (keys.some(item => name === item)){
-      return formValues[name].length > 0
+    if (keys.some((item) => name === item)) {
+      return formValues[name].length > 0;
     }
 
     return false;
- }
+  };
 
   const validateForm = () => {
     console.log(formValues);
-    
-    if (checkFormItem('email') === false){
+
+    if (checkFormItem("email") === false) {
       setValidation(false);
       setValidationMessage("Please check your e-mail address");
-    }
-    else if (checkFormItem('name') === false){
+    } else if (checkFormItem("name") === false) {
       setValidation(false);
       setValidationMessage("Please check your name");
-    }
-    else if (checkFormItem('last_name') === false){
+    } else if (checkFormItem("last_name") === false) {
       setValidation(false);
       setValidationMessage("Please check your last name");
-    }
-    else if (checkFormItem('street') === false){
+    } else if (checkFormItem("street") === false) {
       setValidation(false);
       setValidationMessage("Please check your street and house number");
-    }
-    else if (checkFormItem('country') === false){
+    } else if (checkFormItem("country") === false) {
       setValidation(false);
       setValidationMessage("Please select your country");
-    }
-    else if (checkFormItem('city') === false){
+    } else if (checkFormItem("city") === false) {
       setValidation(false);
       setValidationMessage("Please select your city");
-    }else{
+    } else {
       setValidation(true);
-      setValidationMessage("Please fill out all required(*) fields to complete order.");
+      setValidationMessage(
+        "Please fill out all required(*) fields to complete order."
+      );
     }
-    
   };
 
   return (
@@ -291,10 +290,10 @@ const CheckoutPage = () => {
             <div className="form-group">
               <label>*Street and house number</label>
               <input
-                  name={"street"}
-                  type={"text"}
-                  onKeyUp={setFormValue}
-                ></input>
+                name={"street"}
+                type={"text"}
+                onKeyUp={setFormValue}
+              ></input>
             </div>
             <div className="form-group row">
               <div className="form-row">
@@ -380,21 +379,21 @@ const CheckoutPage = () => {
                 </label>
               </div>
             </div>
-            </form>
-            <div className="payment-box">
-              <h4>Payment</h4>
-              <div className="form-group buttons">
-                <div className="checkout-stripe">
-                  {
-                    validation ?
-                  
-      <Elements stripe={promise}>
-        <CheckoutForm total={total} data={formValues} />
-      </Elements> : validationMessage}
-    </div> 
+          </form>
+          <div className="payment-box">
+            <h4>Payment</h4>
+            <div className="form-group buttons">
+              <div className="checkout-stripe">
+                {validation ? (
+                  <Elements stripe={promise}>
+                    <CheckoutForm total={total} data={formValues} />
+                  </Elements>
+                ) : (
+                  validationMessage
+                )}
               </div>
             </div>
-          
+          </div>
         </div>
         <div className="checkout-details">
           <div className="checkout-items">

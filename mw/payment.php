@@ -11,6 +11,7 @@
  *  - https://fetch.spec.whatwg.org/#http-cors-protocol
  *
  */
+
 function cors() {
     
     // Allow from any origin
@@ -41,11 +42,10 @@ function cors() {
 cors();
 
 require 'vendor/autoload.php';
-    require './smtp.php';
+require './smtp.php';
 
 // This is a sample test API key. Sign in to see examples pre-filled with your key.
 \Stripe\Stripe::setApiKey('sk_test_51J1eaAAEoDFgQQjksl9BSG9nj3T6c5dVmAPG0SzozlNvHup62Lrrrwde2mHsqjZfOuQrDUJOlBg4SwPRBofiuKoh00SPe4g079');
-
 
 
 function calculateOrderAmount(float $total): float {
