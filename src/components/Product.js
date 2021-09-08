@@ -136,6 +136,7 @@ const Product = () => {
             </div>
             <a href="#">Add to cart</a>
           </div>
+        </div>
 
 
       <Modal
