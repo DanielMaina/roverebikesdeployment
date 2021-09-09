@@ -458,7 +458,7 @@ const CheckoutPage = () => {
           <div className="checkout-information">
             <p>
               All SALES are pre-sale only. All new purchases will be shipped out
-              MID-AUGUST.
+              at the end of September.
             </p>
           </div>
         </div>
