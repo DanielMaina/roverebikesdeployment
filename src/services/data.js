@@ -2894,12 +2894,12 @@ export const dummyProducts = [
   {
     id: 1,
     name: "ROVER X Black",
-    price: 1899,
+    price: 2399.99,
   },
   {
     id: 2,
     name: "ROVER Y Black",
-    price: 1999,
+    price: 2399.99,
   },
   {
     id: 3,
