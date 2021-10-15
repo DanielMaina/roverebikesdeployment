@@ -98,7 +98,7 @@ const Product = () => {
           <img src={roverLogo} />
         </h3>
         <h4 className="product-price">
-          <span className="product-new-price">CAD 2,399.99</span>
+          <span className="product-new-price">CAD 2,899.99</span>
         </h4>
         <div className="product-description">
           <p>
