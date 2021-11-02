@@ -33,7 +33,7 @@ const customStyles = {
 const Product = () => {
   const { products } = useContext(ProductsContext);
   const { addProduct, cartItems, increase } = useContext(CartContext);
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  //const [modalIsOpen, setIsOpen] = React.useState(false);
 
   const product = products.find((p) => p.id === 1);
 
@@ -66,7 +66,7 @@ const Product = () => {
 
   const addToCart = () => {
     addProduct(product);
-    
+
   };
 
   function openModal() {
