@@ -455,12 +455,6 @@ const CheckoutPage = () => {
               <span>CAD {formatNumber(total)}</span>
             </div>
           </div>
-          <div className="checkout-information">
-            <p>
-              All SALES are pre-sale only. All new purchases will be shipped out
-              at the end of September.
-            </p>
-          </div>
         </div>
       </div>
     </div>
