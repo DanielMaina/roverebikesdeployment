@@ -197,19 +197,19 @@ class HomePage extends React.Component {
           items={[
             {
               name: "Frank F.",
-              image: "/img/reviews/review-1.png",
+              //image: "/img/reviews/review-1.png",
               content:
                 "Love the bike! Torque sensor system makes the rides very smooth, and the back motor barely makes any noise. Everything cuts out right way when you stop pedaling and the bike gives amazing assistance whenever you need it.",
             },
             {
               name: "Zhe Z.",
-              image: "/img/reviews/review-2.png",
+              //image: "/img/reviews/review-2.png",
               content:
                 "I really love the bike. Rover Y looks like a normal bike and can easily support me when I’m doing long-distance biking. I am going to buy a Rover X for my girlfriend as her birthday surprise.",
             },
             {
               name: "Site M.",
-              image: "/img/reviews/review-3.png",
+              //image: "/img/reviews/review-3.png",
               content:
                 "I love the idea of biking, but I hate going uphill. However, after I bought Rover Y, I’m enjoying biking every day. Everyone has been asking me where I got the bike, and they are all surprised of how well it’s been built. All the parts are made from licensed and well-known manufacturer. I am extremely happy with my purchase.",
             },
