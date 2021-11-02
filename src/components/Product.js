@@ -66,7 +66,7 @@ const Product = () => {
 
   const addToCart = () => {
     addProduct(product);
-    openModal();
+    
   };
 
   function openModal() {
