@@ -124,7 +124,7 @@ class HomePage extends React.Component {
               <p>
                 High Capacity Battery Detachable &amp; long lasting battery(36V,
                 14AH) provides convenient charging experience (fully charged
-                within 5hrs) and allows riding up to 160km.
+                within 5hrs) and allows riding up to 120km.
               </p>
             </div>
           </div>
