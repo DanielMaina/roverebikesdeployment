@@ -77,7 +77,7 @@ class ProductPage extends React.Component {
       <div className="product-page">
         <div className="top-message">
           <p>
-            
+
           </p>
         </div>
         <Product />
@@ -229,7 +229,7 @@ class ProductPage extends React.Component {
                 <p>
                   High Capacity Battery Detachable &amp; long lasting
                   battery(36V, 14AH) provides convenient charging experience
-                  (fully charged within 5hrs) and allows riding up to 160km.
+                  (fully charged within 5hrs) and allows riding up to 120km.
                 </p>
               </div>
             </div>
@@ -345,7 +345,7 @@ class ProductPage extends React.Component {
                     <p>
                       Fully charged within 5 hours
                       <br />
-                      Range: 120 - 160 km
+                      Range: 80 - 120 km
                     </p>
                   </div>
                   <div className="spec-grid-item">
