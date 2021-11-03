@@ -15,7 +15,7 @@ const HomeProduct = (props) => {
   const zoomOutProperties = {
     indicators: true,
     arrows: false,
-    duration: 3000,
+    duration: 10000,
     pauseOnHover: false,
     transitionDuration: 500,
     indicators: (i) => <span href="#" className="spotlight-pager"></span>,
