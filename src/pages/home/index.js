@@ -65,9 +65,9 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-        <div className="offer-text">
-          <p></p>
-        </div>
+        // <div className="offer-text">
+        //   <p></p>
+        // </div>
         <HomeProduct />
 
         <div
