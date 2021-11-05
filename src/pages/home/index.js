@@ -150,7 +150,7 @@ class HomePage extends React.Component {
           items={[
             {
               icon: "/img/icons/canadian-maple-leaf.svg",
-              title: "Canadian Own",
+              title: "Made in Canada",
               content: "Based here, designed here, serve here",
             },
             {
