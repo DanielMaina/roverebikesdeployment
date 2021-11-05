@@ -64,7 +64,7 @@ class HomePage extends React.Component {
             </a>
           </div>
         </div>
-
+        
         <HomeProduct />
 
         <div
