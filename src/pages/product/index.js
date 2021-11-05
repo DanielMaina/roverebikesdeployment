@@ -77,7 +77,7 @@ class ProductPage extends React.Component {
       <div className="product-page">
         <div className="top-message">
           <p>
-
+            LIMITED BLACK FRIDAY OFFER FIRST 10 BIKES FOR ONLY CA$ 1,899 !
           </p>
         </div>
         <Product />
@@ -500,7 +500,7 @@ class ProductPage extends React.Component {
             )}
           </div>
         </div>
-  
+
       </div>
     );
   }
