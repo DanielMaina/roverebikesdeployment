@@ -34,6 +34,8 @@
   align-items: center;
 
   padding: 60px 55px;
+
+  height: 230px;
 }
 
 .component-grid .component-grid-item .icon {
