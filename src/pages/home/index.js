@@ -69,7 +69,11 @@ class HomePage extends React.Component {
           <p>LIMITED BLACK FRIDAY OFFER FIRST 10 BIKES FOR ONLY CA$ 1,899 !</p>
         </div>
         <HomeProduct />
-
+        <div className="offer-text">
+          <a href="/product" className="learn-more-button">
+            View Item
+          </a>
+        </div>
         <div
           className="section-wrapper"
           onMouseEnter={() => {
