@@ -500,7 +500,7 @@ class ProductPage extends React.Component {
             )}
           </div>
         </div>
-        <FeaturedProducts />
+      //  <FeaturedProducts />
       </div>
     );
   }
