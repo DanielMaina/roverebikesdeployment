@@ -64,7 +64,7 @@ class HomePage extends React.Component {
             </a>
           </div>
         </div>
-        
+
         <HomeProduct />
 
         <div
@@ -177,18 +177,6 @@ class HomePage extends React.Component {
           ]}
         />
 
-        <div className="shipping-line">
-          <div>
-            <img src="/img/icons/shipping-truck.svg" />
-            <div className="shipping-line-content">
-              <h5>Free shipping and 7 days free return Canada wide.</h5>
-              <p>
-                Different rates will be applied for US. Head to UPS website for
-                more an estimated delivery fee.
-              </p>
-            </div>
-          </div>
-        </div>
 
         <Reviews
           items={[
