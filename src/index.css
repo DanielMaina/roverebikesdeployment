@@ -31,7 +31,8 @@ body {
   font-family: var(--main-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgba(51, 51, 51, 1);
+  /*background: rgba(51, 51, 51, 1);*/
+  background-color: white;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   min-height: calc(100vh - 10px);
