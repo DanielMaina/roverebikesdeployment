@@ -283,7 +283,10 @@
 
     color: #f4f5f4;
   }
-
+  .home-product .home-product-spotlight {
+    width: 100vw;
+    position: relative;
+  }
   .home-product .home-product-spotlight .each-slide div {
     height: 100vw;
     background-size: 90%;
