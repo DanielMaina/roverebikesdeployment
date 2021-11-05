@@ -130,6 +130,9 @@
 }
 .home .section-wrapper {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
 }
 .home .section-wrapper.even {
   flex-direction: row-reverse;
