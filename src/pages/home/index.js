@@ -133,11 +133,11 @@ class HomePage extends React.Component {
 
         <Grid
           style={{
-            backgroundImage: "url(" + gridBackgroundImage + ")",
+            //backgroundImage: "url(" + gridBackgroundImage + ")",
             height: "890px",
           }}
           mobileStyle={{
-            backgroundImage: "url(" + gridBackgroundImageMobile + ")",
+            //backgroundImage: "url(" + gridBackgroundImageMobile + ")",
             height: "500px",
           }}
           items={[
