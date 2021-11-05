@@ -36,20 +36,7 @@ const HomeProduct = (props) => {
           </div>
         </Slide>
       </div>
-      <div className="home-product-information">
-        <h5 className="product-heading">
-          <span>Introducing</span>
-        </h5>
-        <h3 className="product-name">
-          <a href="/product">Rover X/Y Series</a>
-        </h3>
-
-
-        <h5 className="product-price">CAD 2,899.99</h5>
-        <a href="/product" className="explore-button">
-          Explore more
-        </a>
-      </div>
+    
     </div>
   );
 };
