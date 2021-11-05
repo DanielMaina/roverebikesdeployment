@@ -65,6 +65,9 @@ class HomePage extends React.Component {
           </div>
         </div>
 
+        <div className="offer-text">
+          <p>LIMITED Black Friday OFFER FIRST 10 BIKES FOR ONLY CA$ 1,899 !</p>
+        </div>
         <HomeProduct />
 
         <div
@@ -133,7 +136,7 @@ class HomePage extends React.Component {
 
         <Grid
           style={{
-            
+
             height: "890px",
           }}
           mobileStyle={{
