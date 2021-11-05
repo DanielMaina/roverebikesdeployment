@@ -1,12 +1,13 @@
 .home-product {
   display: flex;
   flex-direction: row;
-  background-color: #010101;
+  background-color: white;
   min-height: 932px;
   position: relative;
 }
 .home-product .home-product-spotlight {
-  width: 100vw;
+  width: 80vw;
+  margin: 0 auto;
   position: relative;
 }
 .home-product .home-product-spotlight .each-slide div {
@@ -267,7 +268,7 @@
     margin-top: -10px;
   }
   .home-product .product-price {
-    font-size: 24px;    
+    font-size: 24px;
   }
   .home-product .explore-button {
     width: 100px;
