@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   background-color: white;
-  min-height: 932px;
+  min-height: 700px;
   position: relative;
 }
 .home-product .home-product-spotlight {
