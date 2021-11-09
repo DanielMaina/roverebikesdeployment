@@ -32,8 +32,8 @@ const WarrantyPage = () => {
             </p>
 
             <a
-              href="/content/warranty-details.pdf"
-              className="button" 
+              href="/content/warranty-detail.pdf"
+              className="button"
               download
             >
               Download detailed version
