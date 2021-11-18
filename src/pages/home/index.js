@@ -78,7 +78,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="one-colum">
-          <h4>Find Your Adventure!</h4>
+          <h4>"Find Your Adventure"</h4>
         </div>
 
         <div className="home-product">
