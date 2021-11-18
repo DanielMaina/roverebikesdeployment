@@ -114,11 +114,13 @@
 }
 .home .offer-text p {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
-  line-height: 28px;
-
-  color: #ffffff;
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: left;
 }
 .buy-now-button {
     background: red;
