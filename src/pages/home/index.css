@@ -121,6 +121,14 @@
 
   color: #ffffff;
 }
+.home .offer-text h5 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+}
 
 .home .offer-text p span {
   color: #8a1900;
