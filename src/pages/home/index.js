@@ -67,17 +67,17 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>BLACK FRIDAY SALE</p>
-          <p>Reg. #2899.99</p>
-          <p>1899.99</p>
-          <p>First 10 bikes only</p>
-          <a href="/product" className="button">
+          <p>BLACK FRIDAY SALE</p><br/>
+          <p>Reg. #2899.99</p><br/>
+          <p>1899.99</p><br/>
+          <p>First 10 bikes only</p><br/>
+          <a href="/product" className="buy-now-button">
             BUY NOW
           </a>
         </div>
         <HomeProduct />
         <div className="offer-text">
-          <a href="/product" className="learn-more-button">
+          <a href="/product" className="buy-now-button">
             View Item
           </a>
         </div>
