@@ -134,6 +134,13 @@
   margin-left: 20%;
 }
 
+.one-colum h4 {
+    line-height: 20px;
+    color: #101010;
+    font-size: 24px;
+    padding: 20px;
+}
+
 .one-colum .buy-now-button {
   background: #101010;
   padding: 20px;
