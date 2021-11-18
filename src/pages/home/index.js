@@ -75,9 +75,15 @@ class HomePage extends React.Component {
             BUY NOW
           </a>
         </div>
+
+        <div className="one-colum">
+          <h4>Find Your Adventure!</h4>
+        </div>
+
         <div className="home-product">
 
         </div>
+
         <div className="one-colum">
           <a href="/product" className="buy-now-button">
             View Item
