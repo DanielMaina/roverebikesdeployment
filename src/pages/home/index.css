@@ -66,9 +66,9 @@
   color: var(--color-white);
 }
 .home .learn-more-button {
-  width: 330px;
+  width: 280px;
   height: 50px;
-
+  padding:20px;
   opacity: 0;
 
   background: #242424;
