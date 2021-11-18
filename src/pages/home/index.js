@@ -11,7 +11,7 @@ import landingImage from "../../assets/images/home-page-landing.png";
 
 import torqueVideo from "../../assets/movies/3d_1_torque.mp4";
 
-import sectionImage1 from "../../assets/images/homepage-image.png";
+import sectionImage1 from "../../assets/images/homepage-content_1.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
 import gridBackgroundImageMobile from "../../assets/images/home-page-grid-mobile-bg.png";
@@ -90,6 +90,21 @@ class HomePage extends React.Component {
             View Item
           </a>
         </div>
+
+        <div className="section-wrapper even">
+          <div className="product-section-desc even">
+            <div>
+              <p>
+                Go extra mile, let your bike give you a smile
+              </p>
+            </div>
+          </div>
+
+          <div className="product-section-image">
+            <img src={sectionImage1} />
+          </div>
+        </div>
+
         <div
           className="section-wrapper"
           onMouseEnter={() => {
@@ -121,21 +136,7 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-        <div className="section-wrapper even">
-          <div className="product-section-desc even">
-            <div>
-              <h4>SHIMANO 7-Speed Freewheel</h4>
-              <p>
-                Ride anywhere with trustworthy Shimano TZ500 7-Speed 14-34t
-                Freewheel.
-              </p>
-            </div>
-          </div>
 
-          <div className="product-section-image">
-            <img src={sectionImage1} />
-          </div>
-        </div>
 
         <div className="section-wrapper">
           <div className="product-section-desc odd">
