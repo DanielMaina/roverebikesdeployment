@@ -15,6 +15,7 @@ import sectionImage1 from "../../assets/images/homepage-image.png";
 import sectionBatteryImage from "../../assets/images/3d_5_battery.png";
 import gridBackgroundImage from "../../assets/images/home-page-grid-bg.png";
 import gridBackgroundImageMobile from "../../assets/images/home-page-grid-mobile-bg.png";
+import homeproductbackground from "../../assets/images/homepage_product_background.png";
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -81,7 +82,7 @@ class HomePage extends React.Component {
         </div>
 
         <div className="home-product">
-
+          <img src={homeproductbackground} />
         </div>
 
         <div className="one-colum">
