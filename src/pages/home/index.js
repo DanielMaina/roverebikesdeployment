@@ -67,7 +67,10 @@ class HomePage extends React.Component {
         </div>
 
         <div className="offer-text">
-          <p>BLACK FRIDAY SALE \r Reg. $2899.99 \r $1899.99 \r First 10 bikes only</p></br>
+          <h5>BLACK FRIDAY SALE</h5>
+          <h5>Reg. $2899.99</h5>
+          <h5>$1899.99</h5>
+          <h5>First 10 bikes only</h5>
           <a href="/product" className="buy-now-button">
             BUY NOW
           </a>
