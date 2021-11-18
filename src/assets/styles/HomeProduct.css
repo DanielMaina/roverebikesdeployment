@@ -1,7 +1,7 @@
 .home-product {
   display: flex;
   flex-direction: row;
-  background-image: url("../assets/images/product/home_product_background.png");
+  background-color: white;
   min-height: 400px;
   position: relative;
 }
