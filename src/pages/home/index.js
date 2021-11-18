@@ -136,25 +136,6 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-
-
-        <div className="section-wrapper">
-          <div className="product-section-desc odd">
-            <div>
-              <h4>High Capacity Battery</h4>
-              <p>
-                High Capacity Battery Detachable &amp; long lasting battery(36V,
-                14AH) provides convenient charging experience (fully charged
-                within 5hrs) and allows riding up to 120km.
-              </p>
-            </div>
-          </div>
-
-          <div className="product-section-image">
-            <img src={sectionBatteryImage} />
-          </div>
-        </div>
-
         <Grid
           style={{
 
