@@ -107,21 +107,12 @@
 }
 
 .home .offer-text {
-  height: 30vh;
-  display: flex;
+  
   justify-content: center;
   align-items: center;
   background-color: #101010;
 }
 .home .offer-text p {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #ffffff;
-}
-.home .offer-text h5 {
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
