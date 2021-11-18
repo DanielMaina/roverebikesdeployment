@@ -107,7 +107,7 @@
 }
 
 .home .offer-text {
-  
+
   justify-content: center;
   align-items: center;
   background-color: #101010;
@@ -119,6 +119,11 @@
   line-height: 28px;
 
   color: #ffffff;
+}
+.buy-now-button {
+    background: red;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .home .offer-text p span {
