@@ -58,9 +58,10 @@ class HomePage extends React.Component {
             webkit-playsinline
           ></video>
           <div className="header-title">
-            <h4>CHANGE THE WAY YOU RIDE</h4>
+            <h4>Intraducing</h4>
+            <h4>ROVER X/Y</h4>
             <a href="/product" className="learn-more-button">
-              Learn More
+              Discover ROVER X/Y
             </a>
           </div>
         </div>
