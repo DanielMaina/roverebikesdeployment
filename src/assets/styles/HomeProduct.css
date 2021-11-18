@@ -1,8 +1,8 @@
 .home-product {
   display: flex;
   flex-direction: row;
-  background-color: white;
-  min-height: 700px;
+  background-image: url("../assets/images/product/home_product_background.png");
+  min-height: 400px;
   position: relative;
 }
 .home-product .home-product-spotlight {
